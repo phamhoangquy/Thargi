@@ -3,7 +3,7 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-top: 3rem
+	margin-bottom: 50px
 	ul
 		padding: 0
 		margin: 0
@@ -11,20 +11,16 @@
 		li
 			display: inline-block
 			padding: 0 10px
-			&:last-child()
-				position: relative
-				&:after
-					font-family: 'Material Design Icons'
-					content: '\f142'
-					font-size: 20px
 			&.active
 				a,span
-					background: #faa61a
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					border: 1px solid transparent
 					color: #ffffff
 					border: none
 			&:hover
 				a,span
-					background: #faa61a
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					border: 1px solid transparent
 					color: #ffffff
 					border: none
 			span,a
@@ -34,12 +30,11 @@
 				align-items: center
 				width: 40px
 				height: 40px
-				font-weight: 700
-				background: #0068b0
 				text-decoration: none
-				color: #ffffff
+				color: #58a53f
 				border-radius: 50%
-				font-size: 2.4rem
+				font-size: 16px
+				border: 1px solid #999999
 				@media screen and ( max-width:1024px)
 					height: 32px
 					width: 32px

@@ -1,0 +1,35 @@
+.head-title
+	h1
+		font-size: 36px
+		color: #333333
+		text-align: center
+		text-transform: uppercase
+
+
+.head-menu
+	padding-top: 30px
+	ul
+		list-style: none
+		padding: 0
+		display: flex
+		justify-content: center
+		li
+			padding-right: 10px
+			a
+				padding: 10px 25px
+				border: 1px solid #999999
+				border-radius: 50px
+				color: #999999
+				font-size: 14px
+				font-weight: 600
+			&:hover
+				a
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					border: 1px solid transparent
+					color: #ffffff
+			&.active
+				a
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					border: 0
+					color: #ffffff
+

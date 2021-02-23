@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Tin tức'
+	- var bodyClass = 'news-list-page'
+
+block main
+	include ../components/UI/top-banner/index
+	include ../components/UI/breadcrumb/index
+	include ../components/news-list/index
+	include ../components/UI/pagination/index

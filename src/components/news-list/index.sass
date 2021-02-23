@@ -1,0 +1,115 @@
+.news-list
+	padding: 50px 0
+	.row
+		margin-top: 30px
+	.big-news-right
+		@media screen and ( max-width: 1023px)
+			padding-top: 30px
+	.big-news-left,.big-news-right
+		.card-img
+			border-radius: 20px
+			a
+				img
+					width: 100%
+		.content-news
+			padding: 15px 0
+			.date
+				padding-bottom: 15px
+				time
+					font-size: 14px
+					color: #666666
+			.title-news
+				a
+					font-size: 24px
+					-webkit-background-clip: text
+					font-weight: 700
+					cursor: pointer
+					color: #333333
+					
+			.title-zone
+				font-size: 14px
+				color: #333333
+				padding-top: 15px
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 3
+				-o-text-overflow: ellipsis
+				display: -webkit-box
+				overflow: hidden
+				text-overflow: ellipsis
+		.view-more
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 700
+			display: flex
+			color: #333333
+			span
+				padding-left: 15px
+			
+		&:hover
+			cursor: pointer
+			.content-news
+				.title-news
+					a
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+			.view-more
+				color: #97c93c
+
+	.col-lg-3
+		margin-top: 20px
+	.small-news
+		.card-img
+			border-radius: 20px
+			a
+				img
+					width: 100%
+		.content-news
+			padding: 10px 0
+			.date
+				padding-bottom: 10px
+				time
+					font-size: 14px
+					color: #666666
+			.title-news
+				a
+					font-size: 16px
+					-webkit-background-clip: text
+					font-weight: 700
+					cursor: pointer
+					color: #333333
+					-webkit-box-orient: vertical
+					-webkit-line-clamp: 3
+					-o-text-overflow: ellipsis
+					display: -webkit-box
+					overflow: hidden
+					text-overflow: ellipsis
+			.title-zone
+				font-size: 16px
+				color: #333333
+				padding-top: 10px
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 3
+				-o-text-overflow: ellipsis
+				display: -webkit-box
+				overflow: hidden
+				text-overflow: ellipsis
+		.view-more
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 700
+			display: flex
+			color: #333333
+			span
+				padding-left: 15px
+			
+		&:hover
+			cursor: pointer
+			.content-news
+				.title-news
+					a
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+			.view-more
+				color: #97c93c
