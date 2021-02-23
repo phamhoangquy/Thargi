@@ -1,0 +1,92 @@
+header
+	.header-logo
+		.container
+			a(href="index.html")
+				.logo
+					img(src="./img/header/logo.png", alt="")
+	.header-top
+		.container
+			.header-infor
+				.information
+					.searchbox
+						input(type="text",placeholder='Tìm sản phẩm mong muốn...')
+						button
+							span.ri-search-line
+					.language
+						ul
+							li.active
+								a(href="") VN
+							li
+								a(href="") EN
+					.hotline-box
+						.icon-box
+							span.ri-phone-line
+						.text-box Hotline
+					.shopping-cart-toggle
+						.cart-header
+							.cart-icon
+								span.ri-shopping-cart-2-line
+							.cart-number
+								.item-quantity
+									span.text Giỏ hàng 
+									span.number ( 5 )
+						//- .shopping-cart-wrapper
+							.head
+								.cart-quantity
+									.cart-icon-dark
+									.cart-number
+										.item-quantity Giỏ hàng (
+											span.number 5
+											| )
+								.sum-price
+									p Tổng cộng: 
+										span đ 2.950.000
+							.body
+								.scroll-wrapper
+									-for(i=0;i<5;i++)
+										.cart-item
+											.image
+												a(href="#")
+													img(src="./img/product/1.png", alt="")
+											.caption
+												.title
+													a(href="#") Áo sơ mi trăng soc xanh nhat trăng soc xanh nhat
+												.bottom
+													.price đ 1.125.000
+													.quantity Số lượng: 
+														span.number 1
+								
+							.btn-center
+								a.btn.btn-primary
+									span Thanh toán 
+									em.fas.fa-arrow-right
+					.header_btn
+						span.ri-menu-line
+	.header-bottom
+		.container
+			.header-menu
+				ul.nav-menu
+					li
+						a(href="#") Giới thiệu
+					li
+						a(href="#") Sản phẩm
+					li
+						a(href="#") Khuyến mãi
+					li
+						a(href="#") Hệ thống kinh doanh
+					li
+						a(href="#") Góc chia sẽ
+					li
+						a(href="#") Tin tức
+					li
+						a(href="#") Tuyển dụng
+					li
+						a(href="#") Faqs
+					li
+						a(href="#") Liên hệ
+
+	.menu_mobile
+		.header_btn
+			span.ri-close-line
+		.mobile-wrapper
+	.overlay
