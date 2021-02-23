@@ -4,6 +4,7 @@ $(document).ready(function() {
     toggleMobileMenu();
     setBackgroundElement();
     swiperInit();
+    scrollToDiv();
     // $(document).on("click", function(e) {
     //     if (
     //         $(".shopping-cart-toggle").has(e.target).length === 0 &&
@@ -26,6 +27,18 @@ function toggleShoppingCart() {
     });
 }
 
+const scrollToDiv = () => {
+    $(".banner-scroll").click(function() {
+        let sumHed =
+            $(".home-banner").outerHeight() - $("header").outerHeight();
+        console.log(sumHed);
+        $("html,body").animate({
+                scrollTop: sumHed,
+            },
+            "fast"
+        );
+    });
+};
 
 const InsertBd = () => {
     $(".breadcrumb-wrapper").appendTo("#pagebanner .box-text");

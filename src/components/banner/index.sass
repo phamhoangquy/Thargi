@@ -1,7 +1,5 @@
 .home-banner
 	position: relative
-	content-visibility: auto
-	contain-intrinsic-size: 1440px
 	.swiper-slide
 		position: relative
 		&:before
@@ -87,3 +85,29 @@
 			span
 				padding-left: 15px
 				padding-top: 2px
+
+	.banner-scroll
+		position: absolute
+		margin-top: -25px
+		bottom: -20px
+		left: 50%
+		background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+		z-index: 10
+		border-radius: 50%
+		width: 42px
+		height: 42px
+		cursor: pointer
+		.icon-banner
+			display: flex
+			justify-content: center
+			align-items: center
+			transform: scale(1)
+			transition: .3s all ease-in-out
+			padding-top: 5px
+			span
+				color: #ffffff
+				font-size: 1.6rem
+			&:hover
+				transform: scale(1.13)
+				span
+					transform: scale(1.13)
