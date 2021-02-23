@@ -1,0 +1,172 @@
+footer
+	margin-left: auto
+	.footer-block
+		position: relative
+		padding-top: 40px
+		.col-xl-3
+			margin-top: 20px
+			&:last-child
+				border-right: 0
+			@media screen and ( max-width: 576px)
+				border-right: 0
+		.caption-footer
+			font-size: 18px
+			color: #cfcfcf
+			text-align: center
+			font-weight: 700
+		.footer-card
+			margin-top: 10px
+			padding-top: 40px
+			padding-bottom: 20px
+			@media screen and ( max-width: 576px)
+				padding-top: 10px
+				padding-left: 0
+			&.pr-40
+				padding-right: 40px
+			.card__title
+				padding-bottom: 15px
+				h4
+					font-size: 18px
+					color: #ffffff
+					position: relative
+					&::before
+						content: ''
+						position: absolute
+						width: 30px
+						height: 2px
+						bottom: -15px
+						left: 0
+						background: #ffffff
+			.card__body
+				ul
+					padding: 0
+					list-style: none
+					li
+						display: -webkit-box
+						padding-bottom: 15px
+						.icon-footer
+							span
+								font-size: 14px
+								color: #848484
+								padding-right: 10px
+						p
+							font-size: 14px
+							color: #848484
+
+			.item-footer
+				padding-top: 25px
+				ul
+					padding: 0
+					list-style: none
+					li
+						padding-bottom: 5px
+						a
+							font-size: 16px
+							color: #ffffff
+						&:hover
+							a
+								color: #58a53f
+				.notification
+					padding-top: 30px
+		.footer-card
+			margin-top: 10px
+			padding-left: 30px
+			@media screen and ( max-width: 576px)
+				padding-left: 0
+		.footer-address
+			@media screen and ( max-width:1280px )
+				padding-left: 30px
+			@media screen and ( max-width:576px )
+				padding-left: 0
+				margin-top: 50px
+	
+	.footer-subscribe
+		background: #ffffff
+		.subscribe-wrapper
+			display: flex
+			align-items: center
+			padding: 20px 0
+			.news-footer
+				ul
+					list-style: none
+					li
+						strong
+							font-size: 22px
+							text-transform: uppercase
+							background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+						p
+							font-size: 14px
+							color: #333333
+			.subscribe
+				padding-left: 70px
+				.subscribefrm
+					input
+						border: 0
+						width: 380px
+						padding: 10px 20px
+						border-radius: 50px
+						background: #f6f6f6
+						font-size: 16px
+						color: #666666
+					button
+						border: 0
+						padding: 10px 40px
+						border-radius: 50px
+						background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+						font-size: 16px
+						color: #ffffff
+						font-weight: 700
+						margin-left: 5px
+						text-transform: uppercase
+			.icon-footer
+				padding-left: 30px
+				ul
+					list-style: none
+					padding: 0
+					display: flex
+					li
+						padding-right: 25px
+						a
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+							span
+								background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+								-webkit-background-clip: text
+								-webkit-text-fill-color: transparent
+	.footer-copyright
+		.copyright-wrapper
+			display: flex
+			justify-content: space-between
+			@media screen and ( max-width: 768px)
+				justify-content: center
+			.right-text
+				height: 60px
+				font-size: 14px
+				color: #ffffff
+				padding-top: 20px
+				@media screen and ( max-width: 768px )
+					text-align: center
+					height: auto
+			.right-text-policy
+				padding-top: 20px
+				ul
+					list-style: none
+					padding: 0
+					display: flex
+					li
+						position: relative
+						padding: 0 10px
+						&::before
+							content: '|'
+							top: 0
+							right: 0
+							position: absolute
+							color: #ffffff
+						&:last-child
+							&::before
+								display: none
+						a
+							font-size: 14px
+							color: #ffffff
