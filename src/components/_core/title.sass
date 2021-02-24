@@ -7,14 +7,17 @@
 
 
 .head-menu
+	padding-bottom: 30px
 	padding-top: 30px
 	ul
 		list-style: none
 		padding: 0
 		display: flex
 		justify-content: center
+		@media screen and ( max-width: 1023px)
+			overflow: auto
 		li
-			padding-right: 10px
+			padding: 10px 10px 10px 0
 			a
 				padding: 10px 25px
 				border: 1px solid #999999
@@ -22,6 +25,7 @@
 				color: #999999
 				font-size: 14px
 				font-weight: 600
+				white-space: nowrap
 			&:hover
 				a
 					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)

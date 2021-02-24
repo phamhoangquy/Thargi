@@ -1,0 +1,58 @@
+section.shared-corner
+	.container
+		.head-title
+			h1 Góc chia sẻ
+		.head-menu
+			ul
+				li.active
+					a(href="#") Rong biển
+				li
+					a(href="#") Ẩm thực
+				li
+					a(href="#") Sức khỏe
+				li
+					a(href="#") Làm đẹp
+		.row
+			.col-lg-6
+				.big-share
+					.card-img.images-zoom
+						a(href="#")
+							img(src="./img/share/1.png", alt="")
+					.content-share
+						.date
+							time 08/12/2020
+						.title-share
+							a(href="#") Ăn rong nho thế nào? công dụng, cách bảo quản rong
+						.title-zone Rong nho là một loại tảo biển, có hình dạng giống như chùm nho và được mệnh danh là trứng cá muối xanh (caviar hay trứng cá muối).
+			.col-lg-6
+				-for(i=0;i<2;i++)
+					.row.border
+						.col-lg-6
+							.share-right
+								.card-img.images-zoom
+									a(href="#")
+										img(src="./img/share/2.png", alt="")
+						.col-lg-6
+							.content
+								.date
+									time 08/12/2020
+								.title-share
+									a(href="#") Công dụng khám viêm tuyệt vời của rong nho
+								.title-zone Ăn rong nho sẽ giúp bạn sở hữu bộ xương chắc khỏe, dẻo dai nhất làĂn rong nho sẽ giúp bạn sở hữu bộ xương chắc khỏe, dẻo dai nhất là
+								a(href="").view-more Xem thêm
+									span.ri-arrow-right-line
+		.row
+			-for(i=0; i<4; i++)
+				.col-lg-3
+					.small-share
+						.card-img.images-zoom
+							a(href="#")
+								img(src="./img/share/3.png", alt="")
+						.content-share
+							.date
+								time 08/12/2020
+							.title-share
+								a(href="#") Công ty Nông nghiệp Thuận Hải tiếp tục tham gia Hội Chợ triễn lãm Asia Fruit Logistica
+							.title-zone Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+						a(href="").view-more Xem chi tiết
+							span.ri-arrow-right-line
