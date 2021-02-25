@@ -1,0 +1,93 @@
+.about-page
+	.global-breadcrumb
+		background: none
+.about
+	padding: 50px 0
+	// video
+	.figure-video
+		position: relative
+	.wrapper-video
+		a
+			display: block
+			height: 100%
+			img
+				border-radius: 20px
+				max-width: 100%
+				height: 100%
+				width: 100%
+	.video
+		z-index: 10
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		display: flex
+		justify-content: center
+		align-items: center
+		pointer-events: none
+		.icon
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 65px
+			height: 65px
+			margin:  5px 0
+			@media screen and ( max-width: 1280px )
+				width: 46px
+				margin: 5px auto
+				height: 46px
+			@media screen and ( max-width: 576px )
+				width: 32px
+				margin: 5px auto
+				height: 32px
+			img
+				max-width: 100%
+				height: auto
+				display: block
+				margin: 0 auto !important
+	// end-video
+	.content-about
+		background-color: #fff
+
+		padding: 50px 30px
+		position: relative
+		border-radius: 10px
+		&::before
+			position: absolute
+			content: ''
+			background: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+			z-index: -1
+			border-radius: 10px
+			width: calc(100% + 7px)
+			height: calc(100% + 7px)
+			margin-left: -30px
+			top: -3px
+			left: 27px
+		.head-title
+			// background-image: url("../img/about/bg-text.png")
+			// background-position: center
+			// background-repeat: no-repeat
+			// background-size: cover
+			background: #ffffff
+			position: absolute
+			top: -30px
+			overflow: hidden
+			padding: 0 30px
+			z-index: 9
+			h1
+				text-align: left
+		.desc
+			padding-top: 20px
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				bottom: -10px
+				left: 0
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				width: 60px
+				height: 2px
+			p
+				font-size: 16px
+				color: #666666
+				padding-bottom: 20px

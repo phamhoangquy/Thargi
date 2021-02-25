@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'Giới thiệu'
+	- var bodyClass = 'about-page'
+
+block main
+	include ../components/UI/top-banner/index
+	include ../components/about/sub-menu/index
+	.background-img(setBackground='./img/about/bg-1.png' alt="")
+		include ../components/UI/breadcrumb/index
+		include ../components/about/index
