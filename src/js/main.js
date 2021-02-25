@@ -129,6 +129,36 @@ function swiperInit() {
             clickable: "true"
         }
     });
+    var newsDetailSwiper = new Swiper(".other-news-detail .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 10,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.other-news-detail .nav-arrow-next',
+            prevEl: '.other-news-detail .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+    });
 }
 
 function setBackgroundElement() {

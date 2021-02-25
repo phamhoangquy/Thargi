@@ -163,6 +163,8 @@ header
 			display: block
 		li
 			padding-right: 20px
+			&:last-child
+				padding-right: 0
 			a
 				font-size: 14px
 				transition: all .2s
@@ -170,17 +172,16 @@ header
 				letter-spacing: 1px
 				text-transform: uppercase
 				font-weight: 700
+				text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
 			.moblie-show-menu
 				a
 					padding: 0
 			&:hover
 				a
-					color: #58a53f
-					border-bottom: 1px solid #58a53f
+					border-bottom: 1px solid #ffffff
 			&.active
 				a
-					color: #58a53f
-					border-bottom: 1px solid #58a53f
+					border-bottom: 1px solid #ffffff
 	.menu_mobile
 		width: 50%
 		height: 100%
@@ -274,4 +275,8 @@ header
 	.overlay.show
 		@media screen and ( max-width: 1279px )
 			display: block
+
+
+
+
 
