@@ -1,8 +1,15 @@
 .about-page
 	.global-breadcrumb
 		background: none
+		position: relative
+		margin-top: -40px
+		z-index: -1
+		.breadcrumb
+			position: absolute
+			top: 50px
+
 .about
-	padding: 50px 0
+	padding: 60px 0
 	// video
 	.figure-video
 		position: relative
@@ -46,6 +53,7 @@
 				display: block
 				margin: 0 auto !important
 	// end-video
+
 	.content-about
 		position: relative
 		background: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
@@ -106,3 +114,232 @@
 				font-size: 16px
 				color: #666666
 				padding-bottom: 20px
+
+
+// section-2
+.about-2
+	padding: 65px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	.row
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 35px
+		@media screen and ( max-width: 1024px)
+			margin-top: 15px
+	.item-about-2
+		padding: 30px
+		background: #ffffff
+		text-align: center
+		border-radius: 20px
+		border: 5px solid #d4ecba
+		height: 325px
+		@media screen and ( max-width: 1023px)
+			height: auto
+			margin-bottom: 30px
+		.card-img
+			img
+				height: 66px
+				width: 66px
+		.title
+			padding-top: 10px
+			h3
+				font-size: 22px
+				color: #333333
+		.caption
+			padding-top: 15px
+			font-size: 16px
+			color: #666666
+
+// section-3
+.about-3
+	padding: 60px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	.head-title
+		h2
+			color: #333333
+	.item-about-3
+		margin-top: 30px
+		@media screen and ( max-width: 1023px)
+			margin-top: 45px
+		.card-img
+			a
+				display: block
+				max-width: 100%
+				max-height: 100%
+				width: 100%
+				height: 255px
+				@media screen and ( max-width: 1023px)
+					height: auto
+				img
+					height: 100%
+					width: 100%
+					object-fit: cover
+		.content-about
+			padding: 20px 0
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				bottom: -10px
+				left: 0
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				width: 60px
+				height: 2px
+			.title-about
+				a
+					font-size: 22px
+					color: #333333
+					font-weight: 600
+					-webkit-background-clip: text
+			.title-zone
+				font-size: 16px
+				color: #666666
+				margin-top: 15px
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 3
+				-o-text-overflow: ellipsis
+				display: -webkit-box
+				overflow: hidden
+				text-overflow: ellipsis
+			&:hover
+				cursor: pointer
+				.title-about
+					a
+						background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+					
+// section-4
+.about-4
+	padding-top: 20px
+	.row
+		display: flex
+		justify-content: center
+		align-items: center
+		&.bg-4
+			border-radius: 20px
+			padding: 70px 0
+			background-position: unset !important
+			@media screen and ( max-width: 1024px)
+				padding: 30px 0
+	.description
+		font-size: 24px
+		color: #ffffff
+		text-align: center
+		padding-top: 15px
+		padding-left: 150px
+		padding-right: 150px
+		@media screen and ( max-width: 1024px)
+			padding-left: 0
+			padding-right: 0
+	.item-about-4
+		padding-top: 70px
+		@media screen and ( max-width: 1024px)
+			padding-top: 60px
+		ul
+			list-style: none
+			padding: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			@media screen and ( max-width: 1023px)
+				flex-wrap: wrap
+			li
+				padding-right: 140px
+				&:last-child
+					padding-right: 0
+				@media screen and ( max-width: 1023px)
+					flex: 0 0 45%
+					max-width: 45%
+					padding-right: 0
+					text-align: center
+					padding-bottom: 30px
+
+// section-5
+.about-5
+	padding: 70px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	.head-title
+		h2
+			color: #333333
+	.row
+		margin-top: 30px
+		&:nth-child(2n+1)
+			.col-lg-6
+				.item-about-5
+					.card-img
+						order: 2
+						@media screen and ( max-width: 1023px)
+							order: unset
+	.item-about-5
+		display: flex
+		background: #f3f3f3
+		height: 205px
+		@media screen and ( max-width: 1023px)
+			height: auto
+			display: block
+			margin-bottom: 30px
+		.card-img
+			a
+				display: block
+				max-width: 100%
+				max-height: 100%
+				width: 300px
+				height: 205px
+				@media screen and ( max-width: 1260px)
+					width: 100%
+				@media screen and ( max-width: 1023px)
+					height: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		.content-about
+			padding: 20px 30px
+			@media screen and ( max-width: 1260px)
+				width: 60%
+			@media screen and ( max-width: 1023px)
+				width: 100%
+			.date
+				time
+					font-size: 15px
+					color: #999999
+			.title-about
+				a
+					font-size: 18px
+					font-weight: 700
+					color: #333333
+					border-bottom: 1px solid transparent
+					// -webkit-box-orient: vertical
+					// -webkit-line-clamp: 2
+					// -o-text-overflow: ellipsis
+					// display: -webkit-box
+					// overflow: hidden
+					// text-overflow: ellipsis
+			.view-more
+				font-size: 14px
+				color: #97c93d
+				display: flex
+				font-weight: 700
+				margin-top: 60px
+				span
+					padding-left: 10px
+				@media screen and ( max-width: 1024px)
+					margin-top: 30px
+		&:hover
+			cursor: pointer
+			background: #97c93d
+			.content-about
+				.date
+					time
+						color: #ffffff
+				.title-about
+					a
+						color: #ffffff
+						border-bottom: 1px solid #ffffff
+				.view-more
+					color: #ffffff

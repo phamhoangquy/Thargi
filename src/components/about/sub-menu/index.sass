@@ -9,6 +9,9 @@
 			display: flex
 			justify-content: center
 			align-items: center
+			@media screen and ( max-width: 1023px)
+				overflow: auto
+				justify-content: left
 			li
 				padding-top: 10px
 				margin-right: 25px
@@ -19,6 +22,7 @@
 					font-size: 14px
 					color: #666666
 					font-weight: 600
+					white-space: nowrap
 				&.active
 					&::before
 						content: ''
