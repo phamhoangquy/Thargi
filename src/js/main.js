@@ -4,6 +4,7 @@ $(document).ready(function() {
     toggleMobileMenu();
     setBackgroundElement();
     swiperInit();
+    sideNav();
     scrollToDiv();
     // $(document).on("click", function(e) {
     //     if (
@@ -19,6 +20,26 @@ $(document).ready(function() {
     //     }
     // });
 });
+
+
+// toggle-product-list
+function sideNav() {
+    let btn = $('.product-list .item-product-list .content ul li .title-zone span');
+    let subMenuProduct = $('.product-list .item-product-list .content .sub-product');
+    if ($('.product-list .item-product-list .content ul li.has-dropdown').hasClass('active')) {
+        $('.product-list .item-product-list .content ul li.has-dropdown.active .sub-product').slideDown();
+    }
+    btn.on('click', function() {
+        if ($(this).parents('.has-dropdown').hasClass('active')) {
+            $('.product-list .item-product-list .content ul li.has-dropdown').removeClass('active')
+            subMenuProduct.slideUp();
+            $(this).parents('.has-dropdown').removeClass('active').find('.sub-product').slideUp();
+        } else {
+            subMenuProduct.slideUp();
+            $(this).parents('.has-dropdown').addClass('active').find('.sub-product').slideDown();
+        }
+    })
+}
 
 function toggleShoppingCart() {
     $(".cart-header").on("click", function(e) {

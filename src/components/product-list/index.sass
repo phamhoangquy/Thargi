@@ -1,0 +1,266 @@
+.product-list
+	padding: 50px 0
+	.item-product-list
+		border-radius: 10px
+		background-color: rgb(248, 248, 248)
+		box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1)
+		margin-bottom: 30px
+		.sub-title-product
+			padding: 15px 30px
+			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+			border-radius: 10px 10px 0 0
+			h2
+				color: #ffffff
+				font-size: 16px
+				font-weight: 600
+				text-transform: uppercase
+		.content
+			padding: 15px 30px
+			ul
+				list-style: none
+				padding: 0
+				li
+					padding-top: 15px
+					padding-bottom: 15px
+					border-bottom: 1px solid #e5e5e5
+					&:first-child
+						padding-top: 15px
+					&:last-child
+						border-bottom: 0
+					.title-zone
+						cursor: pointer
+						display: flex
+						justify-content: space-between
+						a
+							color: #333333
+							font-size: 15px
+							font-weight: 600
+						span
+							color: #666666
+							font-size: 15px
+						&:hover
+							a
+								color: #58a53f
+							span
+								color: #58a53f
+						&.active
+							a
+								color: #58a53f
+							span
+								color: #58a53f
+					.sub-product
+						padding-left: 15px
+						&:last-child
+							.sub-has-dropdown
+								padding-bottom: 0
+						.sub-has-dropdown
+							padding-top: 15px
+							border-bottom: 0
+							a
+								font-size: 14px
+								font-weight: 500
+								color: #666666
+							&.active
+								a
+									color: #58a53f
+							&:hover
+								a
+									color: #58a53f
+					&.has-dropdown
+						.sub-product
+							display: none
+
+	// checkbox
+	.item-checkbox
+		.checkbox-list
+			border-radius: 10px
+			background-color: rgb(248, 248, 248)
+			box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1)
+			margin-bottom: 30px
+			.title
+				padding: 15px 30px
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				border-radius: 10px 10px 0 0
+				h2
+					color: #ffffff
+					font-size: 16px
+					font-weight: 600
+					text-transform: uppercase
+			.content-checkbox
+				padding: 15px 30px
+				ul
+					list-style: none
+					padding: 0
+					li
+						padding-top: 15px
+						padding-bottom: 15px
+						border-bottom: 1px solid #e5e5e5
+						&:first-child
+							padding-top: 0
+						&:last-child
+							border-bottom: 0
+						a
+							display: flex
+							justify-content: flex-start
+							align-items: flex-start
+							font-size: 15px
+							color: #333333
+							font-weight: 600
+							position: relative
+							&::before
+								content: ''
+								font-family: "remixicon"
+								font-size: 16px
+								display: block
+								font-weight: 200
+								width: 16px
+								height: 16px
+								padding-right: 25px
+								font-weight: 200
+								color: #333333
+							&.active
+								&::before
+									content: '\eb82'
+									color: #58a53f
+							&::before
+								content: '\eb7f'
+						&:hover
+							a
+								color: #58a53f
+						&.active
+							a
+								color: #58a53f
+
+	// product-right
+	.product-right
+		.block-title-sort
+			display: flex
+			justify-content: space-between
+			border-bottom: 1px solid #e5e5e5
+			padding-bottom: 20px
+			@media screen and ( max-width: 576px)
+				display: block
+				.title-product
+					margin-bottom: 10px
+			.title-product
+				h1
+					font-size: 24px
+					color: #333333
+					font-weight: 700
+			.block-sort
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.text-sort
+					font-size: 14px
+					color: #58a53f
+					font-weight: 700
+					text-transform: uppercase
+					padding-right: 20px
+				.select-sort
+					select
+						border: 1px solid #e5e5e5
+						border-radius: 50px
+						padding: 10px 20px
+						color: #999999
+		.product-wrapper
+			border: 1px solid #e5e5e5
+			border-radius: 25px
+			margin-top: 30px
+			padding-top: 27px
+			position: relative
+			.sale
+				position: absolute
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				top: 10px
+				left: 10px
+				font-size: 14px
+				color: #ffffff
+				border-radius: 50px
+				width: 45px
+				height: 25px
+				display: flex
+				justify-content: center
+				align-items: center
+			.card-img
+				text-align: center
+				a
+					img
+						width: 100%
+			.title
+				margin-top: 15px
+				a
+					padding-left: 30px
+					padding-right: 30px
+					font-size: 16px
+					color: #333333
+					font-weight: 700
+					text-align: center
+					-webkit-box-orient: vertical
+					-webkit-line-clamp: 2
+					-o-text-overflow: ellipsis
+					display: -webkit-box
+					overflow: hidden
+					text-overflow: ellipsis
+					height: 50px
+			.block-price
+				display: flex
+				justify-content: center
+				align-items: center
+				padding-top: 5px
+				.price
+					p
+						padding-right: 15px
+						font-size: 18px
+						color: #eb0000
+						font-weight: 700
+				.discount
+					p
+						text-decoration: line-through
+						font-size: 14px
+						color: #333333
+						font-weight: 500
+			.block-btn
+				cursor: pointer
+				border-top: 1px solid #e5e5e5
+				margin-top: 30px
+				@media screen and ( max-width: 576px)
+					margin-top: 15px
+				ul
+					list-style: none
+					display: flex
+					justify-content: center
+					align-items: center
+					padding-left: 0
+					li
+						padding: 20px
+						border-right: 1px solid #e5e5e5
+						&:first-child
+							width: 50%
+						&:last-child
+							width: 50%
+							border-right: 0
+						@media screen and ( max-width: 1024px)
+							padding: 10px
+						a
+							font-size: 14px
+							color: #999999
+							font-weight: 700
+							display: flex
+							justify-content: center
+							align-items: center
+			&:hover
+				cursor: pointer
+				border-color: rgb(221, 240, 187)
+				border: 5px solid rgb(221, 240, 187)
+				.block-btn
+					ul
+						li
+							&:first-child
+								background: #58a53f
+								border-radius: 0 0 0 20px
+							&:last-child
+								border-radius: 0 0 20px 0
+								background: #97c93d
+							a
+								color: #ffffff

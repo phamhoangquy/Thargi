@@ -1,0 +1,115 @@
+section.product-list
+	.container
+		.row
+			.col-lg-3
+				.item-product-list
+					.sub-title-product
+						h2 Danh sách sản phẩm
+					.content
+						ul
+							li.has-dropdown.active
+								.title-zone
+									a(href="#") Rong nho
+									span.ri-arrow-right-s-fill
+								ul.sub-product
+									li.sub-has-dropdown
+										a(href="#") Rong sụn
+									li.active.sub-has-dropdown
+										a(href="#") Rong sụn gai
+							li.has-dropdown
+								.title-zone
+									a(href="#") Rong sụn
+									span.ri-arrow-right-s-fill
+								ul.sub-product
+									li.sub-has-dropdown
+										a(href="#") Rong sụn
+									li.active.sub-has-dropdown
+										a(href="#") Rong sụn gai
+							li.has-dropdown
+								.title-zone
+									a(href="#") Rong mức 
+							li.has-dropdown
+								.title-zone
+									a(href="#") Tảo be
+							li.has-dropdown
+								.title-zone
+									a(href="#") Tảo xoắn
+							li.has-dropdown
+								.title-zone
+									a(href="#") Rong mơ
+
+				.item-checkbox
+					.ajaxfilterresponse
+						.checkbox-list
+							.title
+								h2 Loại sản phẩm
+							.content-checkbox
+								ul
+									li.active.checkbox
+										a(href="#").active.ajaxlink Tươi
+									li.checkbox
+										a(href="#").ajaxlink Khô
+									li.checkbox
+										a(href="#").ajaxlink Bột
+									li.checkbox
+										a(href="#").ajaxlink Snack
+									li.checkbox
+										a(href="#").ajaxlink Nước giải khát
+									li.checkbox
+										a(href="#").ajaxlink Gia vị
+						.checkbox-list
+							.title
+								h2 Cách chế biến
+							.content-checkbox
+								ul
+									li.active.checkbox
+										a(href="#").active.ajaxlink Salad, gỏi
+									li.checkbox
+										a(href="#").ajaxlink Súp, lẩu
+									li.checkbox
+										a(href="#").ajaxlink Snack
+									li.checkbox
+										a(href="#").ajaxlink Kimbap, Shushi
+									li.checkbox
+										a(href="#").ajaxlink Chè, thạch
+									li.checkbox
+										a(href="#").ajaxlink Bánh, mứt
+									li.checkbox
+										a(href="#").ajaxlink Nước giải khát
+									li.checkbox
+										a(href="#").ajaxlink Gia vị
+
+			.col-lg-9
+				.product-right
+					.block-title-sort
+						.title-product
+							h1 Rong nho
+						.block-sort
+							.text-sort Sắp xếp
+							.select-sort
+								select
+									option(value="option-1")
+										a(href="javascript:void(0)") Giá từ thấp đến cao
+									option(value="option-2")
+										a(href="javascript:void(0)") Giá từ cao đến thấp
+					.row
+						-for(i=0;i<12;i++)
+							.col-lg-4
+								.product-wrapper
+									.sale -10%
+									.card-img
+										a(href="#")
+											img(src="./img/product/1.png", alt="")
+									.title
+										a(href="#") Rong mức Nori 500g
+									.block-price
+										.price
+											p 200.000 đ
+										.discount
+											p 235.000 đ
+									.block-btn
+										ul
+											li
+												a(href="#") Xem thêm
+											li
+												a(href="#") Mua ngay

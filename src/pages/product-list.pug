@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Danh sách sản phẩm'
+	- var bodyClass = 'product-list-page'
+
+block main
+	include ../components/UI/top-banner/index
+	include ../components/UI/breadcrumb/index
+	include ../components/product-list/index
+	include ../components/UI/pagination/index
