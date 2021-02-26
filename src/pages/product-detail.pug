@@ -1,12 +1,11 @@
 extends _layout.pug
 
 block var
-	- var title = 'Giới thiệu'
-	- var bodyClass = 'about-page'
+	- var title = 'Sản phẩm chi tiết'
+	- var bodyClass = 'product-detail-page'
 
 block main
 	include ../components/UI/top-banner/index
 	include ../components/sub-menu/index
 	include ../components/UI/breadcrumb/index
-	include ../components/about/index
-	//- .background-img(setBackground='./img/about/bg-1.png' alt="")
+	include ../components/product-list/product-detail/index

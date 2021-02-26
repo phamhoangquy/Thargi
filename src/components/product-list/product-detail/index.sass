@@ -1,0 +1,391 @@
+.product-detail
+	padding: 50px 0
+	// Slide gallery
+	.project-detail-slide
+		.gallery-top
+			border-radius: 25px
+			cursor: pointer
+			border-color: rgb(221, 240, 187)
+			border: 5px solid rgb(221, 240, 187)
+			position: relative
+			.swiper-slide
+				width: 100%
+				height: 400px
+				@media screen and ( max-width: 1023px)
+					height: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+			.nav-arrow-prev,.nav-arrow-next
+				position: absolute
+				width: 40px
+				height: 40px
+				top: 45%
+				display: flex
+				z-index: 5
+				transition: .3s all  ease-in-out
+				cursor: pointer
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 50%
+				border: 1px solid #65ac4a
+				span
+					color: #999999
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+				&:hover
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					border: 1px solid transparent
+					span
+						color: #ffffff
+						-webkit-text-fill-color: unset
+				&:focus
+					outline: none
+			.nav-arrow-next
+				right: 20px
+			.nav-arrow-prev
+				left: 20px
+		.gallery-thumbs
+			margin-top: 20px
+			.swiper-slide
+				border: 1px solid #e0e0e0
+				border-radius: 10px
+				overflow: hidden
+				padding: 5px 20px
+				cursor: pointer
+				img
+					width: 100%
+					height: 70px
+					object-fit: contain
+			// .swiper-slide-thumb-active
+			// 	border: 1px solid #347227
+	// End nút slide
+
+	.description-detail
+		@media screen and ( max-width: 1023px)
+			padding-top: 30px
+		.title-detail
+			position: relative
+			h1
+				font-size: 24px
+				color: #333333
+				&::before
+					content: ''
+					position: absolute
+					bottom: -10px
+					left: 0
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					width: 60px
+					height: 2px
+
+		.desc-top
+			display: flex
+			align-items: center
+			padding-top: 20px
+			@media screen and ( max-width: 576px)
+				display: block
+			.content
+				display: flex
+				justify-content: space-between
+				align-items: center
+				@media screen and ( max-width: 576px)
+					justify-content: flex-start
+					.discount
+						padding: 0 40px !important
+				.price
+					p
+						font-size: 20px
+						color: #eb0000
+						font-weight: 700
+				.discount
+					padding: 0 15px
+					p
+						text-decoration: line-through
+						font-size: 14px
+						color: #333333
+						font-weight: 500
+				.sale
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					font-size: 14px
+					color: #ffffff
+					border-radius: 50px
+					width: 45px
+					height: 25px
+					display: flex
+					justify-content: center
+					align-items: center
+			.code
+				padding-left: 30px
+				@media screen and ( max-width: 576px)
+					padding-left: 0
+					padding-top: 15px
+				p
+					font-size: 14px
+					color: #333333
+					font-weight: 700
+					span
+						font-weight: 500
+
+		.desc-table
+			margin: 15px 0
+			padding: 5px 0
+			border-top: 1px solid #e5e5e5
+			border-bottom: 1px solid #e5e5e5
+			table
+				tbody
+					tr
+						th
+							width: 45%
+							font-size: 16px
+							color: #333333
+							font-weight: 700
+						td
+							font-size: 16px
+							color: #333333
+							height: 45px
+							font-weight: 500
+
+		.desc-bottom
+			display: flex
+			justify-content: space-between
+			align-items: center
+			@media screen and ( max-width: 1199px)
+				display: block
+			@media screen and ( max-width: 768px)
+				display: flex
+			@media screen and ( max-width: 620px)
+				display: block
+			.content
+				display: flex
+				justify-content: space-between
+				align-items: center
+				@media screen and ( max-width: 1199px)
+					justify-content: flex-start
+					.text
+						padding-right: 40px !important
+					.price
+						padding-left: 40px !important
+				.text
+					color: #333333
+					font-size: 14px
+					font-weight: 700
+					padding-right: 15px
+					text-transform: uppercase
+				select
+					border-radius: 50px
+					background: #f3f3f3
+					border: none
+					padding: 10px 20px
+					font-size: 14px
+					color: #333333
+				.price
+					padding-left: 15px
+					p
+						color: #eb0000
+						font-size: 14px
+						font-weight: 700
+			.content-cart-number
+				border-radius: 50px
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				padding: 10px 25px
+				@media screen and ( max-width: 1199px)
+					width: 240px
+					margin-top: 15px
+				@media screen and ( max-width: 768px)
+					margin-top: 0
+				@media screen and ( max-width: 620px)
+					margin-top: 15px
+				.add-to-card
+					display: flex
+					justify-content: center
+					align-items: center
+					color: #ffffff
+					.icon
+						span
+							padding-right: 10px
+
+		.share-detail
+			padding-top: 25px
+			ul
+				list-style: none
+				padding: 0
+				display: flex
+				li
+					display: flex
+					justify-content: center
+					align-items: center
+					padding-right: 25px
+					&:last-child
+						padding-right: 0
+					.caption
+						font-size: 14px
+						color: #333333
+						font-weight: 700
+						text-transform: uppercase
+					a
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+						span
+							font-size: 24px
+							background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+
+// section-2
+.product-detail-2
+	.tab-description
+		overflow-x: auto
+		ul 
+			list-style: none
+			padding: 0
+			display: flex
+			@media screen and ( max-width:  1024.98px)
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				white-space: nowrap
+			li
+				&:first-child
+					width: 50%
+					a
+						border-radius: 10px 0 0 0
+				&:last-child
+					width: 50%
+					a
+						border-radius: 0 10px 0 0
+				a 
+					display: flex
+					align-items: center
+					justify-content: center
+					background-color: #f5f5f5
+					background: none
+					color: #333333
+					font-size: 14px
+					font-weight: 700
+					padding: 20px
+					text-transform: uppercase
+					border-radius: 5px 5px 0 0
+				&:hover
+					a
+						background: #eeeeee
+				&.active
+					a
+						background: #eeeeee
+			@media screen and ( max-width:576px)
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				li 
+					text-align: center
+	.content-description
+		border: 1px solid #e0e0e0
+		padding: 25px
+		background: #f8f8f8
+		.fullcontent
+			p
+				color: #333333
+				font-size: 14px
+				padding-bottom: 20px
+				font-weight: 600
+			ul
+				list-style: none
+				padding: 0
+				li
+					position: relative
+					padding-left: 20px
+					&::before
+						position: absolute
+						content: '\eb7b'
+						font-family: "remixicon"
+						left: 0
+						top: 0
+						font-size: 14px
+						color: #58a53f
+	
+	.col-lg-3
+		@media screen and ( max-width: 1023px)
+			margin-top: 30px
+	.title-right
+		position: relative
+		h3
+			font-size: 24px
+			color: #333333
+			&::before
+				content: ''
+				position: absolute
+				bottom: -10px
+				left: 0
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				width: 60px
+				height: 2px
+
+
+// section-3
+.product-detail-3
+	padding: 50px 0
+	.head-title
+		position: relative
+		h2
+			text-align: left
+			color: #333333
+			text-transform: unset
+			&::before
+				content: ''
+				position: absolute
+				bottom: -10px
+				left: 0
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				width: 60px
+				height: 2px
+	.product-detail-3-swiper-wrapper
+		padding-top: 30px
+		position: relative
+	.nav-arrow-prev,.nav-arrow-next
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 50%
+		transition: .3s all  ease-in-out
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		border: 1px solid #65ac4a
+		span
+			color: #999999
+			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+		&:hover
+			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+			border: 1px solid transparent
+			span
+				color: #ffffff
+				-webkit-text-fill-color: unset
+		&:focus
+			outline: none
+	.nav-arrow-next
+		right: -50px
+		@media screen and ( max-width: 1350px)
+			right: 0
+		@media screen and ( max-width: 767px)
+			right: 15px
+		@media screen and ( max-width: 576px)
+			right: 0
+			
+	.nav-arrow-prev
+		left: -50px
+		@media screen and ( max-width: 1350px)
+			left: 0
+		@media screen and ( max-width: 767px)
+			left: 15px
+		@media screen and ( max-width: 576px)
+			left: 0
+	.swiper-container
+		margin: 0
+		@media screen and ( max-width: 1350px)
+			margin: 0 50px	

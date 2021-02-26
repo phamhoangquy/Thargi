@@ -1,4 +1,4 @@
-.shared-corner-detail-page,.news-detail-page
+.shared-corner-detail-page,.news-detail-page,.product-detail-page
 	.global-breadcrumb
 		margin-top: 100px
 
@@ -8,3 +8,109 @@
 			padding-left: 25%
 			@media screen and ( max-width: 1023px)
 				padding-left: 0
+
+.product-detail-page
+	.global-breadcrumb
+		margin-top: 0
+	// product
+	.product-wrapper
+		border: 1px solid #e5e5e5
+		border-radius: 25px
+		margin-top: 30px
+		padding-top: 27px
+		position: relative
+		.sale
+			position: absolute
+			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+			top: 10px
+			left: 10px
+			font-size: 14px
+			color: #ffffff
+			border-radius: 50px
+			width: 45px
+			height: 25px
+			display: flex
+			justify-content: center
+			align-items: center
+		.card-img
+			text-align: center
+			a
+				img
+					width: 100%
+		.title
+			margin-top: 15px
+			a
+				padding-left: 30px
+				padding-right: 30px
+				font-size: 16px
+				color: #333333
+				font-weight: 700
+				text-align: center
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 2
+				-o-text-overflow: ellipsis
+				display: -webkit-box
+				overflow: hidden
+				text-overflow: ellipsis
+				height: 50px
+		.block-price
+			display: flex
+			justify-content: center
+			align-items: center
+			padding-top: 5px
+			.price
+				p
+					padding-right: 15px
+					font-size: 18px
+					color: #eb0000
+					font-weight: 700
+			.discount
+				p
+					text-decoration: line-through
+					font-size: 14px
+					color: #333333
+					font-weight: 500
+		.block-btn
+			cursor: pointer
+			border-top: 1px solid #e5e5e5
+			margin-top: 30px
+			@media screen and ( max-width: 576px)
+				margin-top: 15px
+			ul
+				list-style: none
+				display: flex
+				justify-content: center
+				align-items: center
+				padding-left: 0
+				li
+					padding: 20px
+					border-right: 1px solid #e5e5e5
+					&:first-child
+						width: 50%
+					&:last-child
+						width: 50%
+						border-right: 0
+					@media screen and ( max-width: 1024px)
+						padding: 10px
+					a
+						font-size: 14px
+						color: #999999
+						font-weight: 700
+						display: flex
+						justify-content: center
+						align-items: center
+		&:hover
+			cursor: pointer
+			border-color: rgb(221, 240, 187)
+			border: 5px solid rgb(221, 240, 187)
+			.block-btn
+				ul
+					li
+						&:first-child
+							background: #58a53f
+							border-radius: 0 0 0 20px
+						&:last-child
+							border-radius: 0 0 20px 0
+							background: #97c93d
+						a
+							color: #ffffff

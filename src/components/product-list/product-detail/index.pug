@@ -1,0 +1,169 @@
+section.product-detail
+	.container
+		.row
+			.col-lg-6
+				.project-detail-slide
+					.swiper-container.gallery-top
+						.swiper-wrapper
+							-for(i=0;i<5;i++)
+								.swiper-slide
+									img(src="./img/product-detail/1.png", alt="")
+						.nav-arrow-prev
+							span.ri-arrow-left-fill
+						.nav-arrow-next
+							span.ri-arrow-right-fill
+					.swiper-container.gallery-thumbs
+						.swiper-wrapper
+							-for(i=0;i<5;i++)
+								.swiper-slide
+									img(src="./img/product-detail/2.png", alt="")
+			.col-lg-6
+				.description-detail
+					.title-detail 
+						h1 Rong nho tươi
+					.desc-top
+						.content
+							.price
+								p 150.000 đ
+							.discount
+								p 165.000 đ
+							.sale -10%
+						.code
+							p Mã sản phẩm: 
+								span VN-RNT-100
+					.desc-table
+						table.table.table-striped
+							tbody
+								tr
+									th(scope='row') Mã sản phẩm
+									|
+									td VN-RNT-100
+								|
+								tr
+									th(scope='row') Tên thương mại
+									|
+									td Umibudo,Green Caviar, Sea Grapes
+								|
+								tr
+									th(scope='row') Tên khoa học
+									|
+									td Caulerpa Lentillifera
+								|
+								tr
+									th(scope='row') Xuất xứ
+									|
+									td Việt Nam
+					.desc-bottom
+						.content
+							.text Khối lượng
+							select
+								option(value="mass-1")
+									a(href="javascript:void(0)") 100 g
+							.price
+								p 150.000 đ
+						.content-cart-number
+							a(href="#").add-to-card
+								.icon
+									span.ri-shopping-cart-2-line
+								span Thêm vào giỏ hàng
+					.share-detail
+						ul
+							li
+								.caption Chia sẻ
+							li
+								a(href="#")
+									span.ri-facebook-fill
+							li
+								a(href="#")
+									span.ri-youtube-fill
+
+section.product-detail-2
+	.container
+		.row
+			.col-lg-9
+				.tab-product-detail
+					.tab-description
+						ul.tab-navigation
+							li.active
+								a(href="javascript:void(0)" data-type='tab-1') Giới thiệu sản phẩm
+							li
+								a(href="javascript:void(0)" data-type='tab-2') Thông tin sản phẩm
+					.content-description
+						.tab-wrapper
+							.tab-item.active#tab-1
+								.fullcontent
+									p Rong nho là một loại tảo biển, có hình dạng giống như chùm nho và được mệnh danh là cá chứng muôi xanh nhưng giá thành lại rẻ so hơn nhiều với trứng cá muối trên được rất nhiều người ưu chuộng.Rong nho là một loại tảo biển, có hình dạng giống như chùm nho và được mệnh danh là cá chứng muôi xanh nhưng giá thành lại rẻ so hơn nhiều với trứng cá muối trên được rất nhiều người ưu chuộng
+									p Rong nho là một loại tảo biển, có hình dạng giống như chùm nho và được mệnh danh là cá chứng muôi xanh Rong nho là một loại tảo biển, có hình dạng giống như chùm nho và được mệnh danh là cá chứng muôi xanh
+									p Tác dụng của nho với sức khỏe
+									ul
+										li
+											p Làm chắc khỏe xương
+										li
+											p Tăng cường thị lực
+										li
+											p Giảm nguy cơ tiểu đường
+										li
+											p Tốt cho tim mạch
+										li
+											p Làm đẹp nha
+										li
+											p Hỗ trợ giảm cân
+										li
+											p Phòng ngừa ung thư
+
+
+			.col-lg-3
+				.title-right
+					h3 Sản phẩm liên quan
+				-for(i=0;i<3;i++)
+					.product-wrapper
+						.sale -10%
+						.card-img
+							a(href="#")
+								img(src="./img/product/1.png", alt="")
+						.title
+							a(href="#") Rong mức Nori 500g
+						.block-price
+							.price
+								p 200.000 đ
+							.discount
+								p 235.000 đ
+						.block-btn
+							ul
+								li
+									a(href="#") Xem thêm
+								li
+									a(href="#") Mua ngay
+
+
+section.product-detail-3 
+	.container
+		.head-title
+			h2 Sản phẩm khác
+		.product-detail-3-swiper-wrapper
+			.nav-arrow-prev
+				span.ri-arrow-left-fill
+			.nav-arrow-next
+				span.ri-arrow-right-fill
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0; i<4; i++)
+						.swiper-slide
+							.product-wrapper
+								.sale -10%
+								.card-img
+									a(href="#")
+										img(src="./img/product/1.png", alt="")
+								.title
+									a(href="#") Rong mức Nori 500g
+								.block-price
+									.price
+										p 200.000 đ
+									.discount
+										p 235.000 đ
+								.block-btn
+									ul
+										li
+											a(href="#") Xem thêm
+										li
+											a(href="#") Mua ngay

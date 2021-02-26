@@ -102,7 +102,9 @@ footer
 								font-size: 12px
 			.subscribe
 				display: flex
-				padding-left: 70px
+				padding-left: 65px
+				@media screen and ( max-width: 1440px)
+					padding-left: 35px
 				@media screen and ( max-width: 1080px)
 					padding-left: 20px
 				@media screen and ( max-width: 768px)
@@ -110,13 +112,14 @@ footer
 					margin-top: 15px
 					display: flex
 				.subscribefrm
+					display: flex
 					@media screen and ( max-width: 1023px)
 						display: flex
 					@media screen and ( max-width: 998.98px)
 						display: block
 					input
 						border: 0
-						width: 380px
+						width: 280px
 						padding: 10px 20px
 						border-radius: 50px
 						background: #f6f6f6
@@ -141,6 +144,9 @@ footer
 							margin-top: 15px
 				.icon-footer
 					padding-left: 25px
+					display: flex
+					justify-content: center
+					align-items: center
 					ul
 						list-style: none
 						padding: 0
