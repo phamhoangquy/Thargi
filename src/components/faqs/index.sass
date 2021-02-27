@@ -1,0 +1,53 @@
+.faqs-list
+	padding: 50px 0 30px 0
+	.faqs
+		margin-top: 30px
+		.block-togglefaqs
+			list-style: none
+			padding: 0
+			li
+				margin-bottom: 10px
+				border-radius: 10px
+				border: 1px solid #e5e5e5
+				&.active
+					border: 1px solid #58a53f
+				.togglefaqs
+					padding: 15px
+					color: #333333
+					background-color: transparent
+					cursor: pointer
+					width: 100%
+					border: none
+					outline: none
+					display: flex
+					justify-content: space-between
+					align-items: center
+					font-size: 16px
+					font-weight: 500
+					// &:hover
+					// 	color: #333333
+					// &:hover:after
+					// 	color: #333333
+					&::after
+						content: '\ea4e'
+						font-family: 'remixicon'
+						color: #333333
+						float: right
+					@media screen and ( max-width: 1024px )
+						padding: 14px 20px
+					@media screen and ( max-width: 576px )
+						padding: 14px 20px
+				.active
+					color: #ffffff
+					background: #58a53f
+					border-radius: 10px 10px 0 0
+				.active:after
+					content: "\ea78"
+					color: #ffffff
+				.content
+					padding: 0 15px
+					max-height: 0
+					overflow: hidden
+					transition: max-height 0.2s ease-out
+					.caption
+						padding: 20px 0

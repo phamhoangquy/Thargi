@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'FAQS'
+	- var bodyClass = 'faqs-page'
+
+block main
+	include ../components/UI/top-banner/index
+	include ../components/UI/breadcrumb/index
+	include ../components/faqs/index
+	include ../components/UI/pagination/index
