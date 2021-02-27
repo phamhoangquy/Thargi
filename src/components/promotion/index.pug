@@ -1,4 +1,32 @@
-section.promotion
+section.promotion-list
 	.container
 		.head-title
 			h1 Khuyến mãi
+		.row
+			.col-lg-6
+				.big-promotion.images-zoom
+					a(href="#")
+						img(src="./img/promotion/1.png", alt="")
+					
+			.col-lg-3
+				.promotion-right.images-zoom
+					a(href="#")
+						img(src="./img/promotion/2.png", alt="")
+				.promotion-right.images-zoom
+					a(href="#")
+						img(src="./img/promotion/2.png", alt="")
+			.col-lg-3.pg
+				-for(i=0;i<3;i++)
+					.content
+						.date
+							time 10.09.2020
+						.title-promotion
+							a(href="#") Giảm 35% off khi mua combo 2 sản phẩm rong nho
+						a(href="").view-more Xem chi tiết
+							span.ri-arrow-right-line
+		.row
+			-for(i=0; i<4; i++)
+				.col-lg-3
+					.small-promotion.images-zoom
+						a(href="#")
+							img(src="./img/promotion/3.png", alt="")
