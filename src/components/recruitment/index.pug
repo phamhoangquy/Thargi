@@ -1,0 +1,40 @@
+section.recruitment
+	.container
+		.head-title
+			h1 Tuyển dụng
+		.row
+			.col-lg-6
+				.card-img
+					.img.images-zoom
+						img(src="./img/recruitment/1.png", alt="")
+			.col-lg-6
+				.content-hr
+					.title-hr
+						h2 Môi trường làm việc
+					.desc-hr 
+						p "Ohroni luôn xem nguồn nhân lực là yếu tố cốt lỗi, tinh thần" và là tài sản quý giá nhất đối với sự phát triển doanh nghiệp. Ngay từ những ngày đầu tiên thành lập đến nay, Ohroni luôn chú trọng đầu tư phát triển và tâm huyết với công việc thông gia tạo dựng môi trường làm việc năng động, trẻ trung, chuyên nghiệp, cạnh tranh lành mạnh nhưng cũng hết sức cởi mở, đoàn kết, yêu thương và giúp đỡ nhau.
+						p "Ohroni luôn xem nguồn nhân lực là yếu tố cốt lỗi, tinh thần" và là tài sản quý giá nhất đối với sự phát triển doanh nghiệp
+
+section.recruitment-2
+	.container
+		.head-title
+			h2 Vị trí tuyển dụng
+		.row
+			-for(i=0; i<6; i++)
+				.col-lg-6
+					.content-jobs-list
+						.title-jobs 
+							a(href="#") Nhân viên kinh doanh
+						.city-jobs
+							.icon-jobs
+								span.ri-map-pin-2-fill
+							.title-zone-city Thành phố Hồ Chí Minh
+						.agree-jobs
+							.date
+								.icon
+									span.ri-calendar-check-fill
+								time 10/02/2020
+							.view-detail
+								a(href="#") View detail
+		a(href="#").big-view Xem thêm
+			span.ri-arrow-down-line
