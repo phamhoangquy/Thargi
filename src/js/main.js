@@ -7,6 +7,8 @@ $(document).ready(function() {
     sideNav();
     projectDetailSlide();
     tabActive();
+    tabProductActive();
+    tabShareActive();
     toggleFaqs();
     scrollToDiv();
     // $(document).on("click", function(e) {
@@ -42,6 +44,29 @@ function toggleFaqs() {
 }
 
 function tabActive() {
+    $(".tab-navigation-2 li a").on("click", function() {
+        $(this)
+            .parents(".tab-navigation-2")
+            .find("li")
+            .removeClass("active");
+        $(this)
+            .parents("li")
+            .addClass("active");
+
+        var display = $(this).attr("data-type");
+        $(".tab-item-2").removeClass("active");
+        $("#" + display).addClass("active");
+
+        let maxHeight = 400;
+        let contentTab = $(".tab-wrapper-2 .tab-item-2.active");
+        // console.log(contentTab.height())
+        if (contentTab.height() < maxHeight) {
+            $(contentTab).find('.btn-view-more').hide()
+        }
+    });
+}
+
+function tabProductActive() {
     $(".tab-navigation li a").on("click", function() {
         $(this)
             .parents(".tab-navigation")
@@ -57,6 +82,29 @@ function tabActive() {
 
         let maxHeight = 400;
         let contentTab = $(".tab-wrapper .tab-item.active");
+        // console.log(contentTab.height())
+        if (contentTab.height() < maxHeight) {
+            $(contentTab).find('.btn-view-more').hide()
+        }
+    });
+}
+
+function tabShareActive() {
+    $(".tab-navigation-3 li a").on("click", function() {
+        $(this)
+            .parents(".tab-navigation-3")
+            .find("li")
+            .removeClass("active");
+        $(this)
+            .parents("li")
+            .addClass("active");
+
+        var display = $(this).attr("data-type");
+        $(".tab-item-3").removeClass("active");
+        $("#" + display).addClass("active");
+
+        let maxHeight = 400;
+        let contentTab = $(".tab-wrapper-3 .tab-item-3.active");
         // console.log(contentTab.height())
         if (contentTab.height() < maxHeight) {
             $(contentTab).find('.btn-view-more').hide()
@@ -261,6 +309,36 @@ function swiperInit() {
         navigation: {
             nextEl: '.product-detail-3 .nav-arrow-next',
             prevEl: '.product-detail-3 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+    });
+    var newsHomeSwiper = new Swiper(".home_s-2 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 10,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.home_s-2 .nav-arrow-next',
+            prevEl: '.home_s-2 .nav-arrow-prev',
         },
         breakpoints: {
             320: {

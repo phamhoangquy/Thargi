@@ -1,0 +1,43 @@
+section.home_s-3
+	.container
+		.head-title
+			h2 Sản phẩm nổi bậc
+		.head-menu
+			ul.tab-navigation-2
+				li.active
+					a(href="javascript:void(0)" data-type='product-1') Tất cả
+				li
+					a(href="javascript:void(0)" data-type='product-2') Rong nho
+				li
+					a(href="javascript:void(0)" data-type='product-3') Rong sụn
+				li
+					a(href="javascript:void(0)" data-type='product-4') Rong nước
+				li
+					a(href="javascript:void(0)" data-type='product-5') Tảo be
+				li
+					a(href="javascript:void(0)" data-type='product-6') Tảo xoắn
+				li
+					a(href="javascript:void(0)" data-type='product-7') Rong mơ
+		.tab-wrapper-2
+			.tab-item-2.active#product-1
+				.row
+					-for(i=0;i<8;i++)
+						.col-lg-3
+							.product-wrapper
+								.card-img
+									a(href="#")
+										img(src="./img/product/1.png", alt="")
+								.title
+									a(href="#") Rong mức Nori 500g
+								.block-price
+									.price
+										p 200.000 đ
+									.discount
+										p 235.000 đ
+								.block-btn
+									ul
+										li
+											a(href="#") Xem thêm
+										li
+											a(href="#") Mua ngay
+			a(href="#").big-view Xem thêm

@@ -1,0 +1,35 @@
+section.home_s-2(setBackground='./img/home/bg-news-home.png' alt="")
+	.container
+		.row
+			.col-lg-3.pg
+				.head-title
+					h2 Tin Tức - khuyến mãi
+				.description Cập nhật những thông tin khuyến mãi mới nhất từ Ohroni
+				a(href="#").view-all Xem tất cả
+			.col-lg-6
+				.big-promotion.images-zoom
+					a(href="#")
+						img(src="./img/promotion/1.png", alt="")
+					
+			.col-lg-3.pg
+				-for(i=0;i<3;i++)
+					.content
+						.date
+							time 10.09.2020
+						.title-promotion
+							a(href="#") Giảm 35% off khi mua combo 2 sản phẩm rong nho
+						a(href="").view-more Xem chi tiết
+							span.ri-arrow-right-line
+	.container
+		.news-home-swiper-wrapper
+			.nav-arrow-prev
+				span.ri-arrow-left-fill
+			.nav-arrow-next
+				span.ri-arrow-right-fill
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0; i<4; i++)
+						.swiper-slide
+							.small-promotion.images-zoom
+								a(href="#")
+									img(src="./img/promotion/3.png", alt="")

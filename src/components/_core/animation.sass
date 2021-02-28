@@ -17,9 +17,25 @@
 	background-position: left !important
 	@media screen and ( max-width: 1440px)
 		background-position: center !important
+.background-home
+	background-size: unset !important
+	background-repeat: no-repeat !important
+	background-position: unset !important
+	@media screen and ( max-width: 1440px)
+		background-size: cover !important
 
 .tab-wrapper
 	.tab-item
+		display: none
+		&.active
+			display: block
+.tab-wrapper-2
+	.tab-item-2
+		display: none
+		&.active
+			display: block
+.tab-wrapper-3
+	.tab-item-3
 		display: none
 		&.active
 			display: block
