@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'ShopTMDT'
+	- var bodyClass = 'shoptmdt-page'
+
+block main
+	include ../components/UI/top-banner/index
+	include ../components/UI/breadcrumb/index
+	include ../components/shop-tmdt/index
