@@ -1,0 +1,188 @@
+.recruitment-detail
+	padding: 30px 0 80px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	.card-title
+		border-bottom: 1px solid #e5e5e5
+		padding-bottom: 15px
+		h1
+			font-size: 30px
+			color: #333333
+			font-weight: 700
+			@media screen and ( max-width: 576px)
+				font-size: 24px
+	.info-hr-detail
+		border-radius: 20px
+		box-shadow: 0px 0px 13.5px 1.5px rgba(0, 0, 0, 0.05)
+		margin-top: 30px
+		display: flex
+		@media screen and ( max-width: 1023px)
+			display: block
+		.card-img
+			img
+				width: 100%
+				height: 395px
+				border-radius: 20px 0 0 20px
+				@media screen and ( max-width: 1023px)
+					height: auto
+					border-radius: unset
+		.card-body-hr-detail
+			padding-left: 35px
+			@media screen and ( max-width: 1023px)
+				padding: 25px
+			.title-zone
+				padding-top: 30px
+				@media screen and ( max-width: 1023px)
+					padding-top: 0
+				h2
+					font-size: 24px
+					color: #97c93d
+					font-weight: 700
+					text-transform: uppercase
+					@media screen and ( max-width: 576px)
+						font-size: 22px
+			table
+				width: 100%
+				tbody
+					tr 
+						width: 100%
+						height: 35px
+						th 
+							width: 50%
+							font-size: 16px
+							color: #666666
+							font-weight: 500
+						td
+							font-size: 16px
+							color: #666666
+	
+	.hr-list-content
+		.hr-detail-content
+			padding: 40px 0 0 0
+			display: flex
+			h3 
+				color: #97c93d
+				font-size: 24px
+				text-transform: uppercase
+				@media screen and ( max-width: 576px)
+					font-size: 22px
+		.text
+			padding-top: 20px
+			ul
+				padding-left: 20px
+				li
+					padding-bottom: 15px
+					p 
+						font-size: 16px
+						color: #333333
+
+	.form-apply-detail
+		display: flex
+	.apply-form
+		display: flex
+		@media screen and(max-width:1025px)
+			margin: 0 !important
+			padding: 0 0 30px 0
+		@media screen and(max-width:767px)
+			position: static
+			display: block
+		.btn.button-apply
+			height: 50px
+			width: 220px
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 1px solid #999999
+			margin-bottom: 10px
+			border-radius: 50px
+			a 
+				color: #999999
+				text-transform: uppercase
+				font-size: 18px
+			&:hover
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				cursor: pointer
+				border: 1px solid transparent
+				a 
+					color: #ffffff
+		.btn.button-download
+			height: 50px
+			width: 220px
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 1px solid #999999
+			border-radius: 50px
+			a 
+				color: #999999
+				font-size: 18px
+				text-transform: uppercase
+			&:hover
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				cursor: pointer
+				border: 1px solid transparent
+				a 
+					color: #ffffff
+		.text
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 0 10px
+
+
+	.card-title-right
+		position: relative
+		h2
+			color: #333333
+			font-weight: 24px
+			font-weight: 700
+			&::before
+				content: ''
+				position: absolute
+				bottom: -20px
+				left: 0
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				width: 60px
+				height: 2px
+	.card-body-right
+		padding-top: 25px
+		.content
+			padding-top: 20px
+			cursor: pointer
+			border-bottom: 1px solid #e0e0e0
+			padding-bottom: 15px
+			&:hover
+				.title-detail
+					a
+						background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+			.title-detail
+				padding-bottom: 5px
+				a
+					font-size: 18px
+					color: #111111
+					font-weight: 700
+					-webkit-background-clip: text
+			.desc-detail
+				.city-detail
+					display: flex
+					.icon
+						span
+							font-size: 16px
+							color: #666666
+							padding-right: 5px
+					.text
+						font-size: 16px
+						color: #666666
+				.date
+					display: flex
+					.icon
+						span
+							font-size: 16px
+							color: #666666
+					time
+						font-size: 16px
+						color: #666666
+						padding-left: 5px
+						width: 85px
