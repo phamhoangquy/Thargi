@@ -12,6 +12,7 @@ $(document).ready(function() {
     toggleFaqs();
     watchMoreDetail();
     scrollToDiv();
+    showBackToTop();
     // $(document).on("click", function(e) {
     //     if (
     //         $(".shopping-cart-toggle").has(e.target).length === 0 &&
@@ -34,7 +35,6 @@ $(document).ready(function() {
             totalHeight += $(this).outerHeight();
         }
     });
-    console.log("")
     $(".list-infor-wrapper .show-information .show-table").css("max-height", totalHeight);
     // End watch more
 });
@@ -426,6 +426,23 @@ function setBackgroundElement() {
             "background-repeat": "repeat"
         });
     });
+}
+
+function showBackToTop() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+            $('#back-to-top').addClass('active');
+        } else {
+            $('#back-to-top').removeClass('active');
+        }
+    });
+
+    $("#back-to-top").on("click", function(e) {
+        e.preventDefault();
+        $("html,body").animate({
+            scrollTop: 0
+        })
+    })
 }
 
 $(document).on('scroll', function() {
