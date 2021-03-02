@@ -66,6 +66,29 @@ function tabActive() {
     });
 }
 
+function tabShareActive() {
+    $(".tab-navigation-3 li a").on("click", function() {
+        $(this)
+            .parents(".tab-navigation-3")
+            .find("li")
+            .removeClass("active");
+        $(this)
+            .parents("li")
+            .addClass("active");
+
+        var display = $(this).attr("data-type");
+        $(".tab-item-3").removeClass("active");
+        $("#" + display).addClass("active");
+
+        let maxHeight = 400;
+        let contentTab = $(".tab-wrapper-3 .tab-item-3.active");
+        // console.log(contentTab.height())
+        if (contentTab.height() < maxHeight) {
+            $(contentTab).find('.btn-view-more').hide()
+        }
+    });
+}
+
 function tabProductActive() {
     $(".tab-navigation li a").on("click", function() {
         $(this)
@@ -89,28 +112,48 @@ function tabProductActive() {
     });
 }
 
-function tabShareActive() {
-    $(".tab-navigation-3 li a").on("click", function() {
-        $(this)
-            .parents(".tab-navigation-3")
-            .find("li")
-            .removeClass("active");
-        $(this)
-            .parents("li")
-            .addClass("active");
-
-        var display = $(this).attr("data-type");
-        $(".tab-item-3").removeClass("active");
-        $("#" + display).addClass("active");
-
-        let maxHeight = 400;
-        let contentTab = $(".tab-wrapper-3 .tab-item-3.active");
-        // console.log(contentTab.height())
-        if (contentTab.height() < maxHeight) {
-            $(contentTab).find('.btn-view-more').hide()
+// watch more detail
+$(".show-information .button-expand").click(function() {
+    $(this).css("display", "none");
+    $(".show-information .button-compact").css("display", "flex");
+    // $(".show-information show-table").addClass("active");
+    $(".show-information show-table").css("max-height", "100%");
+});
+$(".show-information .button-compact").click(function() {
+    $(this).css("display", "none");
+    $(".show-information .button-expand").css("display", "flex");
+    $(".show-information show-table").removeClass("active");
+    let count = 0;
+    let totalHeight = 100;
+    $(".table-info").each(function(i) {
+        if (i < 2) {
+            totalHeight += $(this).outerHeight();
+            console.log(i + " - " + $(this).outerHeight());
         }
+        $(".show-information .show-table").css("max-height", totalHeight);
     });
-}
+});
+
+// $(".show-comment .button-expand").click(function() {
+//     $(this).css("display", "none");
+//     $(".show-comment .button-rut").css("display", "flex");
+//     // $(".show-comment .wrap-bl").addClass("active");
+//     $(".show-comment .journalItems").css("max-height", "100%");
+// });
+// $(".show-comment .button-rut").click(function() {
+//     $(this).css("display", "none");
+//     $(".show-comment .button-expand").css("display", "flex");
+//     $(".show-comment .journalItems").removeClass("active");
+//     let count = 0;
+//     let totalHeight = 0;
+//     $(".cmt-item").each(function(i) {
+//         if (i < 4) {
+//             totalHeight += $(this).outerHeight();
+//             console.log(i + " - " + $(this).outerHeight());
+//         }
+//         $(".show-comment .journalItems").css("max-height", totalHeight);
+//     });
+// });
 
 // toggle-product-list
 function sideNav() {

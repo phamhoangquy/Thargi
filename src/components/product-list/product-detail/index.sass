@@ -305,6 +305,111 @@
 						font-size: 14px
 						color: #58a53f
 	
+	.list-infor-wrapper
+		margin-top: 80px
+		border-radius: 20px
+		background: #f8f8f8
+		padding: 30px
+		.card-title
+			position: relative
+			h2
+				color: #333333
+				font-weight: 24px
+				font-weight: 700
+				&::before
+					content: ''
+					position: absolute
+					bottom: -20px
+					left: 0
+					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+					width: 60px
+					height: 2px
+		.show-table
+			overflow: hidden
+			.table-info
+				margin-top: 45px
+				border: 1px solid #eeeeee
+				border-radius: 10px
+				.title-heading
+					font-size: 14px
+					color: #333333
+					font-weight: 700
+					background: #eeeeee
+					border-radius: 10px 10px 0 0
+					padding: 10px 30px
+				table
+					width: 100%
+					thead
+						tr
+							height: 50px
+							th
+								padding-left: 30px
+								font-size: 14px
+								color: #58a53f
+								font-weight: 700
+								&:last-child
+									text-align: right
+									padding-right: 30px
+					tbody
+						tr
+							height: 50px
+							th
+								font-size: 14px
+								color: #666666
+								padding-left: 30px
+								font-weight: 500
+							td
+								font-size: 14px
+								color: #666666
+								&:nth-child(3)
+									text-align: right
+									padding-right: 30px
+				.view-more
+					font-size: 14px
+					color: #97c93d
+					font-weight: 700
+					background: #eeeeee
+					border-radius: 0 0 10px 10px
+					padding: 10px 30px
+					span
+						padding-left: 5px
+	.wrap-button
+		.button-compact
+			display: none
+	.button-expand
+		margin-top: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		span
+			font-size: 14px
+			color: #97c93d
+			font-weight: 700
+			display: flex
+			justify-content: center
+			align-items: center
+		em
+			padding-left: 5px
+			color: #97c93d
+	.button-compact
+		margin-top: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		span
+			font-size: 14px
+			color: #97c93d
+			font-weight: 700
+			display: flex
+			justify-content: center
+			align-items: center
+		em
+			padding-left: 5px
+			color: #97c93d
+
+	// col-lg-3
 	.col-lg-3
 		@media screen and ( max-width: 1023px)
 			margin-top: 30px

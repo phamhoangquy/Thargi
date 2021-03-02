@@ -111,7 +111,49 @@ section.product-detail-2
 										li
 											p Phòng ngừa ung thư
 
-
+				.list-infor-wrapper
+					.show-information
+						.card-title
+							h2 Thông tin dinh dưỡng
+						.show-table
+							-for(i=0;i<4;i++)
+								.table-info
+									.title-heading Calorie information
+									table.table.table-sm
+										thead
+											tr
+												th(scope='col') Amounts Per Selected Serving
+												|
+												th
+												|
+												th % DV
+										|
+										tbody
+											tr
+												th(scope='row') Calories
+												|
+												td 26.8 (112 KJ)
+												|
+												td 1%
+											tr
+												th(scope='row') Form Carbohydrate
+												|
+												td 18.3 (766 KJ)
+											tr
+												th(scope='row') Form Fat
+												|
+												td 1.3 (5.4 KJ)
+									.view-more 
+										a(href="#") Xem thêm
+										span.ri-arrow-down-s-fill
+							
+						.wrap-button
+							.button-expand
+								span Xem thêm
+								em.ri-arrow-down-s-fill
+							.button-compact
+								span Rút gọn
+								em.ri-arrow-up-s-fill
 			.col-lg-3
 				.title-right
 					h3 Sản phẩm liên quan
@@ -134,7 +176,6 @@ section.product-detail-2
 									a(href="#") Xem thêm
 								li
 									a(href="#") Mua ngay
-
 
 section.product-detail-3 
 	.container
