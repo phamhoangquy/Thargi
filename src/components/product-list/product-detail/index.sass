@@ -337,6 +337,8 @@
 					background: #eeeeee
 					border-radius: 10px 10px 0 0
 					padding: 10px 30px
+				.wrapper-table-inner
+					overflow: hidden
 				table
 					width: 100%
 					thead
@@ -353,7 +355,7 @@
 					tbody
 						tr
 							height: 50px
-							th
+							td
 								font-size: 14px
 								color: #666666
 								padding-left: 30px
@@ -364,19 +366,27 @@
 								&:nth-child(3)
 									text-align: right
 									padding-right: 30px
-				.view-more
-					font-size: 14px
-					color: #97c93d
-					font-weight: 700
+				.wrapper-table
+					.view-table-compact
+						display: none
+				.view-table-expand,.view-table-compact
+					display: flex
+					justify-content: left
+					align-items: center
 					background: #eeeeee
 					border-radius: 0 0 10px 10px
-					padding: 10px 30px
+					cursor: pointer
 					span
-						padding-left: 5px
+						font-size: 14px
+						color: #97c93d
+						font-weight: 700
+						padding: 10px 10px 10px 30px
+					em
+						color: #97c93d
 	.wrap-button
 		.button-compact
 			display: none
-	.button-expand
+	.button-expand,.button-compact
 		margin-top: 20px
 		display: flex
 		justify-content: center
@@ -392,22 +402,7 @@
 		em
 			padding-left: 5px
 			color: #97c93d
-	.button-compact
-		margin-top: 20px
-		display: flex
-		justify-content: center
-		align-items: center
-		cursor: pointer
-		span
-			font-size: 14px
-			color: #97c93d
-			font-weight: 700
-			display: flex
-			justify-content: center
-			align-items: center
-		em
-			padding-left: 5px
-			color: #97c93d
+	
 
 	// col-lg-3
 	.col-lg-3
