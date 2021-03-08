@@ -7,9 +7,9 @@
 
 <portal:ZonesDisplaySettings runat="server" 
 	ShowDescription="true"
-    DescriptionControlType="editor"
+    DescriptionControlType="textarea"
     ShowPrimaryImage="true"
-    ShowSecondImage="true"
+    ShowSecondImage="false"
 	/>
 <portal:BannerDisplaySettings runat="server" 
 	ShowDescription="true"
@@ -25,6 +25,8 @@
 	/>
 <portal:DealerDisplaySettings runat="server" 
 	ShowDescription="true"
+	ShowFax="true"
+	ShowEmail="true"
 	/>
 <portal:ProductDisplaySettings runat="server" 
 	ShowOldPrice="true"

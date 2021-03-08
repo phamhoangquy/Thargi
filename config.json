@@ -7,6 +7,7 @@
         "src/_plugins/ls.unveilhooks.min.js",
         "src/_plugins/mapping.js",
         "src/_plugins/swiper/swiper-bundle.js",
+        "src/_plugins/Tabslet.js",
         "bower_components/lazysizes/lazysizes.js",
         "bower_components/fancybox/dist/jquery.fancybox.min.js"
     ],

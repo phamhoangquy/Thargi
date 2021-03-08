@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 <xsl:output method="html" indent="yes"/>
-	<xsl:template match="/BannerList">
-		<section class="home-banner">
-			<div class="container-fuild">
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<xsl:apply-templates select="Banner"></xsl:apply-templates>
+	<xsl:template match="/NewsList">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="item-shop-tmdt">
+					<ul>
+						<xsl:apply-templates select="News"></xsl:apply-templates>
 						
-					</div>
-				</div>
-				<div class="banner-scroll">
-					<div class="icon-banner"><span class="ri-arrow-down-s-line"></span></div>
+					</ul>
 				</div>
 			</div>
-		</section>
+		</div>
 	</xsl:template>
-	<xsl:template match="Banner">
-		<div class="swiper-slide">
-			<div class="wrapper">
+	<xsl:template match="News">
+		<li>
+			<div class="tmdt">
+				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				<a class=" ">
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
@@ -39,10 +37,6 @@
 					</img>
 				</a>
 			</div>
-			<div class="caption container" setBackground="/Data/Sites/1/media/home/bg-text-banner.png">
-				<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
-				
-			</div>
-		</div>
+		</li>
 	</xsl:template>
 </xsl:stylesheet>
