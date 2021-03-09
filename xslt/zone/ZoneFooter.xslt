@@ -2,9 +2,16 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 <xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
-		<ul class="nav-menu">
-			<xsl:apply-templates select="Zone"></xsl:apply-templates>
-		</ul>
+		<div class="footer-card">
+			<div class="card__title">
+				<h4><xsl:value-of select="ModuleTitle" disable-output-escaping="yes"></xsl:value-of></h4>
+			</div>
+			<div class="item-footer">
+				<ul>
+					<xsl:apply-templates select="Zone"></xsl:apply-templates>
+				</ul>
+			</div>
+		</div>
 	</xsl:template>
 	<xsl:template match="Zone">
 		<li>

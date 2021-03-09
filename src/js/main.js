@@ -46,10 +46,21 @@ $(document).ready(function() {
             totalTableHeight += $(this).outerHeight();
         }
     });
+	changeIframe();
     $(".wrapper-table-inner").css("max-height", totalTableHeight);
     // End watch table
+	setTimeout(() => {
+		$('#l_0').trigger("click")
+	}, 100);
 });
+function changeIframe(){
+	
+	$(document).on('click','ul li', function(){
+		var data = $(this).attr('data-iframe')
+		$('#custom-maps iframe').attr('src', data)
+	})
 
+}
 
 const InsertBd = () => {
     $(".breadcrumb-wrapper").appendTo("#pagebanner .box-text");

@@ -2,20 +2,27 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 <xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
-		<ul class="nav-menu">
-			<xsl:apply-templates select="Zone"></xsl:apply-templates>
-		</ul>
+		<section class="sub-menu-list">
+			<div class="container">
+				<div class="sub-menu">
+					<ul> 
+						<xsl:apply-templates select="Zone[IsActive='true']/Zone"></xsl:apply-templates>
+					</ul>
+				</div>
+			</div>
+		</section>
 	</xsl:template>
 	<xsl:template match="Zone">
 		<li>
-			<xsl:if test="IsActive = 'true'">
+			<xsl:if test="position()=1">
 				<xsl:attribute name="class">
 					<xsl:text disable-output-escaping="yes">active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<a>
+			<a class=" ">
 				<xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
+					<xsl:text disable-output-escaping="yes">#section-</xsl:text>
+					<xsl:value-of select="position()"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
