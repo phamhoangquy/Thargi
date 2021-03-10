@@ -14,20 +14,16 @@ $(document).ready(function() {
     watchTableDetail();
     linkAbout();
     scrollToDiv();
+    changeIframe();
     showBackToTop();
-    // $(document).on("click", function(e) {
-    //     if (
-    //         $(".shopping-cart-toggle").has(e.target).length === 0 &&
-    //         $(".shopping-cart-wrapper").has(e.target).length === 0
-    //     ) {
-    //         $(".shopping-cart-wrapper").removeClass("open");
-    //     }
-    //     if (
-    //         $(".suggestsearch").has(e.target).length === 0
-    //     ) {
-    //         $(".suggestsearch").fadeOut();
-    //     }
-    // });
+    $(document).on("click", function(e) {
+        if (
+            $(".shopping-cart-toggle").has(e.target).length === 0 &&
+            $(".shopping-cart-ab").has(e.target).length === 0
+        ) {
+            $(".shopping-cart-ab").removeClass("open");
+        }
+    });
 
     // watch more
     let totalHeight = 30;
@@ -46,19 +42,20 @@ $(document).ready(function() {
             totalTableHeight += $(this).outerHeight();
         }
     });
-	changeIframe();
     $(".wrapper-table-inner").css("max-height", totalTableHeight);
     // End watch table
-	setTimeout(() => {
-		$('#l_0').trigger("click")
-	}, 100);
+
+    setTimeout(() => {
+        $('#l_0').trigger("click")
+    }, 100);
 });
-function changeIframe(){
-	
-	$(document).on('click','ul li', function(){
-		var data = $(this).attr('data-iframe')
-		$('#custom-maps iframe').attr('src', data)
-	})
+
+function changeIframe() {
+
+    $(document).on('click', 'ul li', function() {
+        var data = $(this).attr('data-iframe')
+        $('#custom-maps iframe').attr('src', data)
+    })
 
 }
 
@@ -127,7 +124,7 @@ function toggleFaqs() {
 
 function toggleShoppingCart() {
     $(".cart-header").on("click", function(e) {
-        $(".shopping-cart-wrapper").toggleClass("open");
+        $(".shopping-cart-ab").toggleClass("open");
         e.stopPropagation();
     });
 }
@@ -339,17 +336,17 @@ function mappingMenu() {
         desktopMethod: 'prependTo',
         breakpoint: 1279
     });
-    $('header .header-top .header-infor .information .hotline-box').mapping({
+    $('header .header-top .header-infor .information .Module.Module-207').mapping({
         mobileWrapper: 'header .menu_mobile .mobile-wrapper',
         mobileMethod: 'appendTo',
         desktopWrapper: 'header .header-top .header-infor .information',
         desktopMethod: 'prependTo',
         breakpoint: 1279
     });
-    $('header .header-top .header-infor .information .searchbox').mapping({
+    $('header .header-top .information .Module.Module-208').mapping({
         mobileWrapper: 'header .menu_mobile .mobile-wrapper',
         mobileMethod: 'appendTo',
-        desktopWrapper: 'header .header-top .header-infor .information',
+        desktopWrapper: 'header .header-top .information',
         desktopMethod: 'prependTo',
         breakpoint: 1279
     });

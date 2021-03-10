@@ -33,6 +33,7 @@ header
 			@media screen and ( max-width: 320px)
 				width: 130px
 			a
+				pointer-events: auto
 				img
 					width: 135px
 					@media screen and ( max-width: 576px)
@@ -58,8 +59,11 @@ header
 		.header-infor
 			display: flex
 			justify-content: flex-end
+			align-items: center
 			.information
 				display: flex
+				justify-content: flex-end
+				align-items: center
 			.searchbox
 				display: flex
 				justify-content: space-between
@@ -150,6 +154,7 @@ header
 					display: flex
 					justify-content: center
 					align-items: center
+					cursor: pointer
 					&.producttitle
 						i
 							font-size: 16px
