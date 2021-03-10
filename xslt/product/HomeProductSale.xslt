@@ -1,42 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-	<xsl:output method="html" indent="yes" />
-	<xsl:template match="/ProductList">
-		<div class="product-right ajaxresponse">
-			<div class="block-title-sort">
-				<div class="title-product">
-					<h1><xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of></h1>
-				</div>
-				<div class="block-sort">
-					<div class="text-sort">Sắp xếp</div>
-					<div class="select-sort"> 
-						<select class="ajaxsort">
-							<xsl:apply-templates select="SortBy"></xsl:apply-templates>
-						</select>
-					</div>
-				</div>
+<xsl:output method="html" indent="yes"/>
+	<xsl:template match="/ZoneList">
+	<section class="home_s-1">
+		<div class="container">
+			<div class="head-title">
+				<h1><xsl:value-of select="ModuleTitle" disable-output-escaping="yes"></xsl:value-of></h1>
 			</div>
-			<div class="row ajaxresponsewrap">
-				<xsl:apply-templates select="Product"></xsl:apply-templates>
-				
+			<div class="head-menu">
+				<ul class="tab-navigation">
+					<li class="active"><a href="javascript:void(0)" data-type="promotion-0">Tất cả</a></li>
+					<xsl:apply-templates select="Zone"></xsl:apply-templates>
+				</ul>
+			</div>
+			<div class="tab-wrapper">
+				<div class="tab-item active" id="promotion-0">
+					<div class="row">
+						<xsl:apply-templates select="Zone/Product"></xsl:apply-templates>
+						
+					</div>
+					<a class="big-view" href="#">
+						<xsl:attribute name="href">
+							<xsl:value-of select="Zone/Url"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="title">
+							<xsl:value-of select="Zone/Title"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="target">
+							<xsl:value-of select="Zone/Target"></xsl:value-of>
+						</xsl:attribute>
+						Xem thêm
+					</a>
+				</div>
+				<xsl:apply-templates select="Zone" mode="ZoneContent"></xsl:apply-templates>
 			</div>
 		</div>
+	</section>
 	</xsl:template>
-	<xsl:template match="SortBy">
-		<option>
-			<xsl:if test="IsActive='true'">
-				<xsl:attribute name="selected">
-					<xsl:text>selected</xsl:text>
+	<xsl:template match="Zone">
+		<li>
+			<a href="javascript:void(0)" data-type="promotion-2">
+				<xsl:attribute name="data-type">
+					<xsl:text disable-output-escaping="yes">promotion-</xsl:text>
+					<xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
 				</xsl:attribute>
-			</xsl:if>
-			<xsl:attribute name="value">
-				<xsl:value-of select="Url"></xsl:value-of>
+				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+			</a>
+		</li>
+	</xsl:template>
+	<xsl:template match="Zone" mode="ZoneContent">
+		<div class="tab-item">
+			<xsl:attribute name="id">
+				<xsl:text disable-output-escaping="yes">promotion-</xsl:text>
+				<xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
 			</xsl:attribute>
-			<xsl:value-of select="Title"></xsl:value-of>
-		</option>
+			<div class="row">
+				<xsl:apply-templates select="Product"></xsl:apply-templates>
+			</div>
+			<a class="big-view" href="#">
+				<xsl:attribute name="href">
+					<xsl:value-of select="Url"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="target">
+					<xsl:value-of select="Target"></xsl:value-of>
+				</xsl:attribute>
+				Xem thêm
+			</a>
+		</div>
 	</xsl:template>
 	<xsl:template match="Product">
-		<div class="col-lg-4">
+		<div class="col-lg-3">
 			<div class="product-wrapper">
 				<xsl:if test="Percent!=''">
 					<div class="product-promotion sale">
@@ -85,8 +121,7 @@
 					<div class="price">
 						<p><xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of></p>
 					</div>
-					<xsl:if test="OldPrice!=''">
-
+					<xsl:if test="OldPrice != ''">
 						<div class="discount">
 							<p><xsl:value-of select="OldPrice" disable-output-escaping="yes"></xsl:value-of></p>
 						</div>

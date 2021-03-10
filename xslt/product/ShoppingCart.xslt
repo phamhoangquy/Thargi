@@ -2,10 +2,25 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
-		<section class="cart-page clearfix">
+		<section class="cart-page clearfix shopping-cart-toggle">
+			<div class="cart-header">
+				<div class="cart-icon">
+					<span class="ri-shopping-cart-2-line"></span>
+				</div>
+				<div class="cart-number">
+					<div class="item-quantity">
+						<span class="text">
+							<xsl:value-of select="/ShoppingCart/YourCartText"></xsl:value-of>
+						</span>
+						<span class="number">( 
+							<xsl:value-of select="/ShoppingCart/TotalProducts"></xsl:value-of>
+						)</span>
+					</div>
+				</div>
+			</div>
 			<xsl:choose>
 				<xsl:when test="count(/ShoppingCart/CartItem)=0">
-					<div class="shopping-cart-toggle">
+					<div class="shopping-cart-ab">
 						<p class="producttitle cart-header">
 							<i class="fa fa-cart-arrow-down"></i>
 							<xsl:text> </xsl:text>
@@ -19,7 +34,7 @@
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
-					<div class="shopping-cart-toggle">
+					<div class="shopping-cart-ab">
 						<div class="carttitle cart-header">
 							<!-- <xsl:value-of select="/ShoppingCart/YourCartText"></xsl:value-of>
 							(
