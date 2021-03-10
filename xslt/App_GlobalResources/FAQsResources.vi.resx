@@ -112,105 +112,123 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DetailText" xml:space="preserve">
-    <value>Chi tiết</value>
+  <data name="AnswerLabel" xml:space="preserve">
+    <value>Trả lời</value>
   </data>
-  <data name="ViewMoreText" xml:space="preserve">
-    <value>Xem thêm</value>
+  <data name="CancelLink" xml:space="preserve">
+    <value>Hủy/Hoàn tất</value>
   </data>
-  <data name="NewsOtherText" xml:space="preserve">
-    <value>Tin tức khác</value>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>Xóa</value>
   </data>
-  <data name="EmploymentInformationText" xml:space="preserve">
-    <value>Thông tin tuyển dụng</value>
+  <data name="DeleteMultiWarning" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa hỏi đáp được chọn?</value>
   </data>
-  <data name="TheDeadlineForSubmissionText" xml:space="preserve">
-    <value>Hạn nộp hồ sơ</value>
+  <data name="DeleteSelectedButton" xml:space="preserve">
+    <value>Xóa (Được chọn)</value>
   </data>
-  <data name="OtherRecruitmentText" xml:space="preserve">
-    <value>Tuyển dụng khác</value>
+  <data name="DeleteWarning" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa?</value>
   </data>
-  <data name="NewsOtherText" xml:space="preserve">
-    <value>Tin tức khác</value>
+  <data name="DisplayOrderLabel" xml:space="preserve">
+    <value>Thứ tự</value>
   </data>
-  <data name="InformationText" xml:space="preserve">
-    <value>Thông tin</value>
+  <data name="EditHeading" xml:space="preserve">
+    <value>Thêm/Sửa câu hỏi</value>
   </data>
-  <data name="RelatedProjectsText" xml:space="preserve">
-    <value>Dự án liên quan</value>
+  <data name="EditLink" xml:space="preserve">
+    <value>Sửa</value>
   </data>
-  <data name="ViewMoreAllText" xml:space="preserve">
-    <value>Xem tất cả</value>
+  <data name="EditPageTitle" xml:space="preserve">
+    <value>Thêm/Sửa câu hỏi</value>
   </data>
-  <data name="EndDateText" xml:space="preserve">
-    <value>Ngày hết hạn</value>
+  <data name="FAQsFeatureName" xml:space="preserve">
+    <value>Hỏi đáp</value>
   </data>
-  <data name="OtherVacanciesText" xml:space="preserve">
-    <value>Vị trí tuyển dụng khác</value>
+  <data name="FAQsListHeading" xml:space="preserve">
+    <value>Danh sách hỏi đáp</value>
   </data>
-  <data name="AllText" xml:space="preserve">
-    <value>Tất cả</value>
+  <data name="FAQsListLink" xml:space="preserve">
+    <value>Danh sách hỏi đáp</value>
   </data>
-  <data name="CategoryText" xml:space="preserve">
-    <value>Danh mục</value>
+  <data name="FAQsManageMenuLink" xml:space="preserve">
+    <value>Hỏi đáp</value>
   </data>
-  <data name="DiscoverMoreText" xml:space="preserve">
-    <value>Khám phá</value>
+  <data name="FAQsPermissions" xml:space="preserve">
+    <value>Hỏi đáp</value>
   </data>
-  <data name="ViewAllText" xml:space="preserve">
-    <value>Xem tất cả</value>
+  <data name="InsertLink" xml:space="preserve">
+    <value>Thêm mới</value>
   </data>
-  <data name="DiscoverNowText" xml:space="preserve">
-    <value>Khám phá ngay</value>
+  <data name="ItemsPerPageSetting" xml:space="preserve">
+    <value>Số hỏi đáp/trang</value>
   </data>
-  <data name="ExclusiveOfferText" xml:space="preserve">
-    <value>Ưu đãi độc quyền</value>
+  <data name="ItemsPerPageSettingRegexWarning" xml:space="preserve">
+    <value>Phải là 1 số nguyên. Mặc định là 10</value>
   </data>
-  <data name="ReadMoreText" xml:space="preserve">
-    <value>Xem thêm</value>
+  <data name="PermissionsFAQsCreate" xml:space="preserve">
+    <value>Tạo hỏi đáp</value>
   </data>
-  <data name="DiscoverNearbyAttractionsText" xml:space="preserve">
-    <value>khám phá những điểm thu hút gần đó</value>
+  <data name="PermissionsFAQsDelete" xml:space="preserve">
+    <value>Xóa hỏi đáp</value>
   </data>
-  <data name="WeCanHelpText" xml:space="preserve">
-    <value>Gửi câu hỏi cho chúng tôi nếu bạn cần thêm thông tin.</value>
+  <data name="PermissionsFAQsUpdate" xml:space="preserve">
+    <value>Cập nhật hỏi đáp</value>
   </data>
-  <data name="BookNowText" xml:space="preserve">
-    <value>Đặt phòng ngay</value>
+  <data name="PermissionsFAQsViewList" xml:space="preserve">
+    <value>Xem danh sách hỏi đáp</value>
   </data>
-  <data name="NextText" xml:space="preserve">
-    <value>Tiếp</value>
+  <data name="PositionLabel" xml:space="preserve">
+    <value>Vị trí đặc biệt</value>
   </data>
-  <data name="ContactUsText" xml:space="preserve">
-    <value>Liên hệ</value>
+  <data name="PositionSetting" xml:space="preserve">
+    <value>Vị trí đặc biệt</value>
   </data>
-  <data name="ViewProductsText" xml:space="preserve">
-    <value>Xem sản phẩm</value>
+  <data name="QuestionLabel" xml:space="preserve">
+    <value>Câu hỏi</value>
   </data>
-  <data name="DistributionSystemText" xml:space="preserve">
-    <value>Hệ thống phân phối</value>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Lưu</value>
   </data>
-  <data name="BuyNowText" xml:space="preserve">
-    <value>Mua ngay</value>
+  <data name="SelectZoneMessage" xml:space="preserve">
+    <value>Vui lòng chọn chuyên mục</value>
   </data>
-  <data name="PleaseChooseText" xml:space="preserve">
-    <value>Vui lòng chọn</value>
+  <data name="SendQuestionEmptyMessageWarning" xml:space="preserve">
+    <value>Bạn phải nhập nội dung câu hỏi.</value>
   </data>
-  <data name="FindProductsText" xml:space="preserve">
-    <value>Tìm sản phẩm</value>
+  <data name="SendQuestionMessageLabel" xml:space="preserve">
+    <value>Nội dung (*)</value>
   </data>
-  <data name="ViewAllProductsText" xml:space="preserve">
-    <value>Xem tất cả sản phẩm</value>
+  <data name="SendQuestionSendButton" xml:space="preserve">
+    <value>Gửi</value>
   </data>
-  <data name="ProductsOfTheSameTypeText" xml:space="preserve">
-    <value>Sản phẩm cùng loại</value>
+  <data name="SendQuestionSubjectLabel" xml:space="preserve">
+    <value>Tiêu đề</value>
   </data>
-  <data name="ProductsOfText" xml:space="preserve">
-    <value>Các sản phẩm</value>
+  <data name="SendQuestionThankYouLabel" xml:space="preserve">
+    <value>Đã nhận được câu hỏi của bạn. Cảm ơn bạn đã quan tâm!</value>
+  </data>
+  <data name="SendQuestionValidAddressLabel" xml:space="preserve">
+    <value>Email không hợp lệ.</value>
+  </data>
+  <data name="SendQuestionYourEmailLabel" xml:space="preserve">
+    <value>Email của bạn (*)</value>
+  </data>
+  <data name="SendQuestionYourNameLabel" xml:space="preserve">
+    <value>Tên của bạn</value>
+  </data>
+  <data name="ShowAllItemsFromChildPageSetting" xml:space="preserve">
+    <value>Hiển thị tất cả hỏi đáp của trang con</value>
+  </data>
+  <data name="SubmitAQuestionLink" xml:space="preserve">
+    <value>Gửi câu hỏi cho chúng tôi</value>
+  </data>
+  <data name="XsltFileName" xml:space="preserve">
+    <value>Tập tin mẫu</value>
   </data>
 </root>

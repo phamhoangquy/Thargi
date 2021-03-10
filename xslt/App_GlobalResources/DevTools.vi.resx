@@ -112,105 +112,90 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DetailText" xml:space="preserve">
-    <value>Detail</value>
+  <data name="Clear" xml:space="preserve">
+    <value>Xóa</value>
   </data>
-  <data name="ViewMoreText" xml:space="preserve">
-    <value>View More</value>
+  <data name="DeleteSavedQuery" xml:space="preserve">
+    <value>Xóa truy vấn đã lưu</value>
   </data>
-  <data name="NewsOtherText" xml:space="preserve">
-    <value>News Other</value>
+  <data name="DevToolsHeading" xml:space="preserve">
+    <value>Công cụ phát triển</value>
   </data>
-  <data name="EmploymentInformationText" xml:space="preserve">
-    <value>Employment information</value>
+  <data name="ExecuteNonQuery" xml:space="preserve">
+    <value>Execute Non Query</value>
   </data>
-  <data name="TheDeadlineForSubmissionText" xml:space="preserve">
-    <value>The deadline for submission</value>
+  <data name="ExecuteQuery" xml:space="preserve">
+    <value>Execute Query</value>
   </data>
-  <data name="OtherRecruitmentText" xml:space="preserve">
-    <value>Other recruitment</value>
+  <data name="LoadSavedQuery" xml:space="preserve">
+    <value>Load Saved Query</value>
   </data>
-  <data name="NewsOtherText" xml:space="preserve">
-    <value>News other</value>
+  <data name="NoQueryWarning" xml:space="preserve">
+    <value>Vui lòng nhập truy vấn</value>
   </data>
-  <data name="InformationText" xml:space="preserve">
-    <value>Information</value>
+  <data name="QueryNameRequired" xml:space="preserve">
+    <value>Vi lòng nhập tên truy vấn</value>
   </data>
-  <data name="RelatedProjectsText" xml:space="preserve">
-    <value>Related projects</value>
+  <data name="QueryToolHeadingFormat" xml:space="preserve">
+    <value>Công cụ Truy vấn {0}</value>
   </data>
-  <data name="ViewMoreAllText" xml:space="preserve">
-    <value>View More All</value>
+  <data name="QueryToolLink" xml:space="preserve">
+    <value>Công cụ truy vấn</value>
   </data>
-  <data name="EndDateText" xml:space="preserve">
-    <value>End date</value>
+  <data name="QueryToolWarning" xml:space="preserve">
+    <value>Với công cụ này bạn có thể xóa toàn bộ dữ liệu website. Bạn không nên dùng nó trừ khi bạn là một chuyên gia SQL và biết bạn đang làm gì.</value>
   </data>
-  <data name="OtherVacanciesText" xml:space="preserve">
-    <value>Other Vacancies</value>
+  <data name="SavedQueries" xml:space="preserve">
+    <value>Saved Queries</value>
   </data>
-  <data name="AllText" xml:space="preserve">
-    <value>All</value>
+  <data name="SaveQueryAs" xml:space="preserve">
+    <value>Save Query As</value>
   </data>
-  <data name="CategoryText" xml:space="preserve">
-    <value>Category</value>
+  <data name="ServerVariablesLink" xml:space="preserve">
+    <value>Server Variables</value>
   </data>
-  <data name="DiscoverMoreText" xml:space="preserve">
-    <value>Discover More</value>
+  <data name="SqlQuery" xml:space="preserve">
+    <value>SQL Query</value>
   </data>
-  <data name="ViewAllText" xml:space="preserve">
-    <value>View All</value>
+  <data name="SelectButton" xml:space="preserve">
+    <value>Select</value>
   </data>
-  <data name="DiscoverNowText" xml:space="preserve">
-    <value>Discover Now</value>
+  <data name="Tables" xml:space="preserve">
+    <value>Tables</value>
   </data>
-  <data name="ExclusiveOfferText" xml:space="preserve">
-    <value>Exclusive Offer</value>
+  <data name="DesignTools" xml:space="preserve">
+    <value>Công cụ thiết kế</value>
   </data>
-  <data name="ReadMoreText" xml:space="preserve">
-    <value>Read More</value>
+  <data name="DisableCssCaching" xml:space="preserve">
+    <value>Tắt bộ nhớ đệm CSS</value>
   </data>
-  <data name="DiscoverNearbyAttractionsText" xml:space="preserve">
-    <value>discover nearby attractions</value>
+  <data name="EnableCssCaching" xml:space="preserve">
+    <value>Kích hoạt bộ nhớ đệm CSS</value>
   </data>
-  <data name="WeCanHelpText" xml:space="preserve">
-    <value>We can help you with any questions or information.</value>
+  <data name="SkinManagement" xml:space="preserve">
+    <value>Quản lý skin</value>
   </data>
-  <data name="BookNowText" xml:space="preserve">
-    <value>Book Now</value>
+  <data name="DownloadSkin" xml:space="preserve">
+    <value>Tải về giao diện (Skin)</value>
   </data>
-  <data name="NextText" xml:space="preserve">
-    <value>Next</value>
+  <data name="CacheTool" xml:space="preserve">
+    <value>Công cụ bộ nhớ đệm</value>
   </data>
-  <data name="ContactUsText" xml:space="preserve">
-    <value>Contact Us</value>
+  <data name="GenerateCss" xml:space="preserve">
+    <value>Tạo CSS</value>
   </data>
-  <data name="ViewProductsText" xml:space="preserve">
-    <value>View Products</value>
+  <data name="LessInstructions" xml:space="preserve">
+    <value>Nhập mã LESS ở trên và bấm vào nút để tạo ra CSS ở phía dưới.</value>
   </data>
-  <data name="DistributionSystemText" xml:space="preserve">
-    <value>Distribution system</value>
+  <data name="LessUtility" xml:space="preserve">
+    <value>Tiện ích LESS</value>
   </data>
-  <data name="BuyNowText" xml:space="preserve">
-    <value>Buy Now</value>
-  </data>
-  <data name="PleaseChooseText" xml:space="preserve">
-    <value>Please choose</value>
-  </data>
-  <data name="FindProductsText" xml:space="preserve">
-    <value>Find products</value>
-  </data>
-  <data name="ViewAllProductsText" xml:space="preserve">
-    <value>View All Products</value>
-  </data>
-  <data name="ProductsOfTheSameTypeText" xml:space="preserve">
-    <value>Products Of The Same Type</value>
-  </data>
-  <data name="ProductsOfText" xml:space="preserve">
-    <value>Products Of</value>
+  <data name="ExportQueryDataAsCSV" xml:space="preserve">
+    <value>Execute Query and Export as CSV</value>
   </data>
 </root>
