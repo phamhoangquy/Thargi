@@ -144,3 +144,69 @@
 				width: 100%
 				text-align: center
 				font-weight: 600
+
+
+// cart - step 1
+.header-cartpage
+	display: flex
+	padding-top: 30px
+	// position: fixed
+	// top: 0
+	// left: 0
+	// align-items: center
+	// z-index: 9999
+	// transition: all .3s ease-in-out
+	// background-color: #fff
+	// width: 100%
+	// height: 120px
+	// min-height: 50px
+	.main-pm
+		display: flex
+		position: relative
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		max-width: 715px
+		&::before
+			position: absolute
+			top: 30%
+			left: 4%
+			transform: translateY(-50%)
+			z-index: -1
+			border: thin dashed #e1e1e1
+			// width: 85.314685314%
+			width: 96%
+			height: 1px
+			content: ""
+		.step-pm
+			display: flex
+			flex:  0 0 35%
+			flex-direction: column
+			align-items: center
+			padding-right: 30px
+			&:first-of-type
+				flex: 0 0 10%
+			&.active
+				.step-count
+					border: thin solid #58a53f
+					background-color: #58a53f
+					color: #fff
+			.step-count
+				display: flex
+				align-items: center
+				justify-content: center
+				border: thin solid #e1e1e1
+				border-radius: 50%
+				background-color: #fafafa
+				width: 40px
+				height: 40px
+				color: #58a53f
+				font-size: 1.125rem
+				font-weight: 500
+				text-transform: uppercase
+			.name
+				margin-top: 3px
+				color: #58a53f
+				font-size: 1rem
+				font-weight: 600
+				white-space: nowrap
