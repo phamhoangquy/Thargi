@@ -586,21 +586,30 @@
 			overflow: hidden
 			.wrap-form
 				padding: 20px 30px
-				.group
+				.group,.user-info
+					width: 100%
+					.check-group
+						margin-top: 20px
+						margin-bottom: 20px
 					.form-group
 						width: 100%
 						display: flex
 						flex-wrap: wrap
+						@media screen and ( max-width: 576px)
+							display: block
 						.label
 							width: 200px
 							font-size: .875rem
 							align-items: center
 							label
+								display: block !important
 								font-size: 16px
 								color: #333333
 								font-weight: 400
 						.input
-							widows: calc( 100% - 200px )
+							width: calc( 100% - 200px )
+							@media screen and ( max-width: 576px)
+								width: 100%
 							input, select, textarea
 								height: 50px
 								width: 100%
@@ -609,6 +618,213 @@
 								font-weight: 400
 								color: #333333
 								background: #fafafa
+								border-radius: 10px !important
+								border: 1px solid #fafafa
+								margin-bottom: 15px !important
 								&::placeholder
 									color: #999999
 									opacity: 1
+							select
+								margin-bottom: 15px
+							.des
+								width: 100%
+								color: #999
+								font-size: 14px
+								font-style: normal
+								font-weight: 400
+
+	.export-bill
+		margin-bottom: 15px
+		.bill-form
+			border: none
+			border-radius: 10px
+			background: #fff
+			padding: 0
+			box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
+			overflow: hidden
+			.carttitle
+				color: #58a53f
+				font-size: 24px
+				font-weight: 700
+				border-bottom: 1px solid #e1e1e1
+				background: #fff
+				padding: 15px 30px
+				text-transform: none
+			.wrap-form
+				padding: 20px 30px
+				.form-group
+					width: 100%
+					display: flex
+					flex-wrap: wrap
+					@media screen and ( max-width: 576px)
+						display: block
+					.label
+						width: 200px
+						font-size: .875rem
+						align-items: center
+						label
+							display: block !important
+							font-size: 16px
+							color: #333333
+							font-weight: 400
+					.input
+						width: calc( 100% - 200px )
+						@media screen and ( max-width: 576px)
+							width: 100%
+						input, select, textarea
+							height: 50px
+							width: 100%
+							padding: 5px 25px
+							font-size: 16px
+							font-weight: 400
+							color: #333333
+							background: #fafafa
+							border-radius: 10px !important
+							border: 1px solid #fafafa
+							margin-bottom: 15px !important
+							&::placeholder
+								color: #999999
+								opacity: 1
+						select
+							margin-bottom: 15px
+				.des
+					font-size: .875rem
+					color: #999
+				.dieu-khoan
+					margin-top: 10px
+					color: #068fdd
+					font-size: 14px
+					font-weight: 400
+					text-decoration: underline
+
+	.btn-wrap
+		padding-bottom: 40px
+		.btn-back
+			padding-right: 0
+			padding-left: 0
+			color: #999
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			display: flex
+			&::before
+				content: '\ea64'
+				font-family: "remixicon"
+				top: 0
+				left: 0
+				padding-right: 5px
+			&:hover
+				color: #58a53f
+		.btn-continue
+			display: flex
+			align-items: center
+			justify-content: center
+			border: none
+			border-radius: 0
+			border-bottom-right-radius: 15px
+			border-bottom-left-radius: 15px
+			background: #58a53f
+			padding: 5px 25px
+			min-width: 240px
+			height: 40px
+			color: #fff
+			font-size: 14px
+			font-weight: 700
+			letter-spacing: normal
+			text-transform: uppercase
+			margin-left: auto
+			&::after
+				content: '\ea6e'
+				font-family: "remixicon"
+				top: 0
+				right: 0
+				padding-left: 5px
+
+	// right
+	.minicart
+		border: none
+		border-radius: 10px
+		background: #fff
+		padding: 0
+		overflow: hidden
+		box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
+		@media screen and ( max-width: 1024px)
+			margin-bottom: 30px
+		.carttitle
+			color: #58a53f
+			font-size: 24px
+			font-weight: 700
+			border-bottom: 1px solid #e1e1e1
+			background: #fff
+			padding: 15px 30px
+			text-transform: none
+			@media screen and ( max-width: 576px)
+				font-size: 20px
+		.btn-edit
+			position: absolute
+			top: 8px
+			right: 15px
+			font-size: 0
+			color: #58a53f
+		.carttable
+			padding: 20px
+			.group
+				padding: 10px 0
+				display: flex
+				flex-wrap: wrap
+				&:first-child
+					padding-bottom: 15px
+					border-top: none
+					border-bottom: 1px solid #e6e6e6
+				&:last-child
+					border-top: 1px solid #e6e6e6
+					padding-top: 15px
+				.label
+					color: #333
+					font-size: 14px
+					width: calc(100% - 150px)
+					text-align: left
+					font-weight: 600
+				.value
+					width: 150px
+					text-align: right
+					color: #333
+					font-size: 14px
+					font-weight: 400
+					&.order-total
+						color: #ed1c24
+						font-size: 18px
+						font-weight: 700
+				.product
+					width: calc(100% - 100px)
+					margin: 0
+					.productimg
+						border: none
+						width: 70px
+						height: 70px
+						display: flex
+						justify-content: center
+						align-items: center
+						float: left
+						background: #ffffff
+						border: 1px solid #f6f6f6
+					.productdetail
+						width: calc(100% - 70px)
+						float: left
+						padding-left: 10px
+						.productname
+							color: #111
+							font-size: 12px
+							font-weight: 500
+				.amount
+					text-align: right
+					width: 100px
+					white-space: nowrap
+					.price,.count
+						color: #333
+						font-size: 14px
+						font-weight: 400
+					.total
+						color: #58a53f
+						font-size: 15px
+						font-weight: 700
