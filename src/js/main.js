@@ -457,6 +457,36 @@ function swiperInit() {
             },
         },
     });
+    var newsDetailSwiper = new Swiper(".product-lastview .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 10,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.product-lastview .swiper-button-next',
+            prevEl: '.product-lastview .swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+    });
 }
 
 function setBackgroundElement() {
