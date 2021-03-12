@@ -42,17 +42,24 @@
 	.caption
 		position: absolute
 		bottom: 80px
-		left: 50%
-		z-index: 2
-		transform: translateX(-50%)
-		padding-left: 250px
-		max-width: 1230px
-		width: 100%
+		left: 18%
 		padding: 60px
+		z-index: 2
+		// transform: translateX(-50%)
+		// padding-left: 250px
+		// max-width: 1230px
+		// width: 100%
+		@media screen and ( max-width: 1600px)
+			left: 11%
+		@media screen and ( max-width: 1440px)
+			left: 7%
+		@media screen and ( max-width: 1280px)
+			left: 3%
+			bottom: 125px
 		@media screen and ( max-width: 1024px)
-			bottom: 50px
-		@media screen and(max-width:575px)
-			width: 100%
+			bottom: 80px
+		@media screen and ( max-width: 576px)
+			padding: 30px
 		.title-caption
 			&:first-child
 				font-size: 18px
@@ -60,6 +67,8 @@
 				font-style: italic
 				text-transform: uppercase
 				font-weight: 700
+				@media screen and ( max-width: 576px)
+					font-size: 16px
 			&:nth-child(2)
 				font-size: 60px
 				color: #58a53f
@@ -67,17 +76,35 @@
 				display: flex
 				text-transform: uppercase
 				position: relative
-			&:nth-child(3)
-				font-size: 24px
-				color: #333333
-				font-weight: 400
+				@media screen and ( max-width: 1280px)
+					font-size: 55px
+				@media screen and ( max-width: 1023px)
+					font-size: 48px
+				@media screen and ( max-width: 576px)
+					font-size: 36px
+		.title-caption-zone
+			font-size: 24px
+			color: #333333
+			font-weight: 400
+			@media screen and ( max-width: 576px)
+				font-size: 16px
 		.text
 			font-size: 30px
 			color: #97c93d
 			margin-top: 10px
 			position: absolute
-			left: 25%
+			left: 74%
 			top: 25%
+			@media screen and ( max-width: 1024px)
+				left: 70%
+			@media screen and ( max-width: 1023px)
+				left: 63%
+			@media screen and ( max-width: 576px)
+				top: 20%
+				left: 70%
+				font-size: 20px
+			@media screen and ( max-width: 320px)
+				left: 70%
 		.view-more-banner
 			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
 			border-radius: 50px

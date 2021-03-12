@@ -343,10 +343,10 @@ function mappingMenu() {
         desktopMethod: 'prependTo',
         breakpoint: 1279
     });
-    $('header .header-top .information .Module.Module-208').mapping({
+    $('header .header-top .header-infor .information .Module.Module-208 .hotline-box').mapping({
         mobileWrapper: 'header .menu_mobile .mobile-wrapper',
         mobileMethod: 'appendTo',
-        desktopWrapper: 'header .header-top .information',
+        desktopWrapper: 'header .header-top .header-infor .information .Module.Module-208',
         desktopMethod: 'prependTo',
         breakpoint: 1279
     });

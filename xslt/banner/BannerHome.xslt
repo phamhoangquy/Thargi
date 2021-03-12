@@ -41,7 +41,6 @@
 			</div>
 			<div class="caption container" setBackground="/Data/Sites/1/media/home/bg-text-banner.png">
 				<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
-				
 			</div>
 		</div>
 	</xsl:template>
