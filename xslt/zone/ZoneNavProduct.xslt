@@ -36,7 +36,7 @@
 					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 				</a>
 				<xsl:if test="count(Zone)&gt;0">
-					<span class="ri-arrow-right-s-fill"></span>
+					<span class="ri-arrow-down-s-fill"></span>
 				</xsl:if>
 			</div>
 			<xsl:if test="count(Zone)&gt;0">
