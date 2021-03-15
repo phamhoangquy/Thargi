@@ -59,9 +59,9 @@ function changeIframe() {
 
 }
 
-const InsertBd = () => {
-    $(".breadcrumb-wrapper").appendTo("#pagebanner .box-text");
-};
+// const InsertBd = () => {
+//     $(".breadcrumb-wrapper").appendTo("#pagebanner .box-text");
+// };
 
 function height(el) {
     var height = 0;

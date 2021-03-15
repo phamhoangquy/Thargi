@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 <xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
-		<section class="about">
+		<section class="about" id="section-1">
 			<xsl:attribute name="setBackground">
 				<xsl:value-of select="Zone[1]/ImageUrl" disable-output-escaping="yes"></xsl:value-of>
 			</xsl:attribute>
@@ -11,7 +11,7 @@
 			</div>
 		</section>
 		
-		<section class="about-2">
+		<section class="about-2" id="section-2">
 			<xsl:attribute name="setBackground">
 				<xsl:value-of select="Zone[2]/ImageUrl" disable-output-escaping="yes"></xsl:value-of>
 			</xsl:attribute>
@@ -30,7 +30,7 @@
 			<xsl:attribute name="setBackground">
 				<xsl:value-of select="Zone[3]/ImageUrl" disable-output-escaping="yes"></xsl:value-of>
 			</xsl:attribute>
-			<section class="about-3">
+			<section class="about-3" id="section-3">
 				<div class="container">
 					<div class="head-title">
 						<h2><xsl:value-of select="Zone[3]/Title" disable-output-escaping="yes"></xsl:value-of></h2>
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="about-4">
+			<section class="about-4" id="section-4">
 				<div class="container">
 					<div class="row bg-4">
 						<xsl:attribute name="setBackground">
@@ -64,7 +64,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="about-5">
+			<section class="about-5" id="section-5">
 				<div class="container">
 					<div class="head-title">
 						<h2>

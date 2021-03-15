@@ -47,13 +47,14 @@
 										</a>
 									</div>
 								</xsl:if>
-								<div class="form-apply">
-									<iframe>
-										<xsl:attribute name="src">
-											<xsl:value-of select="ApplyUrl"></xsl:value-of>
-										</xsl:attribute>
-									</iframe>
-								</div>
+							
+							</div>
+							<div class="form-apply" id="form-apply" style="display: none">
+								<iframe>
+									<xsl:attribute name="src">
+										<xsl:value-of select="ApplyUrl"></xsl:value-of>
+									</xsl:attribute>
+								</iframe>
 							</div>
 						</div>
 					</div>
