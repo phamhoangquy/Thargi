@@ -15,6 +15,8 @@ $(document).ready(function() {
     linkAbout();
     scrollToDiv();
     changeIframe();
+    quantityNumber();
+    checkFormCart();
     showBackToTop();
     $(document).on("click", function(e) {
         if (
@@ -49,6 +51,38 @@ $(document).ready(function() {
         $('#l_0').trigger("click")
     }, 100);
 });
+
+function checkFormCart() {
+    $('input[id="ttmh"]').click(function() {
+        if ($(this).prop("checked") == true) {
+            $(".cart-page-step-3 .receive-address .user-info").slideDown();
+        } else if ($(this).prop("checked") == false) {
+            $(".cart-page-step-3 .receive-address .user-info").slideUp();
+        }
+    });
+    $('input[id="Invoice_Required"]').click(function() {
+        if ($(this).prop("checked") == true) {
+            $(".cart-page-step-3 .export-bill .bill-form").slideDown();
+        } else if ($(this).prop("checked") == false) {
+            $(".cart-page-step-3 .export-bill .bill-form").slideUp();
+        }
+    });
+}
+
+function quantityNumber() {
+    $(".btn-dec").click(function() {
+        let minus = $(this).parents('.input-number').find('input').val();
+        if (minus > 0) {
+            $(this).parents('.input-number').find('input').val(minus - 1);
+        } else {
+            $(this).parents('.input-number').find('input').val(0);
+        }
+    });
+    $(".btn-inc").on("click", function() {
+        let plus = Number($(this).parents('.input-number').find('input').val());
+        $(this).parents('.input-number').find('input').val(plus + 1);
+    });
+}
 
 function changeIframe() {
 
@@ -466,6 +500,36 @@ function swiperInit() {
             nextEl: '.product-lastview .swiper-button-next',
             prevEl: '.product-lastview .swiper-button-prev',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+    });
+    var newsDetailSwiper = new Swiper(".test .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 10,
+        breakpointsInverse: true,
+        // navigation: {
+        //     nextEl: '.product-lastview .swiper-button-next',
+        //     prevEl: '.product-lastview .swiper-button-prev',
+        // },
         breakpoints: {
             320: {
                 slidesPerView: 1,
