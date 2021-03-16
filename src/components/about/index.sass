@@ -9,7 +9,12 @@
 			top: 50px
 
 .about
-	padding: 60px 0
+	background-size: unset !important
+	background-position: 50% -510px !important
+	padding: 80px 0
+	@media screen and ( max-width: 1280px)
+		background-size: cover !important
+		background-position: center !important
 	// video
 	.figure-video
 		position: relative
@@ -127,6 +132,11 @@
 		margin-top: 35px
 		@media screen and ( max-width: 1024px)
 			margin-top: 15px
+	.col-lg-5
+		&:nth-child(1)
+			margin-right: 35px
+			@media screen and ( max-width: 1279px)
+				margin-right: 0
 	.item-about-2
 		padding: 30px
 		background-color: rgba(#ffffff, .9)
@@ -204,11 +214,12 @@
 				color: #666666
 				margin-top: 15px
 				-webkit-box-orient: vertical
-				-webkit-line-clamp: 3
+				-webkit-line-clamp: 4
 				-o-text-overflow: ellipsis
 				display: -webkit-box
 				overflow: hidden
 				text-overflow: ellipsis
+				padding-right: 25px
 			&:hover
 				cursor: pointer
 				.title-about
@@ -225,7 +236,7 @@
 		justify-content: center
 		align-items: center
 		&.bg-4
-			border-radius: 20px
+			border-radius: 70px
 			padding: 70px 0
 			background-position: unset !important
 			@media screen and ( max-width: 1024px)
@@ -287,13 +298,22 @@
 			color: #333333
 	.row
 		margin-top: 30px
-		&:nth-child(2n+1)
+		// &:nth-child(2n+1)
 			.col-lg-6
 				.item-about-5
 					.card-img
 						order: 2
 						@media screen and ( max-width: 1023px)
 							order: unset
+		.col-lg-6
+			margin-bottom: 30px
+			&:nth-child(3),&:nth-child(4)
+				.item-about-5
+					.card-img
+						order: 2
+						@media screen and ( max-width: 1023px)
+							order: unset
+
 	.item-about-5
 		display: flex
 		background: #f3f3f3
@@ -333,12 +353,12 @@
 					font-weight: 700
 					color: #333333
 					border-bottom: 1px solid transparent
-					// -webkit-box-orient: vertical
-					// -webkit-line-clamp: 2
-					// -o-text-overflow: ellipsis
-					// display: -webkit-box
-					// overflow: hidden
-					// text-overflow: ellipsis
+					-webkit-box-orient: vertical
+					-webkit-line-clamp: 2
+					-o-text-overflow: ellipsis
+					display: -webkit-box
+					overflow: hidden
+					text-overflow: ellipsis
 			.view-more
 				font-size: 14px
 				color: #97c93d
