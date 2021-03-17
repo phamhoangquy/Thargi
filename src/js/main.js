@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    AOS.init({
+        duration: 1500,
+        easing: 'ease-in-sine',
+    })
     mappingMenu();
     toggleShoppingCart();
     toggleMobileMenu();
@@ -15,7 +19,7 @@ $(document).ready(function() {
     linkAbout();
     scrollToDiv();
     changeIframe();
-    quantityNumber();
+    // quantityNumber();
     checkFormCart();
     showBackToTop();
     $(document).on("click", function(e) {
@@ -69,28 +73,26 @@ function checkFormCart() {
     });
 }
 
-function quantityNumber() {
-    $(".btn-dec").click(function() {
-        let minus = $(this).parents('.input-number').find('input').val();
-        if (minus > 0) {
-            $(this).parents('.input-number').find('input').val(minus - 1);
-        } else {
-            $(this).parents('.input-number').find('input').val(0);
-        }
-    });
-    $(".btn-inc").on("click", function() {
-        let plus = Number($(this).parents('.input-number').find('input').val());
-        $(this).parents('.input-number').find('input').val(plus + 1);
-    });
-}
+// function quantityNumber() {
+//     $(".btn-dec").click(function() {
+//         let minus = $(this).parents('.input-number').find('input').val();
+//         if (minus > 0) {
+//             $(this).parents('.input-number').find('input').val(minus - 1);
+//         } else {
+//             $(this).parents('.input-number').find('input').val(0);
+//         }
+//     });
+//     $(".btn-inc").on("click", function() {
+//         let plus = Number($(this).parents('.input-number').find('input').val());
+//         $(this).parents('.input-number').find('input').val(plus + 1);
+//     });
+// }
 
 function changeIframe() {
-
     $(document).on('click', 'ul li', function() {
         var data = $(this).attr('data-iframe')
         $('#custom-maps iframe').attr('src', data)
     })
-
 }
 
 // const InsertBd = () => {
@@ -392,6 +394,7 @@ function swiperInit() {
         // Optional parameters
         speed: 1205,
         slidesPerView: 1,
+        effect: 'fade',
         autoplay: {
             delay: 3000
         },

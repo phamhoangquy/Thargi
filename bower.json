@@ -1,22 +1,23 @@
 {
-    "name": "gulp-html",
-    "description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
-    "main": "gulpfile.babel.js",
-    "authors": [
-        "vdmanh99"
-    ],
-    "license": "MIT",
-    "homepage": "https://github.com/phamhoangquy/MySource",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "jquery": "3.5.1",
-        "fancybox": "3.5.7",
-        "plyr": "3.5.4"
-    }
+  "name": "gulp-html",
+  "description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
+  "main": "gulpfile.babel.js",
+  "authors": [
+    "vdmanh99"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/phamhoangquy/MySource",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.5.1",
+    "fancybox": "3.5.7",
+    "plyr": "3.5.4",
+    "aos": "^2.3.4"
+  }
 }

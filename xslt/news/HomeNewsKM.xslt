@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/ZoneList">
-		<section class="home_s-2" setBackground="/Data/Sites/1/media/home/bg-news-home.png" alt="">
+		<section class="home_s-2" data-aos="fade-up" setBackground="/Data/Sites/1/media/home/bg-news-home.png" alt="">
 			<xsl:apply-templates select="Zone"></xsl:apply-templates>
 		</section>
 	</xsl:template>
