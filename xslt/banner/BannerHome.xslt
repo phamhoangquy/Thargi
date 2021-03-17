@@ -18,7 +18,7 @@
 	</xsl:template>
 	<xsl:template match="Banner">
 		<div class="swiper-slide">
-			<div class="wrapper">
+			<div class="wrapper" data-aos="fade-up">
 				<a class=" ">
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
