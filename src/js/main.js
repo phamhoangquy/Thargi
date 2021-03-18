@@ -141,7 +141,7 @@ function linkAbout() {
     });
 }
 
-// Toggle
+// Toggle Faqs
 function toggleFaqs() {
     var coll = document.getElementsByClassName("togglefaqs");
     var i;
@@ -157,6 +157,23 @@ function toggleFaqs() {
         });
     }
 }
+// $('.togglefaqs').click(function(e) {
+//     e.preventDefault();
+//     $('.togglefaqs').removeClass('click');
+
+//     var $this = $(this);
+//     if ($this.next().hasClass('show')) {
+//         $this.next().removeClass('show');
+//         $this.next().slideUp(350);
+//     } else {
+//         $this.parent().parent().find('li').removeClass('show');
+//         $this.parent().parent().find('li').slideUp(350);
+//         $this.toggleClass('click');
+//         $this.next().toggleClass('show');
+//         $this.next().slideToggle(350);
+//     }
+// });
+
 
 function toggleShoppingCart() {
     $(".cart-header").on("click", function(e) {
@@ -183,7 +200,6 @@ function sideNav() {
         }
     })
 }
-
 
 // Tab-Active
 function tabActive() {

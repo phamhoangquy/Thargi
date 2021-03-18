@@ -180,7 +180,7 @@
 						</xsl:attribute>
 						
 						Xem thêm
-						<span class="ri-arrow-right-line"></span>
+						<span class="lnr lnr-arrow-right"></span>
 					</a>
 				</div>
 			</div>
