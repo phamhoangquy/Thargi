@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/ZoneList">
-		<section class="home_s-5">
+		<section class="home_s-5" data-aos="fade-up">
 			<div class="container">
 				<div class="head-title">
 					<h2><xsl:value-of select="Zone/Title" disable-output-escaping="yes"></xsl:value-of></h2>
@@ -180,7 +180,7 @@
 						</xsl:attribute>
 						
 						Xem thêm
-						<span class="ri-arrow-right-line"></span>
+						<span class="lnr lnr-arrow-right"></span>
 					</a>
 				</div>
 			</div>

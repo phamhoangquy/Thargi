@@ -115,7 +115,7 @@
 					</a>
 				</div>
 				<div class="title-zone">
-					<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
+					<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 				</div>
 			</div>
 		</div>
@@ -183,7 +183,7 @@
 							<xsl:value-of select="Target"></xsl:value-of>
 						</xsl:attribute>
 						Xem thêm
-						<span class="ri-arrow-right-line"></span>
+						<span class="lnr lnr-arrow-right"></span>
 					</a>
 				</div>
 			</div>
@@ -247,8 +247,8 @@
 						<xsl:value-of select="Target"></xsl:value-of>
 					</xsl:attribute>
 					
-					Xem chi tiết
-					<span class="ri-arrow-right-line"></span>
+					Xem thêm
+					<span class="lnr lnr-arrow-right"></span>
 				</a>
 			</div>
 		</div>

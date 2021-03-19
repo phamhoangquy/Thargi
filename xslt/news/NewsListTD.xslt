@@ -59,7 +59,7 @@
 							<xsl:attribute name="target">
 								<xsl:value-of select="Target"></xsl:value-of>
 							</xsl:attribute>
-							View detail
+							Xem thêm
 						</a>
 					</div>
 				</div>
