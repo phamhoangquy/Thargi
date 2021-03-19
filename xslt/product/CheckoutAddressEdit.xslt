@@ -357,7 +357,8 @@
 		</div>-->
 		<div class="btn-wrap clearfix">
 			<a href="/cart" class="btn-back hidden-sm-down">
-				<xsl:value-of select="/CheckoutAddress/ProductCompareBackButtonText"></xsl:value-of>
+				<!-- <xsl:value-of select="/CheckoutAddress/ProductCompareBackButtonText"></xsl:value-of> -->
+				Quay lại
 			</a>
 			<button id="checkout" name="checkout" class="hvr-sweep-to-right btn-continue">
 				<xsl:attribute name="onclick">
@@ -365,7 +366,8 @@
 					<xsl:value-of select="/CheckoutAddress/NextPageUrl"></xsl:value-of>
 					<xsl:text>');return false;</xsl:text>
 				</xsl:attribute>
-				<xsl:value-of select="/CheckoutAddress/CheckoutContinueText"></xsl:value-of>
+				<!-- <xsl:value-of select="/CheckoutAddress/CheckoutContinueText"></xsl:value-of> -->
+				Tiếp tục 
 			</button>
 		</div>
 	</xsl:template>

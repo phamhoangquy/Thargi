@@ -353,6 +353,7 @@ $(document).ready(function () {
 	if ($('input[name="ShippingMethod"]').length) {
 		$('input[name="ShippingMethod"]').trigger('change');
 	}
+	updateCartStep1();
 })
 
 /*************************************************************************************************************/
@@ -679,6 +680,7 @@ var AjaxCart = {
 			var checkoutUrl = $('.checkout-url').data('checkouturl');
 			//$(AjaxCart.flyoutcartselector).replaceWith(response.updateflyoutcartsectionhtml);
 			$(AjaxCart.flyoutcartselector).replaceWith($(response.updateflyoutcartsectionhtml).filter(AjaxCart.flyoutcartselector));
+			
 			if (checkoutUrl != null)
 				$(AjaxCart.flyoutcartselector).find('.btn-checkout').attr('href', checkoutUrl);
 		}
@@ -708,11 +710,14 @@ var AjaxCart = {
 			setLocation(response.redirect);
 			return true;
 		}
+		
 		return false;
 	},
 
 	resetLoadWaiting: function () {
 		AjaxCart.setLoadWaiting(false);
+		$('header .header-top .header-infor .shopping-cart-toggle .cart-header').addClass('active');
+
 	},
 
 	ajaxFailure: function () {
@@ -720,6 +725,18 @@ var AjaxCart = {
 	}
 }
 
+function updateCartStep1(){
+	$("body").on("change", ".btn-inc", function(e) {
+        e.preventDefault();
+        AjaxCart.updatecart();
+        return false;
+    });
+	$("body").on("change", ".btn-dec", function(e) {
+        e.preventDefault();
+        AjaxCart.updatecart();
+        return false;
+    });
+}
 function OpenWindow(n, t, i, r) {
 	var u = (screen.width - t) / 2,
 		f = (screen.height - i) / 2,
