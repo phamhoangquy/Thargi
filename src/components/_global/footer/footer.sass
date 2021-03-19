@@ -3,6 +3,8 @@ footer
 	.footer-block
 		position: relative
 		padding-top: 50px
+		@media screen and ( max-width: 576px)
+			padding-top: 20px
 		.caption-footer
 			font-size: 18px
 			color: #cfcfcf
@@ -13,6 +15,7 @@ footer
 			@media screen and ( max-width: 576px)
 				padding-top: 10px
 				padding-left: 0
+				padding-bottom: 25px
 			&.pr-40
 				padding-right: 40px
 			.card__title
@@ -130,6 +133,10 @@ footer
 						@media screen and ( max-width: 1246px)
 							width: max-content
 							font-size: 12px
+						@media screen and ( max-width: 576px)
+							padding: 10px 70px 10px 20px
+						@media screen and ( max-width: 320px)
+							padding: 10px 20px
 					button
 						border: 0
 						padding: 10px 40px
@@ -142,6 +149,8 @@ footer
 						text-transform: uppercase
 						@media screen and ( max-width: 1023px)
 							font-size: 12px
+						@media screen and ( max-width: 1024px)
+							white-space: nowrap
 						@media screen and ( max-width: 998.98px)
 							margin-top: 15px
 				.icon-footer
@@ -163,6 +172,11 @@ footer
 									background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
 									-webkit-background-clip: text
 									-webkit-text-fill-color: transparent
+				.Module.Module-219
+					@media screen and ( max-width: 576px)
+						display: flex
+						justify-content: center
+						align-items: center
 	.footer-copyright
 		.copyright-wrapper
 			display: flex
@@ -170,6 +184,8 @@ footer
 			padding: 0 15px
 			@media screen and ( max-width: 768px)
 				justify-content: center
+			@media screen and ( max-width: 576px)
+				padding: 0
 			.right-text
 				height: 60px
 				font-size: 14px
@@ -179,6 +195,10 @@ footer
 					text-align: center
 					height: auto
 				@media screen and ( max-width: 576px)
+					font-size: 11px
+				@media screen and ( max-width: 375px)
+					font-size: 10px
+				@media screen and ( max-width: 320px)
 					font-size: 12px
 			.right-text-policy
 				padding-top: 20px
@@ -189,6 +209,10 @@ footer
 					li
 						position: relative
 						padding: 0 10px
+						@media screen and ( max-width: 320px)
+							padding: 0 7px
+							&::before
+								right: -1px !important
 						&::before
 							content: '|'
 							top: 0
@@ -202,4 +226,7 @@ footer
 							font-size: 14px
 							color: #ffffff
 							@media screen and ( max-width: 576px)
-								font-size: 12px
+								font-size: 10px
+							@media screen and ( max-width: 375px)
+								font-size: 9px
+							

@@ -142,6 +142,10 @@
 		width: 55px
 		height: 55px
 		cursor: pointer
+		@media screen and ( max-width: 576px)
+			width: 36px
+			height: 36px
+			left: 48%
 		.icon-banner
 			display: flex
 			justify-content: center
@@ -152,6 +156,8 @@
 			span
 				color: #ffffff
 				font-size: 2rem
+				@media screen and ( max-width: 576px)
+					font-size: 20px
 			&:hover
 				transform: scale(1.13)
 				span

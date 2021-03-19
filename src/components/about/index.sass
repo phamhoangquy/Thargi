@@ -78,7 +78,8 @@
 		@media screen and ( max-width: 1023px)
 			margin-left: 0
 			margin-right: 0
-			padding-left: 30px
+			padding-left: 25px
+			padding-right: 15px
 		&:before
 			content: ''
 			position: absolute
@@ -241,6 +242,8 @@
 			background-position: unset !important
 			@media screen and ( max-width: 1024px)
 				padding: 30px 0
+			@media screen and ( max-width: 576px)
+				border-radius: 20px
 	.description
 		font-size: 24px
 		color: #ffffff
@@ -293,6 +296,8 @@
 	padding: 70px 0
 	@media screen and ( max-width: 1024px)
 		padding: 30px 0
+	@media screen and ( max-width: 576px)
+		padding-bottom: 0
 	.head-title
 		h2
 			color: #333333
@@ -306,7 +311,7 @@
 						@media screen and ( max-width: 1023px)
 							order: unset
 		.col-lg-6
-			margin-bottom: 30px
+			// margin-bottom: 30px
 			&:nth-child(3),&:nth-child(4)
 				.item-about-5
 					.card-img
