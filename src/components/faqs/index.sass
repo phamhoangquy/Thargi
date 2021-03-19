@@ -1,5 +1,7 @@
 .faqs-list
 	padding: 50px 0 30px 0
+	@media screen and ( max-width: 576px)
+		padding: 30px 0
 	.faqs
 		margin-top: 30px
 		.block-togglefaqs
@@ -9,8 +11,6 @@
 				margin-bottom: 10px
 				border-radius: 10px
 				border: 1px solid #e5e5e5
-				&.active
-					border: 1px solid #58a53f
 				.togglefaqs
 					padding: 15px
 					color: #333333
@@ -37,20 +37,34 @@
 						padding: 14px 20px
 					@media screen and ( max-width: 576px )
 						padding: 14px 20px
-				.active
-					color: #ffffff
-					background: #58a53f
-					border-radius: 10px 10px 0 0
-				.active:after
+					&.click
+						color: #ffffff 
+						background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+						border-radius: 10px 10px 0 0
+						&::after
+							transform: rotate(180deg)
+							color: #ffffff
+				// .active
+				// 	color: #ffffff
+				// 	background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+				// 	border-radius: 10px 10px 0 0
+				// .active:after
 					content: "\ea78"
 					color: #ffffff
 				.content
+					display: none
 					padding: 0 15px
-					max-height: 0
+					// max-height: 0
 					overflow: hidden
 					transition: max-height 0.2s ease-out
 					.caption
 						padding: 20px 0
+					&.show
+						border-top: 0
+						border-right: 1px solid #82ba06
+						border-left: 1px solid #82ba06
+						border-bottom: 1px solid #82ba06
+						border-radius: 0 0 10px 10px
 	// .box
 	// 	width: 500px 
 	// 	height: 500px

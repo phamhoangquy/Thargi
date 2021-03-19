@@ -143,36 +143,37 @@ function linkAbout() {
 
 // Toggle Faqs
 function toggleFaqs() {
-    var coll = document.getElementsByClassName("togglefaqs");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-}
-// $('.togglefaqs').click(function(e) {
-//     e.preventDefault();
-//     $('.togglefaqs').removeClass('click');
+    // var coll = document.getElementsByClassName("togglefaqs");
+    // var i;
+    // for (i = 0; i < coll.length; i++) {
+    //     coll[i].addEventListener("click", function() {
+    //         this.classList.toggle("active");
+    //         var content = this.nextElementSibling;
+    //         if (content.style.maxHeight) {
+    //             content.style.maxHeight = null;
+    //         } else {
+    //             content.style.maxHeight = content.scrollHeight + "px";
+    //         }
+    //     });
+    //     // console.log(this)
+    // }
+    $('.togglefaqs').click(function(e) {
+        e.preventDefault();
+        $('.togglefaqs').removeClass('click');
 
-//     var $this = $(this);
-//     if ($this.next().hasClass('show')) {
-//         $this.next().removeClass('show');
-//         $this.next().slideUp(350);
-//     } else {
-//         $this.parent().parent().find('li').removeClass('show');
-//         $this.parent().parent().find('li').slideUp(350);
-//         $this.toggleClass('click');
-//         $this.next().toggleClass('show');
-//         $this.next().slideToggle(350);
-//     }
-// });
+        var $this = $(this);
+        if ($this.next().hasClass('show')) {
+            $this.next().removeClass('show');
+            $this.next().slideUp(350);
+        } else {
+            $this.parent().parent().find('li .content').removeClass('show');
+            $this.parent().parent().find('li .content').slideUp(350);
+            $this.toggleClass('click');
+            $this.next().toggleClass('show');
+            $this.next().slideToggle(350);
+        }
+    });
+}
 
 
 function toggleShoppingCart() {
