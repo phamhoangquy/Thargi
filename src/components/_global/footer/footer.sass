@@ -15,7 +15,7 @@ footer
 			@media screen and ( max-width: 576px)
 				padding-top: 10px
 				padding-left: 0
-				padding-bottom: 25px
+				padding-bottom: 10px
 			&.pr-40
 				padding-right: 40px
 			.card__title
@@ -103,6 +103,7 @@ footer
 						p
 							font-size: 14px
 							color: #333333
+							font-family: "Quicksand"
 							@media screen and ( max-width: 576px)
 								font-size: 12px
 			.subscribe
@@ -153,6 +154,19 @@ footer
 							white-space: nowrap
 						@media screen and ( max-width: 998.98px)
 							margin-top: 15px
+					.fa
+						text-align: unset
+						width: max-content
+						text-indent: unset
+						&::after
+							display: none
+						@media screen and ( min-width: 1024px)
+							left: 15px !important
+							top: 45px !important
+						@media screen and ( max-width: 576px)
+							top: 35px
+							left: 15px
+							font-size: 10px
 				.icon-footer
 					padding-left: 25px
 					display: flex
@@ -229,4 +243,4 @@ footer
 								font-size: 10px
 							@media screen and ( max-width: 375px)
 								font-size: 9px
-							
+
