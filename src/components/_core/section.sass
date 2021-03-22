@@ -136,6 +136,8 @@
 			margin-top: 10px
 			padding-top: 27px
 			position: relative
+			@media screen and ( max-width: 576px)
+				border-radius: 15px
 			.sale
 				position: absolute
 				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
@@ -179,6 +181,10 @@
 					overflow: hidden
 					text-overflow: ellipsis
 					height: 50px
+					@media screen and ( max-width: 375px)
+						font-size: 14px
+						padding-left: 0
+						padding-right: 0
 			.block-price
 				display: flex
 				justify-content: center
@@ -190,12 +196,18 @@
 						font-size: 18px
 						color: #eb0000
 						font-weight: 700
+						@media screen and ( max-width: 576px)
+							font-size: 16px
+						@media screen and ( max-width: 375px)
+							font-size: 11px
 				.discount
 					p
 						text-decoration: line-through
 						font-size: 14px
 						color: #333333
 						font-weight: 500
+						@media screen and ( max-width: 375px)
+							font-size: 11px
 			.block-btn
 				cursor: pointer
 				border-top: 1px solid #e5e5e5
@@ -218,6 +230,8 @@
 							border-right: 0
 						@media screen and ( max-width: 1024px)
 							padding: 10px
+						@media screen and ( max-width: 375px)
+							padding: 8px
 						a
 							font-size: 14px
 							color: #999999
@@ -225,6 +239,13 @@
 							display: flex
 							justify-content: center
 							align-items: center
+							white-space: nowrap
+							@media screen and ( max-width: 576px)
+								font-size: 12px
+							@media screen and ( max-width: 375px)
+								font-size: 10px
+							@media screen and ( max-width: 320px)
+								text-align: center
 			&:hover
 				cursor: pointer
 				border-color: rgb(221, 240, 187)
@@ -238,8 +259,16 @@
 							&:last-child
 								border-radius: 0 0 20px 0
 								background: #97c93d
+							@media screen and ( max-width: 576px)
+								padding: 0
+								&:first-child
+									border-radius: 0 0 0 10px
+								&:last-child
+									border-radius: 0 0 10px 0
 							a
 								color: #ffffff
+								@media screen and ( max-width: 375px)
+									padding: 8px
 
 .news-detail-page
 	.Module.Module-233,.Module.Module-237,.Module.Module-236,.Module.Module-230

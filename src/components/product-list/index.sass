@@ -1,10 +1,38 @@
 .product-list
 	padding: 50px 0
+	@media screen and ( max-width: 576px)
+		padding: 25px 0
 	.item-product-list
 		border-radius: 10px
 		background-color: rgb(248, 248, 248)
 		box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1)
 		margin-bottom: 30px
+		@media screen and ( max-width: 768px )
+			visibility: hidden
+			transform: translateY(30px)
+			opacity: 0
+			position: fixed
+			bottom: 0px
+			left: 0
+			right: 0
+			z-index: 11
+			margin-bottom: 40px
+			overflow: auto
+			background-color: white
+			transition: .3s all  ease-in-out
+			padding-bottom: 30px
+			&::-webkit-scrollbar
+				width: 3px
+				height: 3px
+			&::-webkit-scrollbar-thumb
+				border-radius: 2.5px
+				// background-color: red
+			&.active
+				visibility: visible
+				opacity: 1
+				transform: translate(0)
+			.choose-product
+				padding-bottom: 40px
 		.sub-title-product
 			padding: 15px 30px
 			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
@@ -72,6 +100,30 @@
 
 	// checkbox
 	.item-checkbox
+		@media screen and ( max-width: 768px )
+			visibility: hidden
+			transform: translateY(30px)
+			opacity: 0
+			position: fixed
+			bottom: 0px
+			left: 0
+			right: 0
+			z-index: 11
+			margin-bottom: 40px
+			overflow: auto
+			background-color: white
+			transition: .3s all  ease-in-out
+			padding-bottom: 30px
+			&::-webkit-scrollbar
+				width: 3px
+				height: 3px
+			&::-webkit-scrollbar-thumb
+				border-radius: 2.5px
+				background-color: #97c93d
+			&.active
+				visibility: visible
+				opacity: 1
+				transform: translate(0)
 		.checkbox-list
 			border-radius: 10px
 			background-color: rgb(248, 248, 248)
@@ -169,6 +221,8 @@
 			margin-top: 30px
 			padding-top: 27px
 			position: relative
+			@media screen and ( max-width: 576px)
+				border-radius: 15px
 			.sale
 				position: absolute
 				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
@@ -190,8 +244,8 @@
 					max-height: 100%
 					width: 100%
 					height: 230px
-					@media screen and ( max-width: 1023px)
-						height: auto
+					// @media screen and ( max-width: 1023px)
+					// 	height: auto
 					img
 						width: 100%
 						height: 100%
@@ -212,6 +266,10 @@
 					overflow: hidden
 					text-overflow: ellipsis
 					height: 50px
+					@media screen and ( max-width: 375px)
+						font-size: 14px
+						padding-left: 0
+						padding-right: 0
 			.block-price
 				display: flex
 				justify-content: center
@@ -223,12 +281,18 @@
 						font-size: 18px
 						color: #eb0000
 						font-weight: 700
+						@media screen and ( max-width: 576px)
+							font-size: 16px
+						@media screen and ( max-width: 375px)
+							font-size: 11px
 				.discount
 					p
 						text-decoration: line-through
 						font-size: 14px
 						color: #333333
 						font-weight: 500
+						@media screen and ( max-width: 375px)
+							font-size: 11px
 			.block-btn
 				cursor: pointer
 				border-top: 1px solid #e5e5e5
@@ -258,6 +322,13 @@
 							display: flex
 							justify-content: center
 							align-items: center
+							white-space: nowrap
+							@media screen and ( max-width: 576px)
+								font-size: 12px
+							@media screen and ( max-width: 375px)
+								font-size: 10px
+							@media screen and ( max-width: 320px)
+								text-align: center
 			&:hover
 				cursor: pointer
 				border-color: rgb(221, 240, 187)
@@ -271,5 +342,61 @@
 							&:last-child
 								border-radius: 0 0 20px 0
 								background: #97c93d
+							@media screen and ( max-width: 576px)
+								padding: 0
+								&:first-child
+									border-radius: 0 0 0 10px
+								&:last-child
+									border-radius: 0 0 10px 0
 							a
 								color: #ffffff
+								white-space: nowrap
+								@media screen and ( max-width: 375px)
+									padding: 8px
+
+#cls_filter,#cls_filter-2
+	display: none
+	@media screen and ( max-width: 768px)
+		display: block
+		text-align: center
+		font-size: 16px
+		color: #fff
+		width: 145px
+		height: 40px
+		background: #58a53f
+		padding-top: 10px
+		margin: auto
+.tool-product
+	display: none
+	@media screen and ( max-width: 768px )
+		display: block
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 10
+		font-size: r(16px)
+		font-weight: 400
+		.wrapper
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.btn-cate,.btn-filter
+				background: #97c93d
+				color: #ffffff
+		.btn
+			min-height: 40px
+			flex: 1
+			display: flex
+			padding: 0.5rem 1rem
+			justify-content: center
+			align-items: center
+			border: thin solid #cccccc
+			background-color: white
+			box-shadow: 0px 0px 15px #0000000b
+			white-space: nowrap
+			font-weight: 700
+			span
+				margin-right: 10px
+				@media screen and ( max-width: 375px )
+					margin-right: 5px

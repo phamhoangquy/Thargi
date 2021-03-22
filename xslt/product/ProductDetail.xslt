@@ -153,13 +153,14 @@
 						<h2>Sản phẩm khác</h2>
 					</div>
 					<div class="product-detail-3-swiper-wrapper">
-						<div class="nav-arrow-prev"><span class="ri-arrow-left-fill"></span></div>
-						<div class="nav-arrow-next"><span class="ri-arrow-right-fill"></span></div>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<xsl:apply-templates select="ProductOther"></xsl:apply-templates>
-								
 							</div>
+						</div>
+						<div class="nav-wrapper">
+							<div class="nav-arrow-prev"><span class="ri-arrow-left-fill"></span></div>
+							<div class="nav-arrow-next"><span class="ri-arrow-right-fill"></span></div>
 						</div>
 					</div>
 				</div>

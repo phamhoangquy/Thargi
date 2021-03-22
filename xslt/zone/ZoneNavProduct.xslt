@@ -2,6 +2,12 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/ZoneList">
+		<div class="tool-product">
+			<div class="wrapper"><div class="btn btn-cate">Loại sản phẩm</div>
+			<div class="btn btn-filter"> Loại sản phẩm / Cách chế biến
+			</div></div>
+			
+		</div>
 		<div class="item-product-list">
 			<div class="sub-title-product">
 				<h2>
@@ -13,6 +19,7 @@
 					<xsl:apply-templates select="Zone[IsActive='true']/Zone"></xsl:apply-templates>
 				</ul>
 			</div>
+			<div id="cls_filter">Đóng</div>
 		</div>
 	</xsl:template>
 	<xsl:template match="Zone">
