@@ -363,9 +363,10 @@
 		color: #fff
 		width: 145px
 		height: 40px
-		background: #58a53f
+		background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
 		padding-top: 10px
 		margin: auto
+		border-radius: 20px
 .tool-product
 	display: none
 	@media screen and ( max-width: 768px )
@@ -400,3 +401,15 @@
 				margin-right: 10px
 				@media screen and ( max-width: 375px )
 					margin-right: 5px
+
+
+.product-list-page
+	.sub-menu-list
+		.sub-menu
+			ul
+				li
+					a
+						&.active
+							background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+							border: 1px solid transparent
+							color: #ffffff
