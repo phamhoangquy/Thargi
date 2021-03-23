@@ -129,6 +129,13 @@
 // Home
 .home-page
 	.home_s-1,.home_s-3
+		.col-lg-3
+			@media screen and ( max-width: 576px)
+				&:nth-child(2n+1)
+					padding-right: 5px
+				&:nth-child(2n)
+					padding-left: 5px
+				
 		// product
 		.product-wrapper
 			border: 1px solid #e5e5e5
@@ -138,6 +145,7 @@
 			position: relative
 			@media screen and ( max-width: 576px)
 				border-radius: 15px
+				padding-top: 0
 			.sale
 				position: absolute
 				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
@@ -159,7 +167,7 @@
 					max-height: 100%
 					width: 100%
 					height: 230px
-					// @media screen and ( max-width: 1023px)
+					// @media screen and ( max-width: 576px)
 					// 	height: auto
 					img
 						width: 100%
@@ -167,6 +175,8 @@
 						object-fit: contain
 			.title
 				margin-top: 15px
+				@media screen and ( max-width: 576px)
+					margin-top: 0
 				a
 					padding-left: 30px
 					padding-right: 30px
@@ -181,6 +191,9 @@
 					overflow: hidden
 					text-overflow: ellipsis
 					height: 50px
+					@media screen and ( max-width: 576px)
+						font-size: 14px
+						height: 43px
 					@media screen and ( max-width: 375px)
 						font-size: 14px
 						padding-left: 0
@@ -190,6 +203,13 @@
 				justify-content: center
 				align-items: center
 				padding-top: 5px
+				@media screen and ( max-width: 576px)
+					display: block
+					.price,.discount
+						text-align: center !important
+					.price
+						p
+							padding-right: 0 !important
 				.price
 					p
 						padding-right: 15px
@@ -262,13 +282,13 @@
 							@media screen and ( max-width: 576px)
 								padding: 0
 								&:first-child
+									padding: 7px
 									border-radius: 0 0 0 10px
 								&:last-child
+									padding: 7px
 									border-radius: 0 0 10px 0
 							a
 								color: #ffffff
-								@media screen and ( max-width: 375px)
-									padding: 8px
 
 .news-detail-page
 	.Module.Module-233,.Module.Module-237,.Module.Module-236,.Module.Module-230
