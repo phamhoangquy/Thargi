@@ -28,6 +28,8 @@
         <link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
         <link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
+        <link rel="shortcut icon" href="/Data/Sites/1/skins/default/img/favicon.ico">
+        <link rel="icon" href="/favicon.ico">
         <meta name="msapplication-TileColor">
         <meta name="msapplication-TileImage" content="/Data/Sites/1/skins/default/favicon/ms-icon-144x144.png">
         <meta name="theme-color">

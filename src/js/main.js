@@ -144,14 +144,10 @@ function height(el) {
 }
 
 let header = {
-    scrollActive: function() {
-        let height = $('header').height()
-        if ($(window).scrollTop() > height) {
-            $('header').addClass('active')
-        } else {
-            $('header').removeClass('active')
-        }
-    },
+    headerScroll: () => {
+        let heightHeader = $('header').height();
+        $(window).scrollTop() > heightHeader ? $('header').addClass('header-scroll') : $('header').removeClass('header-scroll');
+    }
 }
 
 function linkAbout() {
@@ -640,5 +636,5 @@ function showBackToTop() {
 }
 
 $(document).on('scroll', function() {
-    header.scrollActive()
+    header.headerScroll()
 });

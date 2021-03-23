@@ -148,16 +148,23 @@ footer
 						font-weight: 700
 						margin-left: 5px
 						text-transform: uppercase
+						border: 1px solid transparent
 						@media screen and ( max-width: 1023px)
 							font-size: 12px
 						@media screen and ( max-width: 1024px)
 							white-space: nowrap
 						@media screen and ( max-width: 998.98px)
 							margin-top: 15px
+						&:hover
+							border: 1px solid #58a53f
+							background-image: none
+							background: none
+							color: #58a53f
 					.fa
 						text-align: unset
 						width: max-content
 						text-indent: unset
+						font-size: 12px !important
 						&::after
 							display: none
 						@media screen and ( min-width: 1024px)
