@@ -451,7 +451,7 @@ function swiperInit() {
     var newsDetailSwiper = new Swiper(".other-news-detail .swiper-container", {
         // Optional parameters
         speed: 1000,
-        spaceBetween: 10,
+        spaceBetween: 30,
         breakpointsInverse: true,
         navigation: {
             nextEl: '.other-news-detail .nav-arrow-next',
@@ -481,7 +481,7 @@ function swiperInit() {
     var newsDetailSwiper = new Swiper(".product-detail-3 .swiper-container", {
         // Optional parameters
         speed: 1000,
-        spaceBetween: 10,
+        spaceBetween: 30,
         breakpointsInverse: true,
         navigation: {
             nextEl: '.product-detail-3 .nav-arrow-next',
