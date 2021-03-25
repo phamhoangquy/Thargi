@@ -43,7 +43,7 @@ $(document).ready(function() {
     // End watch more
 
     // watch table
-    let totalTableHeight = 70;
+    let totalTableHeight = 65;
     $("table td").each(function(i) {
         if (i < 3) {
             totalTableHeight += $(this).outerHeight();
@@ -336,7 +336,7 @@ const watchTableDetail = () => {
     $(".show-table .view-table-compact").click(function() {
         $(this).css("display", "none");
         $(this).prev().css("display", "flex");
-        let totalTableHeight = 70;
+        let totalTableHeight = 65;
         $("table td").each(function(i) {
             if (i < 3) {
                 totalTableHeight += $(this).outerHeight();
