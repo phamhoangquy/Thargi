@@ -15,6 +15,8 @@
 	@media screen and ( max-width: 1280px)
 		background-size: cover !important
 		background-position: center !important
+	@media screen and ( max-width: 576px)
+		padding: 60px 0 30px
 	// video
 	.figure-video
 		position: relative
@@ -31,7 +33,7 @@
 		z-index: 10
 		position: absolute
 		top: 50%
-		left: 50%
+		left: 55%
 		transform: translate(-50%,-50%)
 		display: flex
 		justify-content: center
@@ -63,11 +65,10 @@
 		position: relative
 		background: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
 		border-radius: 20px
-		padding: 75px 120px
-		margin-left: -90px
-		margin-top: 50px
 		z-index: -1
 		height: 395px
+		margin-left: -90px
+		margin-top: 50px
 		padding-top: 75px
 		padding-bottom: 75px
 		padding-left: 120px
@@ -80,6 +81,8 @@
 			margin-right: 0
 			padding-left: 25px
 			padding-right: 15px
+		@media screen and ( max-width: 576px)
+			padding-bottom: 50px
 		&:before
 			content: ''
 			position: absolute
