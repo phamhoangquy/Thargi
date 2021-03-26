@@ -82,7 +82,7 @@
 					</div>
 				</xsl:if>
 				<div class="card-img">
-					<a class=" ">
+					<a class="images-zoom">
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>
