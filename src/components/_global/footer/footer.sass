@@ -60,9 +60,11 @@ footer
 						a
 							font-size: 16px
 							color: #ffffff
+							border-bottom: 1px solid transparent
 						&:hover
 							a
-								color: #58a53f
+								// color: #58a53f
+								border-bottom: 1px solid #fff
 				.notification
 					padding-top: 30px
 		.footer-card
@@ -119,12 +121,15 @@ footer
 					display: flex
 				@media screen and ( max-width: 576px)
 					display: block
+				.Module.Module-218
+					@media screen and ( max-width: 576px)
+						padding-bottom: 25px
 				.subscribefrm
 					display: flex
 					@media screen and ( max-width: 1023px)
 						display: flex
-					@media screen and ( max-width: 998.98px)
-						display: block
+					// @media screen and ( max-width: 998.98px)
+					// 	display: block
 					input
 						border: 0
 						width: 280px
@@ -154,8 +159,8 @@ footer
 							font-size: 12px
 						@media screen and ( max-width: 1024px)
 							white-space: nowrap
-						@media screen and ( max-width: 998.98px)
-							margin-top: 15px
+						// @media screen and ( max-width: 998.98px)
+						// 	margin-top: 15px
 						&:hover
 							border: 1px solid #58a53f
 							background-image: none
@@ -172,7 +177,7 @@ footer
 							left: 15px !important
 							top: 45px !important
 						@media screen and ( max-width: 576px)
-							top: 35px
+							top: 50px
 							left: 15px
 							font-size: 10px
 				.icon-footer
@@ -197,8 +202,8 @@ footer
 				.Module.Module-219
 					@media screen and ( max-width: 576px)
 						display: flex
-						justify-content: center
-						align-items: center
+						justify-content: left
+						// align-items: center
 	
 	.footer-copyright
 		.copyright-wrapper

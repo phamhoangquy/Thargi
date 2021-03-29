@@ -144,12 +144,14 @@
 							font-size: 16px
 							color: #333333
 							font-weight: 700
+							text-align: left !important
 						td
 							font-size: 16px
 							color: #333333
 							height: 45px
 							font-weight: 500
 							font-family: "Quicksand"
+
 
 		.desc-bottom
 			display: flex
@@ -171,6 +173,16 @@
 						padding-right: 40px !important
 					.price
 						padding-left: 40px !important
+				@media screen and ( max-width: 360px)
+					.text
+						padding-right: 30px !important
+					.price
+						padding-left: 30px !important
+				@media screen and ( max-width: 320px)
+					.text
+						padding-right: 15px !important
+					.price
+						padding-left: 15px !important
 				.text
 					color: #333333
 					font-size: 14px
@@ -240,7 +252,8 @@
 // section-2
 .product-detail-2
 	.tab-description
-		overflow-x: auto
+		@media screen and ( max-width: 320px)
+			overflow-x: auto
 		ul 
 			list-style: none
 			padding: 0
@@ -274,6 +287,13 @@
 					padding: 20px
 					text-transform: uppercase
 					border-radius: 5px 5px 0 0
+					@media screen and ( max-width: 576px)
+						padding: 13px
+					@media screen and ( max-width: 375px)
+						font-size: 13px
+						padding: 15px 10px
+					@media screen and ( max-width: 360px)
+						padding: 15px 6px
 				&:hover
 					a
 						background: #eeeeee
@@ -381,7 +401,6 @@
 							font-family: "Quicksand"
 							+ tr
 								border-top: 1px solid #e0e0e0
-
 							td
 								font-size: 14px
 								color: #666666

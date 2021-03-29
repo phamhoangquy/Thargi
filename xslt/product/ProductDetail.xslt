@@ -235,7 +235,7 @@
 				</div>
 			</xsl:if>
 			<div class="card-img">
-				<a class="images-zoom">
+				<a class="">
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
@@ -322,7 +322,7 @@
 					</div>
 				</xsl:if>
 				<div class="card-img">
-					<a class="images-zoom">
+					<a class="">
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>
