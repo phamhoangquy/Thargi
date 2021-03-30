@@ -24,6 +24,7 @@ $(document).ready(function() {
     filterCate();
     showBackToTop();
     $(document).on("click", function(e) {
+
         if (
             $(".shopping-cart-toggle").has(e.target).length === 0 &&
             $(".shopping-cart-ab").has(e.target).length === 0
