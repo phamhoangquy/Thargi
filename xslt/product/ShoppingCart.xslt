@@ -2,92 +2,92 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
-			<xsl:choose>
-				<xsl:when test="count(/ShoppingCart/CartItem)=0">
-					<section class="cart-page cart-step-1 clearfix">
-						<h2 class="carttitle">
-							<i class="fa fa-cart-arrow-down"></i>
+		<xsl:choose>
+			<xsl:when test="count(/ShoppingCart/CartItem)=0">
+				<section class="cart-page cart-step-1 clearfix">
+					<h2 class="carttitle">
+						<i class="fa fa-cart-arrow-down"></i>
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="/ShoppingCart/CartEmptyText"></xsl:value-of>
+					</h2>
+					<section class="cart-button clearfix">
+						<a href="/" class="btn-back">
+							<xsl:value-of select="/ShoppingCart/BackText"></xsl:value-of>
+						</a>
+					</section>
+				</section>
+			</xsl:when>
+			<xsl:otherwise>
+				<section class="cart-page cart-step-1 clearfix">
+					<h1 class="carttitle">
+						<xsl:value-of select="/ShoppingCart/YourCartText"></xsl:value-of>
+						(
+						<strong>
+							<xsl:value-of select="/ShoppingCart/TotalProducts"></xsl:value-of>
 							<xsl:text> </xsl:text>
-							<xsl:value-of select="/ShoppingCart/CartEmptyText"></xsl:value-of>
-						</h2>
-						<section class="cart-button clearfix">
-							<a href="/" class="btn-back">
-								<xsl:value-of select="/ShoppingCart/BackText"></xsl:value-of>
+						</strong>
+						<xsl:value-of select="/ShoppingCart/ProductText"></xsl:value-of>)
+					</h1>
+					<div class="body-cart">
+						<table class="cart-table">
+							<!-- <thead>
+								<tr>
+									<th>
+										<xsl:value-of select="/ShoppingCart/ProductText"></xsl:value-of>
+									</th>
+									<th>
+										<xsl:value-of select="/ShoppingCart/PriceText"></xsl:value-of>
+									</th>
+									<th>
+										<xsl:value-of select="/ShoppingCart/QuantityText"></xsl:value-of>
+									</th>
+									<th>
+										<xsl:value-of select="/ShoppingCart/ItemTotalText"></xsl:value-of>
+									</th>
+								</tr>
+							</thead> -->
+							<tbody>
+								<xsl:apply-templates select="/ShoppingCart/CartItem"></xsl:apply-templates>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<section class="cart-step-1-bottom">
+					<div class="btn-wrap clearfix">
+						<div class="btn-left">
+							<a class="btn-back hidden-sm-down">
+								<xsl:attribute name="href">
+									<xsl:value-of select="/ShoppingCart/ContinueShoppingUrl"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:value-of select="/ShoppingCart/ContinueShoppingText"></xsl:value-of>
 							</a>
-						</section>
-					</section>
-				</xsl:when>
-				<xsl:otherwise>
-					<section class="cart-page cart-step-1 clearfix">
-						<h1 class="carttitle">
-							<xsl:value-of select="/ShoppingCart/YourCartText"></xsl:value-of>
-							(
-							<strong>
-								<xsl:value-of select="/ShoppingCart/TotalProducts"></xsl:value-of>
-								<xsl:text> </xsl:text>
-							</strong>
-							<xsl:value-of select="/ShoppingCart/ProductText"></xsl:value-of>)
-						</h1>
-						<div class="body-cart">
-							<table class="cart-table">
-								<!-- <thead>
-									<tr>
-										<th>
-											<xsl:value-of select="/ShoppingCart/ProductText"></xsl:value-of>
-										</th>
-										<th>
-											<xsl:value-of select="/ShoppingCart/PriceText"></xsl:value-of>
-										</th>
-										<th>
-											<xsl:value-of select="/ShoppingCart/QuantityText"></xsl:value-of>
-										</th>
-										<th>
-											<xsl:value-of select="/ShoppingCart/ItemTotalText"></xsl:value-of>
-										</th>
-									</tr>
-								</thead> -->
-								<tbody>
-									<xsl:apply-templates select="/ShoppingCart/CartItem"></xsl:apply-templates>
-								</tbody>
-							</table>
 						</div>
-					</section>
-					<section class="cart-step-1-bottom">
-						<div class="btn-wrap clearfix">
-							<div class="btn-left">
-								<a class="btn-back hidden-sm-down">
-									<xsl:attribute name="href">
-										<xsl:value-of select="/ShoppingCart/ContinueShoppingUrl"></xsl:value-of>
-									</xsl:attribute>
-									<xsl:value-of select="/ShoppingCart/ContinueShoppingText"></xsl:value-of>
-								</a>
+						<div class="btn-right">
+							<div class="totalamount">
+								<!-- <xsl:apply-templates select="/ShoppingCart/NotionalPriceText"></xsl:apply-templates> -->
+								Tạm tính
+								<xsl:text>: </xsl:text>
+								<strong>
+									<xsl:value-of select="/ShoppingCart/Total"></xsl:value-of>
+								</strong>
 							</div>
-							<div class="btn-right">
-								<div class="totalamount">
-									<!-- <xsl:apply-templates select="/ShoppingCart/NotionalPriceText"></xsl:apply-templates> -->
-									Tạm tính
-									<xsl:text>: </xsl:text>
-									<strong>
-										<xsl:value-of select="/ShoppingCart/Total"></xsl:value-of>
-									</strong>
-								</div>
-								<div class="payment-des">
-									<!-- <xsl:value-of select="/ShoppingCart/PriceHasIncludedVATText"></xsl:value-of> -->
-									Giá đã bao gồm VAT
-								</div>
-								<a href="#!" class="hvr-sweep-to-right btn-continue">
-									<xsl:attribute name="onclick">
-										<xsl:text>setLocation('</xsl:text>
-										<xsl:value-of select="/ShoppingCart/CheckoutUrl"></xsl:value-of>
-										<xsl:text>');return false;</xsl:text>
-									</xsl:attribute>
-									<xsl:value-of select="/ShoppingCart/CheckoutProcessText"></xsl:value-of>
-								</a>
+							<div class="payment-des">
+								<!-- <xsl:value-of select="/ShoppingCart/PriceHasIncludedVATText"></xsl:value-of> -->
+								Giá đã bao gồm VAT
 							</div>
+							<a href="#!" class="hvr-sweep-to-right btn-continue">
+								<xsl:attribute name="onclick">
+									<xsl:text>setLocation('</xsl:text>
+									<xsl:value-of select="/ShoppingCart/CheckoutUrl"></xsl:value-of>
+									<xsl:text>');return false;</xsl:text>
+								</xsl:attribute>
+								<xsl:value-of select="/ShoppingCart/CheckoutProcessText"></xsl:value-of>
+							</a>
 						</div>
-					</section>
-				</xsl:otherwise>
-			</xsl:choose>
+					</div>
+				</section>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="CartItem">
 		<tr>
