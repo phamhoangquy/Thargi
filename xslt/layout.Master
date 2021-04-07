@@ -232,8 +232,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-3 col-md-6 col-sm-6 col-12">
-                                    <portal:ModuleWrapper ID="mdl212" runat="server" ConfigureModuleId="212" />
-
+                                    <div class="footer-address">
+                                        <portal:ModuleWrapper ID="mdl212" runat="server" ConfigureModuleId="273" />
+                                    </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6 col-sm-6 col-12">
                                     <portal:ModuleWrapper ID="mdl213" runat="server" ConfigureModuleId="213" />

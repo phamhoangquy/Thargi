@@ -7,11 +7,48 @@ footer
 			padding-top: 30px
 		@media screen and ( max-width: 576px)
 			padding-top: 20px
-		.caption-footer
-			font-size: 18px
-			color: #cfcfcf
-			text-align: center
-			font-weight: 700
+		.footer-address
+			.card__title
+				padding-bottom: 15px
+				text-transform: uppercase
+				h4
+					font-size: 18px
+					color: #ffffff
+					position: relative
+					
+					&::before
+						content: ''
+						position: absolute
+						width: 30px
+						height: 2px
+						bottom: -15px
+						left: 0
+						background: #ffffff
+			.card__body
+				ul
+					padding: 0
+					list-style: none
+					li
+						display: flex
+						&:nth-child(2)
+							padding-bottom: 15px
+						strong
+							color: #fff
+							font-size: 16px
+							font-weight: 600
+						.icon-footer
+							padding-right: 5px
+							color: #fff
+							font-size: 16px
+						p
+							font-size: 16px
+							color: #ffffff
+							padding-bottom: 5px
+							strong
+								font-size: 16px
+								color: #ffffff
+								font-weight: 600
+
 		.footer-card
 			padding-bottom: 50px
 			@media screen and ( max-width: 576px)
@@ -36,22 +73,6 @@ footer
 						bottom: -15px
 						left: 0
 						background: #ffffff
-			.card__body
-				ul
-					padding: 0
-					list-style: none
-					li
-						display: -webkit-box
-						padding-bottom: 15px
-						.icon-footer
-							span
-								font-size: 14px
-								color: #848484
-								padding-right: 10px
-						p
-							font-size: 14px
-							color: #848484
-
 			.item-footer
 				padding-top: 25px
 				ul
@@ -69,16 +90,10 @@ footer
 								border-bottom: 1px solid #fff
 				.notification
 					padding-top: 30px
-		.footer-card
+		.footer-card,.footer-address
 			margin-top: 10px
 			@media screen and ( max-width: 576px)
 				padding-left: 0
-		.footer-address
-			@media screen and ( max-width:1280px )
-				padding-left: 30px
-			@media screen and ( max-width:576px )
-				padding-left: 0
-				margin-top: 50px
 	
 	.footer-subscribe
 		background: #ffffff
@@ -220,7 +235,7 @@ footer
 				height: 60px
 				font-size: 14px
 				color: #ffffff
-				padding-top: 20px
+				padding-top: 12px
 				font-family: "Quicksand"
 				@media screen and ( max-width: 768px )
 					text-align: center

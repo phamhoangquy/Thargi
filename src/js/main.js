@@ -1,4 +1,19 @@
 $(document).ready(function() {
+
+    // link srcoll index page to about page
+    var path = window.location.href;
+    let Ketqua = path.substr(path.indexOf("#") + 1);
+    if (path.indexOf("#") != -1) {
+        let offset = $("header").outerHeight();
+        $(this).parent().addClass("active").siblings().removeClass("active");
+        $("html, body").animate({
+                scrollTop: $("#" + Ketqua).offset().top - offset,
+            },
+            800,
+        );
+    }
+    // end srcoll page
+
     AOS.init({
         duration: 1500,
         easing: 'ease-in-sine',
