@@ -1752,4 +1752,37 @@
   <data name="ManufacturerShowPagerSetting" xml:space="preserve">
     <value>Hiển thị phân trang</value>
   </data>
+  <data name="ManufacturerDetailFeatureName" xml:space="preserve">
+    <value>Chi tiết thương hiệu</value>
+  </data>
+  <data name="ManufacturerLoadProductsSetting" xml:space="preserve">
+    <value>Hiển thị sản phẩm</value>
+  </data>
+  <data name="ManufacturerLoadZonesSetting" xml:space="preserve">
+    <value>Hiển thị danh mục</value>
+  </data>
+  <data name="ChildProductChildImagesLabel" xml:space="preserve">
+    <value>Sao chép hình ảnh từ sản phẩm cha</value>
+  </data>
+  <data name="ChildProductLabel" xml:space="preserve">
+    <value>Thêm sản phẩm con</value>
+  </data>
+  <data name="ChildProductNameLabel" xml:space="preserve">
+    <value>Tên sản phẩm con</value>
+  </data>
+  <data name="ChildProductPublishedLabel" xml:space="preserve">
+    <value>Hiển thị sản phẩm con</value>
+  </data>
+  <data name="GenarationProductChildButton" xml:space="preserve">
+    <value>Tạo hàng loạt sản phẩm con</value>
+  </data>
+  <data name="GenarationProductChildLabel" xml:space="preserve">
+    <value>Tạo hàng loạt sản phẩm con</value>
+  </data>
+  <data name="ProductAddProductChildButton" xml:space="preserve">
+    <value>Thêm sản phẩm</value>
+  </data>
+  <data name="ProductEditChildProductTab" xml:space="preserve">
+    <value>Sản phẩm con</value>
+  </data>
 </root>
