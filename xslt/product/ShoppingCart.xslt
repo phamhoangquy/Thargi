@@ -39,7 +39,7 @@
 											<xsl:value-of select="/ShoppingCart/QuantityText"></xsl:value-of>
 										</th>
 										<th>
-											<xsl:value-of select="/ShoppingCart/PriceText"></xsl:value-of>
+											<xsl:value-of select="/ShoppingCart/TotalCartText"></xsl:value-of>
 										</th>
 										<!-- <th>
 											<xsl:value-of select="/ShoppingCart/ItemTotalText"></xsl:value-of>

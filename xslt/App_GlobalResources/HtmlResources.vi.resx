@@ -294,4 +294,7 @@
 	<data name="OrderInformationText" xml:space="preserve">
 		<value>Thông tin đặt hàng</value>
 	</data>
+	<data name="TotalCartText" xml:space="preserve">
+		<value>Tổng</value>
+	</data>
 </root>
