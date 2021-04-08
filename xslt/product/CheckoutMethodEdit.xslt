@@ -35,7 +35,7 @@
 						<xsl:value-of select="/CheckoutMethod/NextPageUrl"></xsl:value-of>
 						<xsl:text>');return false;</xsl:text>
 					</xsl:attribute>
-					<xsl:text>Đặt hàng</xsl:text>
+					<xsl:text>Hoàn tất</xsl:text>
 				</button>
 			</div>
 		</section>

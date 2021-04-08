@@ -308,6 +308,13 @@
 				padding-right: 30px
 			.cart-table
 				width: 100%
+				thead
+					tr
+						th
+							&:first-child
+								padding-left: 15px
+							&:last-child
+								text-align: right
 				tbody
 					tr
 						@media screen and ( max-width: 1023px)
@@ -403,12 +410,14 @@
 	.btn-wrap
 		display: flex
 		justify-content: space-between
+		align-items: center
 		@media screen and ( max-width: 576px)
 			display: block
 		.btn-left
 			a
 				// padding-right: 0
 				// padding-left: 0
+				margin-top: 105px
 				padding: 10px
 				border-radius: 10px
 				color: #fff
@@ -425,6 +434,8 @@
 					padding-right: 5px
 				&:hover
 					color: #58a53f
+				@media screen and ( max-width: 576px)
+					margin-top: 0
 		.btn-right
 			margin-top: 15px
 			.totalamount
@@ -616,6 +627,7 @@
 		color: #58a53f
 		font-size: 24px
 		font-weight: 700
+		padding: 20px 25px 0
 		@media screen and ( max-width: 576px)
 			font-size: 20px
 	.receive-address
@@ -670,7 +682,8 @@
 							select
 								margin-bottom: 30px
 							textarea
-								height: 108px
+								// height: 108px
+								display: none
 							.des
 								width: 100%
 								color: #999
@@ -755,7 +768,10 @@
 			display: none
 	
 	.btn-wrap
+		display: flex
 		padding-bottom: 40px
+		@media screen and ( max-width: 576px)
+			display: block
 		.btn-back
 			// padding-right: 0
 			// padding-left: 0
@@ -776,6 +792,8 @@
 				padding-right: 5px
 			&:hover
 				color: #58a53f
+			@media screen and ( max-width: 576px)
+				margin-bottom: 20px
 		.btn-continue
 			display: flex
 			align-items: center
@@ -953,6 +971,7 @@
 							padding-right: 10px
 							width: 270px
 							max-width: 270px
+							padding-left: 10px
 						.services
 							width: calc(100% - 270px)
 							max-width: calc(100% - 270px)
@@ -1009,7 +1028,22 @@
 								&:after
 									border-color: #ed1c24
 									background: #ed1c24
+						.method-detail
+							padding-left: 10px
+						.method-info
+							display: flex
+							border: 1px solid #e0e0e0
+							border-radius: 10px
+							margin-left: 10px
+							.method-img,.method-detail
+								padding: 10px
+							.method-detail
+								border-left: 1px solid #e0e0e0
+
 		.cart-button
+			display: flex
+			@media screen and ( max-width: 576px)
+				display: block
 			.btn-back
 				// padding-right: 0
 				// padding-left: 0
@@ -1031,7 +1065,7 @@
 				&:hover
 					color: #58a53f
 				@media screen and ( max-width: 576px)
-					padding-bottom: 20px
+					margin-bottom: 20px
 			.btn-continue
 				display: flex
 				align-items: center
@@ -1078,6 +1112,8 @@
 			background: #fff
 			padding: 15px 30px
 			text-transform: none
+			strong
+				font-weight: 600
 			@media screen and ( max-width: 576px)
 				font-size: 20px
 		.btn-edit

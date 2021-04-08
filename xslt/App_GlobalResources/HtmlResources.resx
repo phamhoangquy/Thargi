@@ -291,4 +291,7 @@
 	<data name="OtherProductsText" xml:space="preserve">
 		<value>Other products</value>
 	</data>
+	<data name="OrderInformationText" xml:space="preserve">
+		<value>Other information</value>
+	</data>
 </root>
