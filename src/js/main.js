@@ -1,19 +1,4 @@
 $(document).ready(function() {
-
-    // link srcoll index page to about page
-    var path = window.location.href;
-    let Ketqua = path.substr(path.indexOf("#") + 1);
-    if (path.indexOf("#") != -1) {
-        let offset = $("header").outerHeight();
-        $(this).parent().addClass("active").siblings().removeClass("active");
-        $("html, body").animate({
-                scrollTop: $("#" + Ketqua).offset().top - offset,
-            },
-            800,
-        );
-    }
-    // end srcoll page
-
     AOS.init({
         duration: 1500,
         easing: 'ease-in-sine',
@@ -37,6 +22,7 @@ $(document).ready(function() {
     // quantityNumber();
     checkFormCart();
     filterCate();
+    linkToPageAbout();
     showBackToTop();
     $(document).on("click", function(e) {
 
@@ -72,6 +58,20 @@ $(document).ready(function() {
         $('#l_0').trigger("click")
     }, 100);
 });
+
+function linkToPageAbout() {
+    var path = window.location.href;
+    let Ketqua = path.substr(path.indexOf("#") + 1);
+    if (path.indexOf("#") != -1) {
+        let offset = $("header").outerHeight();
+        $(this).parent().addClass("active").siblings().removeClass("active");
+        $("html, body").animate({
+                scrollTop: $("#" + Ketqua).offset().top - offset,
+            },
+            800,
+        );
+    }
+}
 
 function filterCate() {
     $('.tool-product').prependTo('.product-list-page main .product-list .container');
@@ -464,7 +464,7 @@ function swiperInit() {
             clickable: "true"
         }
     });
-    var newsDetailSwiper = new Swiper(".other-news-detail .swiper-container", {
+    var oterNews = new Swiper(".other-news-detail .swiper-container", {
         // Optional parameters
         speed: 1000,
         spaceBetween: 30,
@@ -494,7 +494,7 @@ function swiperInit() {
             },
         },
     });
-    var newsDetailSwiper = new Swiper(".product-detail-3 .swiper-container", {
+    var productDetailSwiper = new Swiper(".product-detail-3 .swiper-container", {
         // Optional parameters
         speed: 1000,
         spaceBetween: 30,
@@ -554,7 +554,7 @@ function swiperInit() {
             },
         },
     });
-    var newsDetailSwiper = new Swiper(".product-lastview .swiper-container", {
+    var productLastviewSwiper = new Swiper(".product-lastview .swiper-container", {
         // Optional parameters
         speed: 1000,
         spaceBetween: 10,
@@ -611,6 +611,37 @@ function swiperInit() {
             },
             1440: {
                 slidesPerView: 4,
+            },
+        },
+    });
+    var shopTMDTSwiper = new Swiper(".shop-tmdt .swiper-container", {
+        // Optional parameters
+        breakpointsInverse: true,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.shop-tmdt .nav-arrow-next',
+            prevEl: '.shop-tmdt .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 3,
             },
         },
     });

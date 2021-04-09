@@ -49,6 +49,9 @@
 									</span></p>
 								</div>
 							</div>
+							<div class="tax-price">
+								<p>Giá chưa bao gồm Thuế VAT</p>
+							</div>
 							<div class="desc-table">
 								<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 							</div>

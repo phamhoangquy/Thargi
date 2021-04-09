@@ -9,20 +9,18 @@ section.shop-tmdt
 				li
 					a(href="#") Hệ thống bán lẻ
 				li
-					a(href="#") Shop TMĐT 
+					a(href="#") Shop TMĐT
 		.row
 			.col-lg-6
-				.item-shop-tmdt
-					ul
-						li
-							.tmdt
-								a(href="#")
-									img(src="./img/system/tiki.png", alt="") 
-						li
-							.tmdt
-								a(href="#")
-									img(src="./img/system/tiki.png", alt="") 
-						li
-							.tmdt
-								a(href="#")
-									img(src="./img/system/tiki.png", alt="") 
+				.shop-slider-swiper-wrapper
+					.nav-arrow-prev
+						span.ri-arrow-left-fill
+					.nav-arrow-next
+						span.ri-arrow-right-fill
+					.swiper-container
+						.swiper-wrapper
+							-for(i=0; i<12; i++)
+								.swiper-slide
+									.item-shop-tmdt
+										img(src="./img/system/tiki.png", alt="") 
+
