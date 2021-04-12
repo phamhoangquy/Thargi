@@ -318,9 +318,9 @@
 						</div>
 					</div>
 					<div class="des">Lưu ý: Giá trị hóa đơn không bao gồm giá trị giảm giá</div>
-					<div class="dieu-khoan">
+					<!-- <div class="dieu-khoan">
 						Bằng cách đặt hàng, bạn đồng ý với điều khoản sử dụng của Thargi
-					</div>
+					</div> -->
 				</div>
 			</section>
 		</div>

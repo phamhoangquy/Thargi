@@ -342,6 +342,35 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		.login-panel
+			.login-form
+				.form-group
+					.panel-primary
+						.panel-body
+							.mt-3
+								.cart-login
+									.facebook-login,.google-login
+										display: flex
+										align-items: center
+										justify-content: center
+										transition: .2s
+										margin-top: 15px
+										margin-bottom: 0
+										border: 1px solid #4267b2
+										border-radius: 5px
+										background: #4267b2
+										width: 100%
+										height: 45px
+										color: #fff
+										font-size: 16px
+										font-weight: 400
+										text-align: center
+										em
+											padding-right: 5px
+									.google-login
+										border: 1px solid #df4a32
+										background: #df4a32
+
 
 // registerpage
 .registerpage
@@ -350,3 +379,77 @@
 			display: flex
 			justify-content: center
 			align-items: center
+			.signup-panel
+				.signup-form
+					.form-horizontal
+						#ctl00_mainContent_RegisterUser_CreateUserStepContainer_pnlRequiredProfileProperties
+							.form-group
+								label
+									&.col-sm-3
+										margin-left: -15px
+								.col-sm-9
+									max-width: 100%
+									margin-left: -15px
+									input
+										width: 105.5%
+										@media screen and ( max-width: 1024px)
+											width: 105%
+										@media screen and ( max-width: 576px)
+											width: 109%
+								.settingcontrol
+									.frm-row
+										margin-bottom: 20px
+
+
+// passwordrecovery
+.passwordrecovery
+	background: #f5f5f5
+	.wrap-recover
+		padding: 50px 0
+		text-align: center
+		.panel-primary
+			padding: 30px 0
+			box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
+			background: #fff
+			border-radius: 5px
+			width: 35%
+			display: block
+			margin-left: auto
+			margin-right: auto
+			@media screen and ( max-width: 1023px)
+				width: 100%
+		.form-horizontal
+			.form-group
+				label
+					padding-top: 10px
+					max-width: 100%
+				.col-sm-offset-3
+					padding-top: 20px
+				.col-sm-offset-3,.col-sm-9
+					max-width: 100%
+					input[type="text"]
+						width: 250px
+						height: 40px
+						border: 1px solid #e0e0e0
+						border-radius: 5px
+						margin-top: 20px
+					input[type="submit"]
+						width: 250px
+						height: 40px
+						border-radius: 5px
+						background: #ed1c24
+						color: #fff
+						border: none
+						// &:hover
+						// 	background: none
+						// 	border: 1px solid #58a53f
+						// 	color: #58a53f
+					.captcha
+						.RadCaptcha
+							display: flex
+							justify-content: center
+							align-items: center
+							#ctl00_mainContent_PasswordRecovery1_UserNameContainerID_captcha_ctl01
+								margin-top: 0
+								height: auto !important
+								flex-direction: row !important

@@ -30,23 +30,21 @@
 								<div class="btn button-apply">
 									<a href="javascript:void(0)" data-fancybox="" data-src="#form-apply">Ứng tuyển</a>
 								</div>
-								<xsl:if test="FileUrl != ''">
-									<div class="text">Hoặc</div>
-									<div class="btn button-download">
-										<a href="" download="">
-											<xsl:attribute name="href">
-												<xsl:value-of select="FileUrl"></xsl:value-of>
-											</xsl:attribute>
-											<xsl:attribute name="title">
-												<xsl:value-of select="Title"></xsl:value-of>
-											</xsl:attribute>
-											<xsl:attribute name="target">
-												<xsl:value-of select="Target"></xsl:value-of>
-											</xsl:attribute>
-											Tải hồ sơ mẫu
-										</a>
-									</div>
-								</xsl:if>
+								<div class="text">Hoặc</div>
+								<div class="btn button-download">
+									<a href="" download="">
+										<xsl:attribute name="href">
+											<xsl:value-of select="FileUrl"></xsl:value-of>
+										</xsl:attribute>
+										<xsl:attribute name="title">
+											<xsl:value-of select="Title"></xsl:value-of>
+										</xsl:attribute>
+										<xsl:attribute name="target">
+											<xsl:value-of select="Target"></xsl:value-of>
+										</xsl:attribute>
+										Tải hồ sơ mẫu
+									</a>
+								</div>
 							
 							</div>
 							<div class="form-apply" id="form-apply" style="display: none">

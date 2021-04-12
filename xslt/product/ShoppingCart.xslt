@@ -73,7 +73,7 @@
 								</div>
 								<div class="payment-des">
 									<!-- <xsl:value-of select="/ShoppingCart/PriceHasIncludedVATText"></xsl:value-of> -->
-									Giá đã bao gồm VAT
+									Giá chưa bao gồm thuế VAT
 								</div>
 								<a href="#!" class="hvr-sweep-to-right btn-continue">
 									<xsl:attribute name="onclick">

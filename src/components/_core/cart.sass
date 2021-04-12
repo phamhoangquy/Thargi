@@ -296,6 +296,7 @@
 			overflow-y: auto
 			scrollbar-width: thin
 			scrollbar-color: #82ba06
+			padding-right: 30px
 			&::-webkit-scrollbar
 				background: #82ba06
 				width: 5px
@@ -313,6 +314,8 @@
 						th
 							&:first-child
 								padding-left: 15px
+							&:nth-child(2)
+								text-align: center
 							&:last-child
 								text-align: right
 				tbody
@@ -324,6 +327,7 @@
 							margin-bottom: 30px
 						td
 							&.product
+								width: 50%
 								padding: 15px 10px 25px
 								@media screen and ( max-width: 1023px)
 									position: relative
@@ -360,6 +364,10 @@
 												em
 													color: #58a53f
 							&.amount
+								display: flex
+								justify-content: center
+								align-items: center
+								margin-top: 30px
 								@media screen and ( max-width: 1023px)
 									width: 50%
 								.input-number
@@ -420,12 +428,13 @@
 				margin-top: 105px
 				padding: 10px
 				border-radius: 10px
-				color: #fff
+				color: #666
 				font-size: 14px
 				font-weight: 700
 				text-transform: uppercase
 				display: flex
 				background: #e0e0e0
+				border: 1px solid transparent
 				&::before
 					content: '\ea64'
 					font-family: "remixicon"
@@ -434,6 +443,8 @@
 					padding-right: 5px
 				&:hover
 					color: #58a53f
+					border: 1px solid #58a53f
+					background: none
 				@media screen and ( max-width: 576px)
 					margin-top: 0
 		.btn-right
@@ -620,6 +631,9 @@
 
 // cart - step 3
 .cart-page-step-3
+	padding-bottom: 50px
+	@media screen and ( max-width: 1024px)
+		padding-bottom: 30px
 	.flex-wrap
 		display: flex
 		justify-content: center
@@ -779,12 +793,13 @@
 			padding: 10px
 			border-radius: 10px
 			width: max-content
-			color: #fff
+			color: #666
 			background: #e0e0e0
 			font-size: 14px
 			font-weight: 700
 			text-transform: uppercase
 			display: flex
+			border: 1px solid transparent
 			&::before
 				content: '\ea64'
 				font-family: "remixicon"
@@ -793,6 +808,8 @@
 				padding-right: 5px
 			&:hover
 				color: #58a53f
+				background: none
+				border: 1px solid #58a53f
 			@media screen and ( max-width: 576px)
 				margin-bottom: 20px
 		.btn-continue
@@ -1051,13 +1068,14 @@
 				// padding-left: 0
 				padding: 10px
 				background: #e0e0e0
-				color: #fff
+				color: #666
 				width: max-content
 				border-radius: 10px
 				font-size: 14px
 				font-weight: 700
 				text-transform: uppercase
 				display: flex
+				border: 1px solid transparent
 				&::before
 					content: '\ea64'
 					font-family: "remixicon"
@@ -1066,6 +1084,8 @@
 					padding-right: 5px
 				&:hover
 					color: #58a53f
+					background: none
+					border: 1px solid #58a53f
 				@media screen and ( max-width: 576px)
 					margin-bottom: 20px
 			.btn-continue
@@ -1196,3 +1216,12 @@
 // cart - step 5
 .cart-page-step-5
 	padding: 40px 0
+	.payment-success
+		.letter
+			p
+				padding-bottom: 5px
+			ul
+				list-style: none
+				padding: 0
+				li
+					padding-bottom: 5px

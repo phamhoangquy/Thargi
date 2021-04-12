@@ -190,7 +190,7 @@
 		<value>Sản phẩm cùng loại</value>
 	</data>
 	<data name="ProductText" xml:space="preserve">
-		<value> sản phẩm</value>
+		<value> Sản phẩm</value>
 	</data>
 	<data name="PromotionText" xml:space="preserve">
 		<value>Giảm giá:</value>
@@ -295,6 +295,6 @@
 		<value>Thông tin đặt hàng</value>
 	</data>
 	<data name="TotalCartText" xml:space="preserve">
-		<value>Tổng</value>
+		<value>Tổng tiền</value>
 	</data>
 </root>
