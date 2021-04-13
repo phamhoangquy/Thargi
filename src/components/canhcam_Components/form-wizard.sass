@@ -1,0 +1,222 @@
+.wrap-form
+	margin-top: 30px
+	@media(min-width: 1025px)
+		margin-top: 0
+	.form-group
+		label
+			display: none
+	input[type='text'], textarea
+		width: 100%
+		padding: 13px 20px
+		font-size: 15px
+		border: 1px solid #e5e5e5
+		color: #333333
+		border-radius: 50px
+		margin-bottom: 30px
+		@media screen and ( max-width: 576px)
+			margin-bottom: 15px
+		&:placeholder
+			color: #999999
+			font-size: 14px
+			font-weight: 300
+		&:focus
+			outline: none
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+	textarea
+		height: 108px
+		border-radius: 15px !important
+	&>div
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -5px
+		.qtext
+			padding: 0 15px
+			flex: 0 0 50%
+			// margin-bottom: 20px
+			@media(max-width: 768px)
+				flex: 0 0 100%
+		.qparagraph
+			flex: 0 0 100%
+			padding: 0 15px
+			// margin-bottom: 20px
+		span
+			color: red
+			font-size: 13px
+	.frm-captcha
+		display: flex
+		align-items: center
+		flex-direction: row-reverse
+		justify-content: flex-end
+		display: flex
+		@media screen and ( max-width: 576px)
+			display: block
+		.frm-captcha-input
+			width: calc(100% - 227px)
+			label
+				display: none
+		.RadCaptcha
+			width: auto!important
+			position: relative
+			span
+				position: absolute
+				bottom: 100%
+			&>div>div
+				align-items: center
+				display: flex
+				// width: 227px
+				@media screen and ( max-width: 576px)
+					width: max-content
+					padding-left: 15px
+					margin-top: -20px
+		.rcRefreshImage
+			margin: 0 10px
+			font-size: 0
+			&:after
+				content: url('/Data/Sites/1/media/change.png')
+	.frm-btnwrap
+		margin-top: 20px
+		@media screen and ( max-width: 576px)
+			margin-left: 10px
+			margin-right: 10px
+			margin-top: 0
+		label
+			display: none
+		.frm-btn-reset
+			display: none
+		.frm-btn
+			width: 100%
+		input
+			width: 100%
+			padding: 10px 30px
+			text-transform: uppercase
+			color: #333333
+			border: 1px solid #e5e5e5
+			border-radius: 50px
+			background: none
+			font-weight: 500
+			&:hover
+				color: #ffffff
+				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+			@media screen and ( max-width: 576px)
+				width: 135px
+	@media(min-width: 768px)
+		.frm-captcha
+			width: 75%
+			float: left
+		.frm-btnwrap
+			float: right
+			margin-top: 0
+			width: 25%
+			// margin-right: 10px
+.frm-btn-reset
+	display: none
+.frm-captcha
+	display: inline-flex
+	justify-content: flex-end
+	align-items: center
+	flex-direction: row-reverse
+	@media screen and ( max-width: 576px)
+		justify-content: flex-start
+		
+	img
+		height: 40px !important
+		max-width: auto
+		max-width: 150px
+		@media screen and ( max-width:1200px)
+			max-width: 150px
+			
+	@media screen and(max-width:576px)
+		flex-direction: column-reverse
+	.frm-captcha-input
+		margin-top: 0
+		padding: 0 60px 0 0 !important
+		margin: 0 !important
+		// order: 1
+		order: unset
+		@media screen and ( max-width:576px)
+			padding: 0  !important
+			margin-left: 0
+			margin-top: 30px
+		label
+			display: none
+		input
+			// padding: 0 10px
+			margin-top: 0
+			// height: 40px
+			// text-transform: uppercase
+			width: 350px !important
+			@media screen and ( max-width:1280px)
+				max-width: 200px
+			@media screen and ( max-width:1200px)
+				max-width: 150px
+			@media screen and ( max-width:1024px)
+				max-width: max-content
+			@media (max-width: 767.98px)
+				margin-left: 20px
+			@media (max-width: 576.98px)
+				margin-left: 0
+				padding-right: 100%
+	.rcRefreshImage
+		position: absolute
+		opacity: 1
+		cursor: pointer
+		height: 0
+		width: 0
+		right: -5px
+		top: 5px
+		color: #ffffff
+		z-index: 0
+		font-size: 0
+		// &:before
+		// 	font-family: "Linearicons-Free"
+		// 	position: absolute
+		// 	top: -5px
+		// 	right: 170px
+		// 	opacity: 1
+		// 	z-index: 99
+		// 	color: #111111
+		// 	font-size: 30px
+		// 	content: "\e860"
+		// 	display: flex
+		// 	justify-content: center
+		// 	align-items: flex-start
+		// 	@media screen and ( max-width: 767px)
+		// 		right: 200px
+		// 	@media screen and ( max-width:576px)
+		// 		height: 50px
+		// 		right: -15px
+@media screen and ( max-width:500px )
+	#ctl00_mainContent_ctl05_captcha_ctl00
+		display: none
+#ctl00_mainContent_ctl02_captcha_ctl01
+	position: relative
+#ctl00_mainContent_ctl06_btnReset,#ctl00_mainContent_ctl05_captcha_ctl00,#ctl00_mainContent_ctl08_captcha_ctl00,#ctl00_mainContent_ctl07_captcha_ctl00
+	display: none
+#ctl00_mainContent_ctl06_txtCaptcha
+	margin-left: 10px
+	@media screen and ( max-width: 576px)
+		margin: 0
+		
+#ctl00_mainContent_ctl06_captcha_CaptchaLinkButton
+	#text
+		display: none
+.RadCaptcha
+	@media screen and ( max-width:767.5px)
+		margin-left: 0
+	@media screen and ( max-width: 576px)
+		width: 100% !important
+		margin-bottom: 15px
+		margin-top: 20px
+	span
+		display: none
+	>div
+		>div
+			display: flex
+			position: relative
+			flex-direction: column-reverse
+			height: 40px !important
+			// margin-top: 0
+			margin-top: -30px
+			@media (max-width: 767.98px)
+				margin-right: 0
+				width: 180px

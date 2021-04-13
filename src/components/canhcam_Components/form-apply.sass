@@ -1,0 +1,125 @@
+.apply-frm
+	margin: 0
+	padding: 20px 10px
+	@media screen and ( max-width: 576px)
+		overflow-x: hidden
+	>div
+		width: 100%
+	#ctl00_phMain_jobApply_pnlNewComment
+		position: relative
+		display: flex
+		flex-wrap: wrap
+
+		>.form-group
+			width: 100%
+			.frm-btnwrap
+				margin-top: -30px
+		.col-left,.col-right
+			flex: 0 0 100%
+			max-width: 100%
+			display: flex
+			flex-wrap: wrap
+			@media screen and ( max-width: 576px)
+				padding-left: 0
+			>.form-group
+				margin-bottom: 10px
+			@media (min-width: 576px)
+				margin: 0 -10px
+				>.form-group
+					padding: 0 10px
+					&.attachfile2
+						position: absolute
+						left: 516px
+						bottom: 0
+	.col-left
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+			@media (min-width: 576px)
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					flex: 0 0 50%
+					max-width: 50%
+	.col-right
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+
+	h4
+		font-size: 16px
+		font-weight: 600
+		color: #333333
+		text-transform: uppercase
+		margin-bottom: 10px
+		@media (min-width: 992px)
+			width: 100%
+		@media screen and ( max-width: 576px)
+			font-size: 12px
+		.required
+			color: red
+	.fa-exclamation-triangle
+		top: 50%
+		transform: translateY(-50%)
+		right: 15px
+		color: red
+	.label
+		font-size: 14px
+		font-weight: 400
+		color: #999999
+		margin-bottom: 4px
+		.required
+			color: red
+			@media screen and ( max-width: 576px)
+				font-size: 10px
+	input[type="text"], input[type="password"], textarea
+		width: 100%
+		border: 1px solid #e5e5e5
+		color: lighten(black, 20%)
+		font-size: 13px
+		padding: 7px 15px
+		font-family: 'Bai Jamjuree',sans-serif
+		&:focus
+			border-color: $main
+	input[type="text"],input[type="password"]
+		height: 25px
+	textarea
+		height: 65px
+	.RadAsyncUpload
+		.ruDropZone
+			display: none
+		.ruFileWrap
+			position: relative
+			display: block
+			height: 50px
+		.ruFileInput, .ruBrowse
+			height: 30px
+			width: 120px
+			background: #e5e5e5
+			text-transform: uppercase
+			font-size: 12px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 0
+		input.ruFileInput
+			left: 0 !important
+			position: absolute
+			top: 0
+			opacity: 0
+	.frm-btn
+		margin-top: 20px
+		text-align: left
+		input[type="submit"]
+			height: 40px
+			width: 100%
+			max-width: 180px
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			border: 0
+			background: linear-gradient(to right, #52a23c 0%, #b8d86f 100%) !important
+			border-radius: 20px !important
+			color: #fff
+			text-transform: uppercase
