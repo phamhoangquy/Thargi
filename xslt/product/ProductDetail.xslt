@@ -16,13 +16,13 @@
 							</div>
 							<div class="swiper-container gallery-thumbs">
 								<div class="swiper-wrapper">
-									<xsl:apply-templates select="ProductImages"></xsl:apply-templates>
+									<xsl:apply-templates select="ProductImages" mode="Thumbnail"></xsl:apply-templates>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
-						<div class="description-detail">
+					<div class="col-lg-6"> 
+						<div class="description-detail product-info">
 							<div class="title-detail"> 
 								<h1><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></h1>
 							</div>
@@ -57,10 +57,9 @@
 							</div>
 							<div class="desc-bottom">
 								<div class="content">
-									<div class="text">Khối lượng</div>
-									<select>
-										<option value="mass-1"><a href="javascript:void(0)">100 g</a></option>
-									</select>
+									<div class="product-attributes">
+										<xsl:apply-templates select="/ProductDetail/ProductProperties[EnableShoppingCart='True']"/>
+									</div>
 									<div class="price">
 										<p><xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of></p>
 									</div>
@@ -169,8 +168,74 @@
 				</div>
 			</section>
 		</xsl:if>
+		<input type="hidden" id="hdProductId">
+			<xsl:attribute name="value">
+				<xsl:value-of select="ProductId"/>
+			</xsl:attribute> 
+		</input>
+	</xsl:template>
+
+	<xsl:template match="ProductProperties">
+		<div class="product-options">  
+			<div class="text">
+				<xsl:value-of select="Title" disable-output-escaping="yes"/>
+			</div>
+			<select onchange="AjaxCart.selectproductoption(this);return false;" class="product-option">  
+				<xsl:attribute name="name">
+					<xsl:text>product_attribute_</xsl:text>
+					<xsl:value-of select="/ProductDetail/ProductId"/>
+					<xsl:text>_</xsl:text>
+					<xsl:value-of select="FieldId"/>
+				</xsl:attribute>
+				<xsl:attribute name="data-id">
+					<xsl:value-of select="FieldId"/> 
+				</xsl:attribute>
+				<xsl:apply-templates select="Options"/>
+			</select>
+			<input type="hidden" class="product-option-input">
+				<xsl:attribute name="name">
+					<xsl:text>product_option_</xsl:text>
+				<xsl:value-of select="FieldId"/>
+				</xsl:attribute>
+				<xsl:attribute name="value">
+					<xsl:value-of select="ActiveOptionId"/>
+				</xsl:attribute>
+			</input>
+		</div>
+	</xsl:template>
+	<xsl:template match="Options">
+		<option>
+			<xsl:attribute name="value">
+				<xsl:value-of select="OptionId"/>
+			</xsl:attribute> 
+			<xsl:value-of select="Title" disable-output-escaping="yes"/>
+		</option>
 	</xsl:template>
 	<xsl:template match="ProductImages">
+		<div class="swiper-slide">
+			<a class=" " data-fancybox="">
+				<xsl:attribute name="href">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="target">
+					<xsl:value-of select="Target"></xsl:value-of>
+				</xsl:attribute>
+				
+				<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+				</img>
+			</a>
+		</div>
+	</xsl:template>
+	<xsl:template match="ProductImages" mode="Thumbnail">
 		<div class="swiper-slide">
 			<img>
 				<xsl:attribute name="src">

@@ -10,6 +10,7 @@
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<xsl:apply-templates select="News"></xsl:apply-templates>
+							
 						</div>
 					</div>
 				</div>
@@ -18,6 +19,7 @@
 	</xsl:template>
 	<xsl:template match="News">
 		<div class="swiper-slide">
+
 			<div class="item-shop-tmdt">
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>

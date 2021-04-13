@@ -68,7 +68,7 @@
 									Tạm tính
 									<xsl:text>: </xsl:text>
 									<strong>
-										<xsl:value-of select="/ShoppingCart/Total"></xsl:value-of>
+										<xsl:value-of select="/ShoppingCart/TotalWithoutTax"></xsl:value-of>
 									</strong>
 								</div>
 								<div class="payment-des">
