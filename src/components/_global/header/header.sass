@@ -30,16 +30,19 @@ header
 			box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05)
 			@media screen and ( max-width: 576px)
 				width: 160px
+				height: 65px
+			@media screen and ( max-width: 360px)
+				width: 145px
 			@media screen and ( max-width: 320px)
-				width: 130px
+				width: 110px
 			a
 				pointer-events: auto
 				img
-					width: 135px
+					// width: 135px
 					@media screen and ( max-width: 576px)
 						width: 110px
 					@media screen and ( max-width: 320px)
-						width: 90px
+						width: 80px
 			&::before
 				content: ''
 				position: absolute
@@ -49,6 +52,8 @@ header
 				width: 201%
 				height: 100px
 				// box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05)
+				@media screen and ( max-width: 576px)
+					height: 65px
 
 	.header-top
 		background: #f5f5f5
@@ -56,6 +61,9 @@ header
 			background: #97c93d
 			height: 90px
 			padding-top: 25px
+		@media screen and ( max-width: 576px)
+			height: 60px
+			padding-top: 10px
 		.header-infor
 			display: flex
 			justify-content: flex-end
@@ -70,6 +78,7 @@ header
 				position: relative
 				border-right: 1px solid #e5e5e5
 				padding-right: 20px
+				height: 40px
 				input
 					border: 0
 					font-size: 12px
@@ -128,6 +137,7 @@ header
 				border-right: 1px solid #e5e5e5
 				padding-left: 20px
 				padding-right: 20px
+				height: 40px
 				.icon-box
 					span
 						font-size: 16px
@@ -146,10 +156,15 @@ header
 			.shopping-cart-toggle
 				display: flex
 				padding-left: 20px
+				border-right: 1px solid #e5e5e5
+				padding-right: 20px
+				height: 40px
 				@media screen and ( max-width: 576px)
 					padding-left: 10px
+					padding-right: 10px
 				@media screen and ( max-width: 320px)
 					padding-left: 10px
+					padding-right: 10px
 				.cart-header
 					display: flex
 					justify-content: center
@@ -170,6 +185,7 @@ header
 						.item-quantity
 							span
 								&.text
+									font-size: 12px
 									@media screen and ( max-width: 1279px)
 										color: #ffffff
 									@media screen and ( max-width: 576px)
@@ -307,6 +323,14 @@ header
 						padding-bottom: 0
 					a
 						color: #333333
+						display: block
+						width: 100%
+					&:hover
+						a
+							border-bottom: 0
+					&.active
+						a
+							border-bottom: 0
 	.menu_mobile.show
 		opacity: 1
 		pointer-events: auto
@@ -324,3 +348,8 @@ header
 		@media screen and ( max-width: 1279px )
 			display: block
 
+// srcoll-header
+.header-scroll
+	.header-logo
+		.logo
+			padding-top: 15px

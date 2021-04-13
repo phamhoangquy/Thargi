@@ -72,7 +72,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="Product">
-		<div class="col-lg-3">
+		<div class="col-6 col-md-6 col-lg-3">
 			<div class="product-wrapper">
 				<xsl:if test="Percent!=''">
 					<div class="product-promotion sale">
@@ -82,7 +82,7 @@
 					</div>
 				</xsl:if>
 				<div class="card-img">
-					<a class=" ">
+					<a class="">
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>

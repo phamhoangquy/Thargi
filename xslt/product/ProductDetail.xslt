@@ -49,6 +49,9 @@
 									</span></p>
 								</div>
 							</div>
+							<div class="tax-price">
+								<p>Giá chưa bao gồm Thuế VAT</p>
+							</div>
 							<div class="desc-table">
 								<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 							</div>
@@ -153,13 +156,14 @@
 						<h2>Sản phẩm khác</h2>
 					</div>
 					<div class="product-detail-3-swiper-wrapper">
-						<div class="nav-arrow-prev"><span class="ri-arrow-left-fill"></span></div>
-						<div class="nav-arrow-next"><span class="ri-arrow-right-fill"></span></div>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<xsl:apply-templates select="ProductOther"></xsl:apply-templates>
-								
 							</div>
+						</div>
+						<div class="nav-wrapper">
+							<div class="nav-arrow-prev"><span class="ri-arrow-left-fill"></span></div>
+							<div class="nav-arrow-next"><span class="ri-arrow-right-fill"></span></div>
 						</div>
 					</div>
 				</div>
@@ -234,7 +238,7 @@
 				</div>
 			</xsl:if>
 			<div class="card-img">
-				<a class=" ">
+				<a class="">
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
@@ -321,7 +325,7 @@
 					</div>
 				</xsl:if>
 				<div class="card-img">
-					<a class=" ">
+					<a class="">
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>

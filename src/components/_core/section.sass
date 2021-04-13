@@ -3,6 +3,8 @@
 		// margin-top: 100px
 
 .product-list-page
+	.sub-menu-list
+		display: none
 	.pages
 		.modulepager
 			padding-left: 25%
@@ -19,6 +21,16 @@
 		margin-top: 30px
 		padding-top: 27px
 		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: 25px
+			border: 5px solid transparent
+			pointer-events: none
 		.sale
 			position: absolute
 			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
@@ -112,16 +124,18 @@
 							font-size: 12px
 		&:hover
 			cursor: pointer
-			border-color: rgb(221, 240, 187)
-			border: 5px solid rgb(221, 240, 187)
+			border: 1px solid transparent
+			&::before
+				border-color: rgb(221, 240, 187)
+				border: 5px solid rgb(221, 240, 187)
 			.block-btn
 				ul
 					li
 						&:first-child
 							background: #58a53f
-							border-radius: 0 0 0 20px
+							border-radius: 0 0 0 35px
 						&:last-child
-							border-radius: 0 0 20px 0
+							border-radius: 0 0 35px 0
 							background: #97c93d
 						a
 							color: #ffffff
@@ -129,13 +143,34 @@
 // Home
 .home-page
 	.home_s-1,.home_s-3
+		.col-lg-3
+			@media screen and ( max-width: 576px)
+				&:nth-child(2n+1)
+					padding-right: 5px
+				&:nth-child(2n)
+					padding-left: 5px
+				
 		// product
 		.product-wrapper
-			border: 1px solid #e5e5e5
+			border:  1px solid #e5e5e5
 			border-radius: 25px
-			margin-top: 10px
+			margin-top: 30px
 			padding-top: 27px
 			position: relative
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				border-radius: 25px
+				pointer-events: none
+				border: 5px solid transparent
+			@media screen and ( max-width: 576px)
+				border-radius: 15px
+				padding-top: 0
+				margin-top: 15px
 			.sale
 				position: absolute
 				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
@@ -157,7 +192,7 @@
 					max-height: 100%
 					width: 100%
 					height: 230px
-					// @media screen and ( max-width: 1023px)
+					// @media screen and ( max-width: 576px)
 					// 	height: auto
 					img
 						width: 100%
@@ -165,6 +200,8 @@
 						object-fit: contain
 			.title
 				margin-top: 15px
+				@media screen and ( max-width: 576px)
+					margin-top: 0
 				a
 					padding-left: 30px
 					padding-right: 30px
@@ -179,23 +216,45 @@
 					overflow: hidden
 					text-overflow: ellipsis
 					height: 50px
+					@media screen and ( max-width: 576px)
+						font-size: 14px
+						height: 43px
+						padding-left: 15px
+						padding-right: 15px
+					@media screen and ( max-width: 375px)
+						font-size: 14px
+						padding-left: 5px
+						padding-right: 5px
 			.block-price
 				display: flex
 				justify-content: center
 				align-items: center
 				padding-top: 5px
+				@media screen and ( max-width: 576px)
+					display: block
+					.price,.discount
+						text-align: center !important
+					.price
+						p
+							padding-right: 0 !important
 				.price
 					p
 						padding-right: 15px
 						font-size: 18px
 						color: #eb0000
 						font-weight: 700
+						@media screen and ( max-width: 576px)
+							font-size: 16px
+						@media screen and ( max-width: 375px)
+							font-size: 11px
 				.discount
 					p
 						text-decoration: line-through
 						font-size: 14px
 						color: #333333
 						font-weight: 500
+						@media screen and ( max-width: 375px)
+							font-size: 11px
 			.block-btn
 				cursor: pointer
 				border-top: 1px solid #e5e5e5
@@ -218,6 +277,8 @@
 							border-right: 0
 						@media screen and ( max-width: 1024px)
 							padding: 10px
+						// @media screen and ( max-width: 375px)
+						// 	padding: 8px
 						a
 							font-size: 14px
 							color: #999999
@@ -225,24 +286,44 @@
 							display: flex
 							justify-content: center
 							align-items: center
+							white-space: nowrap
+							@media screen and ( max-width: 576px)
+								font-size: 12px
+							@media screen and ( max-width: 375px)
+								font-size: 10px
+							@media screen and ( max-width: 320px)
+								text-align: center
 			&:hover
 				cursor: pointer
-				border-color: rgb(221, 240, 187)
-				border: 5px solid rgb(221, 240, 187)
+				border: 1px solid transparent
+				&::before
+					border-color: rgb(221, 240, 187)
+					border: 5px solid rgb(221, 240, 187)
+					@media screen and ( max-width: 576px)
+						border: 3px solid rgb(221, 240, 187)
+						border-radius: 15px
 				.block-btn
 					ul
 						li
 							&:first-child
 								background: #58a53f
-								border-radius: 0 0 0 20px
+								border-radius: 0 0 0 35px
 							&:last-child
-								border-radius: 0 0 20px 0
+								border-radius: 0 0 35px 0
 								background: #97c93d
+							@media screen and ( max-width: 576px)
+								padding: 0
+								&:first-child
+									padding: 10px
+									border-radius: 0 0 0 20px
+								&:last-child
+									padding: 10px
+									border-radius: 0 0 20px 0
 							a
 								color: #ffffff
 
 .news-detail-page
-	.Module.Module-237,.Module.Module-236,.Module.Module-230
+	.Module.Module-233,.Module.Module-237,.Module.Module-236,.Module.Module-230
 		display: none
 
 // cart
@@ -252,6 +333,8 @@
 
 .Module.Module-272
 	padding: 60px 0
+	@media screen and ( max-width: 576px)
+		padding: 30px 0
 
 // login
 .login-page
@@ -259,3 +342,120 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		.login-panel
+			.login-form
+				.form-group
+					.panel-primary
+						.panel-body
+							.mt-3
+								.cart-login
+									.facebook-login,.google-login
+										display: flex
+										align-items: center
+										justify-content: center
+										transition: .2s
+										margin-top: 15px
+										margin-bottom: 0
+										border: 1px solid #4267b2
+										border-radius: 5px
+										background: #4267b2
+										width: 100%
+										height: 45px
+										color: #fff
+										font-size: 16px
+										font-weight: 400
+										text-align: center
+										em
+											padding-right: 5px
+									.google-login
+										border: 1px solid #df4a32
+										background: #df4a32
+
+
+// registerpage
+.registerpage
+	.signup-page
+		.row
+			display: flex
+			justify-content: center
+			align-items: center
+			.signup-panel
+				.signup-form
+					.form-horizontal
+						#ctl00_mainContent_RegisterUser_CreateUserStepContainer_pnlRequiredProfileProperties
+							.form-group
+								label
+									&.col-sm-3
+										margin-left: -15px
+								.col-sm-9
+									max-width: 100%
+									margin-left: -15px
+									input
+										width: 105.5%
+										@media screen and ( max-width: 1024px)
+											width: 105%
+										@media screen and ( max-width: 576px)
+											width: 109%
+								.settingcontrol
+									.frm-row
+										margin-bottom: 20px
+
+
+// passwordrecovery
+.passwordrecovery
+	background: #f5f5f5
+	.wrap-recover
+		padding: 50px 0
+		text-align: center
+		.panel-primary
+			padding: 30px 0
+			box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
+			background: #fff
+			border-radius: 5px
+			width: 35%
+			display: block
+			margin-left: auto
+			margin-right: auto
+			@media screen and ( max-width: 1023px)
+				width: 100%
+		.form-horizontal
+			.form-group
+				label
+					padding-top: 10px
+					max-width: 100%
+				.col-sm-offset-3
+					padding-top: 20px
+				.col-sm-offset-3,.col-sm-9
+					max-width: 100%
+					input[type="text"]
+						width: 250px
+						height: 40px
+						border: 1px solid #e0e0e0
+						border-radius: 5px
+						margin-top: 20px
+					input[type="submit"]
+						width: 250px
+						height: 40px
+						border-radius: 5px
+						background: #ed1c24
+						color: #fff
+						border: none
+						// &:hover
+						// 	background: none
+						// 	border: 1px solid #58a53f
+						// 	color: #58a53f
+					.captcha
+						.RadCaptcha
+							display: flex
+							justify-content: center
+							align-items: center
+							#ctl00_mainContent_PasswordRecovery1_UserNameContainerID_captcha_ctl01
+								margin-top: 0
+								height: auto !important
+								flex-direction: row !important
+
+
+.fancybox-stage
+	.fancybox-content
+		button
+			right: 0 !important

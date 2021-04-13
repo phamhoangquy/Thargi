@@ -28,6 +28,8 @@
         <link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
         <link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
+        <link rel="shortcut icon" href="/Data/Sites/1/skins/default/img/favicon.ico">
+        <link rel="icon" href="/favicon.ico">
         <meta name="msapplication-TileColor">
         <meta name="msapplication-TileImage" content="/Data/Sites/1/skins/default/favicon/ms-icon-144x144.png">
         <meta name="theme-color">
@@ -38,6 +40,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
@@ -229,8 +232,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-3 col-md-6 col-sm-6 col-12">
-                                    <portal:ModuleWrapper ID="mdl212" runat="server" ConfigureModuleId="212" />
-
+                                    <div class="footer-address">
+                                        <portal:ModuleWrapper ID="mdl212" runat="server" ConfigureModuleId="273" />
+                                    </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6 col-sm-6 col-12">
                                     <portal:ModuleWrapper ID="mdl213" runat="server" ConfigureModuleId="213" />

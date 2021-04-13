@@ -6,6 +6,7 @@
 			<div class="ajaxfilterresponse">
 				<xsl:apply-templates select="Group"></xsl:apply-templates>
 			</div>
+			<div id="cls_filter-2">Đóng</div>
 		</div>
 	</xsl:template>
 	<xsl:template match="Group">

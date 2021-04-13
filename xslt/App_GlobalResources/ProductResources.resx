@@ -1746,4 +1746,37 @@
   <data name="ManufacturerShowPagerSetting" xml:space="preserve">
     <value>Show pager</value>
   </data>
+  <data name="ManufacturerDetailFeatureName" xml:space="preserve">
+    <value>Manufacturer detail</value>
+  </data>
+  <data name="ManufacturerLoadProductsSetting" xml:space="preserve">
+    <value>Load products</value>
+  </data>
+  <data name="ManufacturerLoadZonesSetting" xml:space="preserve">
+    <value>Load zones</value>
+  </data>
+  <data name="ChildProductChildImagesLabel" xml:space="preserve">
+    <value>Copy Product Image</value>
+  </data>
+  <data name="ChildProductLabel" xml:space="preserve">
+    <value>Add Child Product</value>
+  </data>
+  <data name="ChildProductNameLabel" xml:space="preserve">
+    <value>Child Product Name</value>
+  </data>
+  <data name="ChildProductPublishedLabel" xml:space="preserve">
+    <value>Child Product Published</value>
+  </data>
+  <data name="GenarationProductChildButton" xml:space="preserve">
+    <value>Multi-generate child products</value>
+  </data>
+  <data name="GenarationProductChildLabel" xml:space="preserve">
+    <value>Multi-generate child products</value>
+  </data>
+  <data name="ProductAddProductChildButton" xml:space="preserve">
+    <value>Add Childs</value>
+  </data>
+  <data name="ProductEditChildProductTab" xml:space="preserve">
+    <value>Product Child</value>
+  </data>
 </root>

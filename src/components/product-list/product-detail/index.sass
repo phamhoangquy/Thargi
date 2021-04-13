@@ -11,8 +11,8 @@
 			.swiper-slide
 				width: 100%
 				height: 400px
-				@media screen and ( max-width: 1023px)
-					height: auto
+				// @media screen and ( max-width: 1023px)
+				// 	height: auto
 				img
 					width: 100%
 					height: 100%
@@ -38,7 +38,7 @@
 					-webkit-text-fill-color: transparent
 				&:hover
 					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
-					border: 1px solid transparent
+					border: 0
 					span
 						color: #ffffff
 						-webkit-text-fill-color: unset
@@ -60,8 +60,8 @@
 					width: 100%
 					height: 70px
 					object-fit: contain
-			// .swiper-slide-thumb-active
-			// 	border: 1px solid #347227
+			.swiper-slide-thumb-active
+				border: 1px solid #52a23c
 	// End nút slide
 
 	.description-detail
@@ -80,6 +80,8 @@
 					background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
 					width: 60px
 					height: 2px
+				@media screen and ( max-width: 576px)
+					font-size: 20px
 
 		.desc-top
 			display: flex
@@ -138,15 +140,23 @@
 				tbody
 					tr
 						th
-							width: 45%
+							width: 40%
 							font-size: 16px
 							color: #333333
 							font-weight: 700
+							text-align: left !important
 						td
 							font-size: 16px
 							color: #333333
 							height: 45px
 							font-weight: 500
+							font-family: "Quicksand"
+
+		.tax-price
+			p
+				font-size: 12px
+				font-style: italic
+				padding-top: 10px
 
 		.desc-bottom
 			display: flex
@@ -168,6 +178,21 @@
 						padding-right: 40px !important
 					.price
 						padding-left: 40px !important
+				@media screen and ( max-width: 360px)
+					.text
+						padding-right: 30px !important
+					.price
+						padding-left: 30px !important
+				@media screen and ( max-width: 320px)
+					.text
+						padding-right: 15px !important
+					.price
+						padding-left: 15px !important
+				.product-attributes
+					.product-options
+						display: flex
+						justify-content: center
+						align-items: center
 				.text
 					color: #333333
 					font-size: 14px
@@ -237,7 +262,8 @@
 // section-2
 .product-detail-2
 	.tab-description
-		overflow-x: auto
+		@media screen and ( max-width: 320px)
+			overflow-x: auto
 		ul 
 			list-style: none
 			padding: 0
@@ -248,6 +274,9 @@
 				align-items: center
 				white-space: nowrap
 			li
+				@media screen and ( max-width: 576px)
+					&:first-child,&:last-child
+						width: auto !important
 				&:first-child
 					width: 50%
 					a
@@ -268,6 +297,13 @@
 					padding: 20px
 					text-transform: uppercase
 					border-radius: 5px 5px 0 0
+					@media screen and ( max-width: 576px)
+						padding: 13px
+					@media screen and ( max-width: 375px)
+						font-size: 13px
+						padding: 15px 10px
+					@media screen and ( max-width: 360px)
+						padding: 15px 6px
 				&:hover
 					a
 						background: #eeeeee
@@ -290,6 +326,7 @@
 				font-size: 14px
 				padding-bottom: 20px
 				// font-weight: 600
+				font-family: "Quicksand"
 			ul
 				list-style: none
 				padding: 0
@@ -306,6 +343,7 @@
 						color: #58a53f
 					p
 						font-size: 14px
+						font-family: "Quicksand"
 
 	
 	.list-infor-wrapper
@@ -313,6 +351,9 @@
 		border-radius: 20px
 		background: #f8f8f8
 		padding: 30px
+		@media screen and ( max-width: 576px)
+			padding: 15px
+			margin-top: 40px
 		.card-title
 			position: relative
 			h2
@@ -340,6 +381,8 @@
 					background: #eeeeee
 					border-radius: 10px 10px 0 0
 					padding: 10px 30px
+					@media screen and ( max-width: 576px)
+						padding: 10px 15px
 				.wrapper-table-inner
 					overflow: hidden
 				table
@@ -347,28 +390,47 @@
 					thead
 						tr
 							height: 50px
+							font-family: "Quicksand"
 							th
 								padding-left: 30px
 								font-size: 14px
 								color: #58a53f
 								font-weight: 700
+								border-bottom: 1px solid #e0e0e0
 								&:last-child
 									text-align: right
 									padding-right: 30px
+								@media screen and ( max-width: 576px)
+									font-size: 12px
+									padding-left: 15px
+									&:last-child
+										padding-right: 15px
 					tbody
 						tr
 							height: 50px
+							font-family: "Quicksand"
+							+ tr
+								border-top: 1px solid #e0e0e0
 							td
 								font-size: 14px
 								color: #666666
 								padding-left: 30px
 								font-weight: 500
+								strong
+									color: #58a53f
 							td
 								font-size: 14px
 								color: #666666
 								&:nth-child(3)
 									text-align: right
 									padding-right: 30px
+								@media screen and ( max-width: 576px)
+									font-size: 12px
+									padding-left: 15px
+									&:first-child
+										width: 30%
+									&:nth-child(3)
+										padding-right: 15px
 				.wrapper-table
 					.view-table-compact
 						display: none
@@ -428,13 +490,16 @@
 
 // section-3
 .product-detail-3
-	padding: 50px 0
+	padding: 50px 0 80px 0
+	@media screen and ( max-width: 576px)
+		padding: 25px 0 25px 0
 	.head-title
 		position: relative
 		h2
 			text-align: left
 			color: #333333
 			text-transform: unset
+			font-size: 24px
 			&::before
 				content: ''
 				position: absolute
@@ -442,10 +507,20 @@
 				left: 0
 				background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
 				width: 60px
-				height: 2px
+				height: 3px
 	.product-detail-3-swiper-wrapper
 		padding-top: 30px
 		position: relative
+	.nav-wrapper
+		@media screen and ( max-width: 576px)
+			display: flex
+			justify-content: center
+			align-items: center
+			padding-top: 20px
+			.nav-arrow-prev,.nav-arrow-next
+				position: unset !important
+			.nav-arrow-next
+				margin-left: 15px !important
 	.nav-arrow-prev,.nav-arrow-next
 		position: absolute
 		width: 40px
@@ -465,7 +540,7 @@
 			-webkit-text-fill-color: transparent
 		&:hover
 			background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
-			border: 1px solid transparent
+			border: 0
 			span
 				color: #ffffff
 				-webkit-text-fill-color: unset
@@ -491,4 +566,4 @@
 	.swiper-container
 		margin: 0
 		@media screen and ( max-width: 1350px)
-			margin: 0 50px	
+			margin: 0 20px

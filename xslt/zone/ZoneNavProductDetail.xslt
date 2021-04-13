@@ -14,7 +14,7 @@
 	</xsl:template>
 	<xsl:template match="Zone">
 		<li>
-			<xsl:if test="position()=1">
+			<xsl:if test="IsActive = 'true'">
 				<xsl:attribute name="class">
 					<xsl:text disable-output-escaping="yes">active</xsl:text>
 				</xsl:attribute>

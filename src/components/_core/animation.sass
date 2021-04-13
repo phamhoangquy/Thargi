@@ -8,33 +8,38 @@
 	transition: .3s all ease-in-out
 	&:hover
 		img
-			transform: scale(1.13)
+			transform: scale(1.1)
 	img
 		transform: scale(1)
 		transition: .3s all ease-in-out
 
 .background-img
 	background-position: left !important
+	background-repeat: no-repeat !important
+	background-position: 0 -185px !important
 	@media screen and ( max-width: 1440px)
 		background-position: center !important
+
 .background-home
-	background-size: unset !important
-	background-repeat: no-repeat !important
-	background-position: unset !important
+	background-position: left !important
 	@media screen and ( max-width: 1440px)
-		background-size: cover !important
+		background-position: center !important
 
 .tab-wrapper
 	.tab-item
 		display: none
 		&.active
 			display: block
+
 .tab-wrapper-2
 	.tab-item-2
 		display: none
 		&.active
 			display: block
+
 .tab-wrapper-3
+	@media screen and ( max-width: 1024px )
+		padding-top: 25px
 	.tab-item-3
 		display: none
 		&.active

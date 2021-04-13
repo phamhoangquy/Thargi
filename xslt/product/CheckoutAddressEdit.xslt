@@ -5,7 +5,7 @@
 		<div class="receive-address clearfix">
 			<section class="cart-form clearfix">
 				<div class="carttitle">
-					<xsl:value-of select="/CheckoutAddress/CustomerInfoText"></xsl:value-of>
+					<xsl:value-of select="/CheckoutAddress/OrderInformationText"></xsl:value-of>
 				</div>
 				<div class="wrap-form">
 					<div class="group clearfix">
@@ -318,9 +318,9 @@
 						</div>
 					</div>
 					<div class="des">Lưu ý: Giá trị hóa đơn không bao gồm giá trị giảm giá</div>
-					<div class="dieu-khoan">
-						Bằng cách đặt hàng, bạn đồng ý với điều khoản sử dụng của Vietcoco
-					</div>
+					<!-- <div class="dieu-khoan">
+						Bằng cách đặt hàng, bạn đồng ý với điều khoản sử dụng của Thargi
+					</div> -->
 				</div>
 			</section>
 		</div>

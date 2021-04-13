@@ -21,8 +21,11 @@ $(document).ready(function() {
     changeIframe();
     // quantityNumber();
     checkFormCart();
+    filterCate();
+    linkToPageAbout();
     showBackToTop();
     $(document).on("click", function(e) {
+
         if (
             $(".shopping-cart-toggle").has(e.target).length === 0 &&
             $(".shopping-cart-ab").has(e.target).length === 0
@@ -42,7 +45,7 @@ $(document).ready(function() {
     // End watch more
 
     // watch table
-    let totalTableHeight = 70;
+    let totalTableHeight = 65;
     $("table td").each(function(i) {
         if (i < 3) {
             totalTableHeight += $(this).outerHeight();
@@ -55,6 +58,50 @@ $(document).ready(function() {
         $('#l_0').trigger("click")
     }, 100);
 });
+
+function linkToPageAbout() {
+    var path = window.location.href;
+    let Ketqua = path.substr(path.indexOf("#") + 1);
+    if (path.indexOf("#") != -1) {
+        let offset = $("header").outerHeight();
+        $(this).parent().addClass("active").siblings().removeClass("active");
+        $("html, body").animate({
+                scrollTop: $("#" + Ketqua).offset().top - offset,
+            },
+            800,
+        );
+    }
+}
+
+function filterCate() {
+    $('.tool-product').prependTo('.product-list-page main .product-list .container');
+    var cate_menu = $('.item-product-list')
+    var filter_menu = $('.item-checkbox')
+    var tool = $('.tool-product')
+    var cate = $('.tool-product .btn-cate')
+    var filter = $('.tool-product .btn-filter')
+    var close = $('#cls_filter')
+    var close_2 = $('#cls_filter-2')
+    setTimeout(() => {
+        var header = $("header").outerHeight();
+        cate_menu.css("top", header);
+        filter_menu.css("top", header);
+    }, 100);
+    cate.on('click', function() {
+        cate_menu.toggleClass('active')
+        filter_menu.removeClass('active')
+    });
+    filter.on('click', function() {
+        filter_menu.toggleClass('active')
+        cate_menu.removeClass('active')
+    });
+    close.on('click', function() {
+        cate_menu.removeClass('active')
+    });
+    close_2.on('click', function() {
+        filter_menu.removeClass('active')
+    });
+}
 
 function checkFormCart() {
     $('input[id="ttmh"]').click(function() {
@@ -113,14 +160,10 @@ function height(el) {
 }
 
 let header = {
-    scrollActive: function() {
-        let height = $('header').height()
-        if ($(window).scrollTop() > height) {
-            $('header').addClass('active')
-        } else {
-            $('header').removeClass('active')
-        }
-    },
+    headerScroll: () => {
+        let heightHeader = $('header').height();
+        $(window).scrollTop() > heightHeader ? $('header').addClass('header-scroll') : $('header').removeClass('header-scroll');
+    }
 }
 
 function linkAbout() {
@@ -143,36 +186,37 @@ function linkAbout() {
 
 // Toggle Faqs
 function toggleFaqs() {
-    var coll = document.getElementsByClassName("togglefaqs");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-}
-// $('.togglefaqs').click(function(e) {
-//     e.preventDefault();
-//     $('.togglefaqs').removeClass('click');
+    // var coll = document.getElementsByClassName("togglefaqs");
+    // var i;
+    // for (i = 0; i < coll.length; i++) {
+    //     coll[i].addEventListener("click", function() {
+    //         this.classList.toggle("active");
+    //         var content = this.nextElementSibling;
+    //         if (content.style.maxHeight) {
+    //             content.style.maxHeight = null;
+    //         } else {
+    //             content.style.maxHeight = content.scrollHeight + "px";
+    //         }
+    //     });
+    //     // console.log(this)
+    // }
+    $('.togglefaqs').click(function(e) {
+        e.preventDefault();
+        $('.togglefaqs').removeClass('click');
 
-//     var $this = $(this);
-//     if ($this.next().hasClass('show')) {
-//         $this.next().removeClass('show');
-//         $this.next().slideUp(350);
-//     } else {
-//         $this.parent().parent().find('li').removeClass('show');
-//         $this.parent().parent().find('li').slideUp(350);
-//         $this.toggleClass('click');
-//         $this.next().toggleClass('show');
-//         $this.next().slideToggle(350);
-//     }
-// });
+        var $this = $(this);
+        if ($this.next().hasClass('show')) {
+            $this.next().removeClass('show');
+            $this.next().slideUp(350);
+        } else {
+            $this.parent().parent().find('li .content').removeClass('show');
+            $this.parent().parent().find('li .content').slideUp(350);
+            $this.toggleClass('click');
+            $this.next().toggleClass('show');
+            $this.next().slideToggle(350);
+        }
+    });
+}
 
 
 function toggleShoppingCart() {
@@ -308,7 +352,7 @@ const watchTableDetail = () => {
     $(".show-table .view-table-compact").click(function() {
         $(this).css("display", "none");
         $(this).prev().css("display", "flex");
-        let totalTableHeight = 70;
+        let totalTableHeight = 65;
         $("table td").each(function(i) {
             if (i < 3) {
                 totalTableHeight += $(this).outerHeight();
@@ -420,10 +464,10 @@ function swiperInit() {
             clickable: "true"
         }
     });
-    var newsDetailSwiper = new Swiper(".other-news-detail .swiper-container", {
+    var oterNews = new Swiper(".other-news-detail .swiper-container", {
         // Optional parameters
         speed: 1000,
-        spaceBetween: 10,
+        spaceBetween: 30,
         breakpointsInverse: true,
         navigation: {
             nextEl: '.other-news-detail .nav-arrow-next',
@@ -450,10 +494,10 @@ function swiperInit() {
             },
         },
     });
-    var newsDetailSwiper = new Swiper(".product-detail-3 .swiper-container", {
+    var productDetailSwiper = new Swiper(".product-detail-3 .swiper-container", {
         // Optional parameters
         speed: 1000,
-        spaceBetween: 10,
+        spaceBetween: 30,
         breakpointsInverse: true,
         navigation: {
             nextEl: '.product-detail-3 .nav-arrow-next',
@@ -510,7 +554,7 @@ function swiperInit() {
             },
         },
     });
-    var newsDetailSwiper = new Swiper(".product-lastview .swiper-container", {
+    var productLastviewSwiper = new Swiper(".product-lastview .swiper-container", {
         // Optional parameters
         speed: 1000,
         spaceBetween: 10,
@@ -570,6 +614,37 @@ function swiperInit() {
             },
         },
     });
+    var shopTMDTSwiper = new Swiper(".shop-tmdt .swiper-container", {
+        // Optional parameters
+        breakpointsInverse: true,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.shop-tmdt .nav-arrow-next',
+            prevEl: '.shop-tmdt .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 3,
+            },
+        },
+    });
 }
 
 function setBackgroundElement() {
@@ -608,5 +683,5 @@ function showBackToTop() {
 }
 
 $(document).on('scroll', function() {
-    header.scrollActive()
+    header.headerScroll()
 });

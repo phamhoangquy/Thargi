@@ -30,22 +30,22 @@
 						</h1>
 						<div class="body-cart">
 							<table class="cart-table">
-								<!-- <thead>
+								<thead>
 									<tr>
 										<th>
 											<xsl:value-of select="/ShoppingCart/ProductText"></xsl:value-of>
 										</th>
 										<th>
-											<xsl:value-of select="/ShoppingCart/PriceText"></xsl:value-of>
-										</th>
-										<th>
 											<xsl:value-of select="/ShoppingCart/QuantityText"></xsl:value-of>
 										</th>
 										<th>
-											<xsl:value-of select="/ShoppingCart/ItemTotalText"></xsl:value-of>
+											<xsl:value-of select="/ShoppingCart/TotalCartText"></xsl:value-of>
 										</th>
+										<!-- <th>
+											<xsl:value-of select="/ShoppingCart/ItemTotalText"></xsl:value-of>
+										</th> -->
 									</tr>
-								</thead> -->
+								</thead>
 								<tbody>
 									<xsl:apply-templates select="/ShoppingCart/CartItem"></xsl:apply-templates>
 								</tbody>
@@ -73,7 +73,7 @@
 								</div>
 								<div class="payment-des">
 									<!-- <xsl:value-of select="/ShoppingCart/PriceHasIncludedVATText"></xsl:value-of> -->
-									Giá đã bao gồm VAT
+									Giá chưa bao gồm thuế VAT
 								</div>
 								<a href="#!" class="hvr-sweep-to-right btn-continue">
 									<xsl:attribute name="onclick">
