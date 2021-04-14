@@ -92,6 +92,10 @@
 	<xsl:template match="CartItem">
 		<tr>
 			<td class="product">
+				<xsl:attribute name="data-title-mobile">
+					<xsl:value-of select="/ShoppingCart/ProductText"></xsl:value-of>
+				</xsl:attribute>
+				
 				<figure>
 					<a class="product-img">
 						<xsl:attribute name="href">
@@ -140,6 +144,9 @@
 				</figure>
 			</td>
 			<td class="amount">
+				<xsl:attribute name="data-title-mobile">
+					<xsl:value-of select="/ShoppingCart/QuantityText"></xsl:value-of>
+				</xsl:attribute>
 				<div class="input-number">
 					<div class="btn-spin btn-dec spin-btn" data-spin="dec">-</div>
 					<input type="text" maxlength="10" class="qty-input amount" onchange="AjaxCart.updatecart();return false;">
@@ -167,6 +174,9 @@
 				</div>
 			</td>
 			<td class="price">
+				<xsl:attribute name="data-title-mobile">
+					<xsl:value-of select="/ShoppingCart/TotalCartText"></xsl:value-of>
+				</xsl:attribute>
 				<div class="top">
 					<xsl:if test="DiscountPercentage !=''">
 						<div class="old">

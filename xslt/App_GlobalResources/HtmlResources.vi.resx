@@ -297,4 +297,10 @@
 	<data name="TotalCartText" xml:space="preserve">
 		<value>Tổng tiền</value>
 	</data>
+	<data name="ImportPhoneText" xml:space="preserve">
+		<value>Nhập số điện thoại của bạn</value>
+	</data>
+	<data name="AgreeingText" xml:space="preserve">
+		<value>Bằng cách đăng kí tài khoản, bạn đã đồng ý với điều khoản sử dụng của Thargi</value>
+	</data>
 </root>

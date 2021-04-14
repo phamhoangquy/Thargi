@@ -32,13 +32,12 @@
 										<p><xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of></p>
 									</div>
 									<xsl:if test="OldPrice != ''">
-
 										<div class="discount">
 											<p><xsl:value-of select="OldPrice" disable-output-escaping="yes"></xsl:value-of></p>
 										</div>
 										<div class="product-promotion sale">
 											<xsl:text>-</xsl:text>
-											<xsl:value-of select="Percent"></xsl:value-of>
+											<xsl:value-of select="DiscountPercentage" disable-output-escaping="yes"></xsl:value-of>
 											<xsl:text>%</xsl:text>
 										</div>
 									</xsl:if>
@@ -83,7 +82,7 @@
 										<div class="caption">Chia sẻ</div>
 									</li>
 									<li>
-										<a href="#">
+										<a href="#" rel="nofollow noopener" onclick="trackClickout('event', 'clickout', 'Webtools Page - Share Facebook link', 'sharelink', this,  true);" target="_blank">
 											<xsl:attribute name="href">
 												<xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
 												<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
@@ -92,8 +91,21 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
-											<span class="ri-youtube-fill"></span>
+										<a href="#" rel="nofollow noopener" onclick="trackClickout('event', 'clickout', 'Webtools Page - Share Pinterest link', 'sharelink', this,  true);" target="_blank">
+											<xsl:attribute name="href">
+												<xsl:text disable-output-escaping="yes">https://pinterest.com/pin/create/button/?url=</xsl:text>
+												<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
+											</xsl:attribute>
+											<span class="ri-pinterest-fill"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#" rel="nofollow noopener" onclick="trackClickout('event', 'clickout', 'Webtools Page - Share Twitter link', 'sharelink', this,  true);" target="_blank">
+											<xsl:attribute name="href">
+												<xsl:text disable-output-escaping="yes">https://twitter.com/intent/tweet?url=</xsl:text>
+												<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
+											</xsl:attribute>
+											<span class="ri-twitter-fill"></span>
 										</a>
 									</li>
 								</ul>

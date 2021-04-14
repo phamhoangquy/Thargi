@@ -392,6 +392,7 @@
 									margin-left: -15px
 									input
 										width: 105.5%
+										
 										@media screen and ( max-width: 1024px)
 											width: 105%
 										@media screen and ( max-width: 576px)
@@ -399,8 +400,11 @@
 								.settingcontrol
 									.frm-row
 										margin-bottom: 20px
-
-
+	.signup-form
+		.form-group 
+			input
+				&::placeholder 
+					font-style: italic
 // passwordrecovery
 .passwordrecovery
 	background: #f5f5f5
@@ -453,8 +457,11 @@
 								margin-top: 0
 								height: auto !important
 								flex-direction: row !important
-
-
+	.form-group .fa.fa-exclamation-triangle
+		right: auto 
+		left: 68%
+		transform: translateX(-50%)
+		top: 32px
 .fancybox-stage
 	.fancybox-content
 		button

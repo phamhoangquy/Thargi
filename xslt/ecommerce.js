@@ -1,6 +1,31 @@
 ﻿;
 var siteRoot = '';
 $(document).ready(function () {
+
+	//login facebook
+	$(".facebook,.google").on('click', function () {
+		var url = $(this).data('url');
+		window.open(url, "popupWindow", "width=660,height=480,scrollbars=yes");
+		return false;
+	});
+
+	function quantityNumber() {
+    $("body").on("click",".btn-dec", function() {
+        let minus = $(this).parents('.input-number').find('input').val();
+        if (minus > 0) {
+            $(this).parents('.input-number').find('input').val(minus - 1);
+        } else {
+            $(this).parents('.input-number').find('input').val(0);
+        }
+        $(this).parents('.input-number').find('input').trigger('change');
+    });
+    $("body").on("click",".btn-inc", function() {
+        let plus = Number($(this).parents('.input-number').find('input').val());
+        $(this).parents('.input-number').find('input').val(plus + 1);
+        $(this).parents('.input-number').find('input').trigger('change');
+    });
+	}
+	quantityNumber();
 	/*************************************************************************************************************/
 	/* BEGIN SEARCH
 	/*************************************************************************************************************/
@@ -403,12 +428,28 @@ var AjaxCart = {
 			url: urladd,
 			data: data,
 			type: 'post',
-			success: this.success_desktop,
+			//success: this.success_desktop,
+			success: this.reloadcardtable,
 			complete: this.resetLoadWaiting,
 			error: this.ajaxFailure
 		});
 	},
 
+	reloadcardtable: function(response)
+	{
+		AjaxCart.success_desktop(response);
+		if($( "body" ).hasClass( "cartpageshoping")) {
+			$.ajax({
+			url: window.location.href,
+			data: {
+				isajax: true
+			},
+			success: function (data) {
+				$('.cart-table-ajax').html($(data).find('.cart-table-ajax').html());
+			}
+		});
+		}
+	},
 	//add a product to the cart/wishlist from the product details page (desktop version)
 	addproducttocart_details: function (button) {
 		if (this.loadWaiting != false) {
@@ -508,7 +549,7 @@ var AjaxCart = {
 			url: urladd,
 			data: data,
 			type: 'post',
-			success: this.success_desktop,
+			success: this.reloadcardtable,
 			complete: this.resetLoadWaiting,
 			error: this.ajaxFailure
 		});
@@ -668,7 +709,121 @@ var AjaxCart = {
 			error: this.ajaxFailure
 		});
 	},
+    selectproductoption: function(button) {
+        var url = siteRoot + "/Product/Services/CartService.aspx";
+        //var data = $('#aspnetForm').serializeArray();
+        var data = [];
+        data.push({
+            name: 'method',
+            value: 'SelectProductOption'
+        });
+        data.push({
+            name: 'productid',
+            value: $("#hdProductId").val()
+        });
+ 		$.each($(button).parents('.product-attributes').find('.product-options'), function () {
+            var input = $(this).find('input[type="hidden"]');
+            if (input)
+				data.push({ name: input.attr("name"), value: input.attr("value") });
 
+			data.push({
+				name: 'optionid',
+				value: $(this).find("select").val()
+			});
+        })
+        $.ajax({
+            cache: false,
+            url: url,
+            data: data,
+            type: 'post',
+            success: function(response) {
+                if (response.success == true) {
+                    $(button).parent().parent().find('.product-option-input').val($(button).attr('data-id'));
+
+                    if (response.price)
+                        $('.product-price').text(response.price);
+                    if (response.oldPrice)
+                        $('.product-oldprice').text(response.oldPrice);
+
+                    if (response.productName)
+                        $('.product-name').text(response.productName);
+                    if (response.productCode)
+                        $('.product-code').text(response.productCode);
+                    if (response.briefContent)
+                        $('.product-briefContent').html(response.briefContent);
+                    // if (response.fullContent)
+                    //     $('.product-fullContent').html(response.fullContent);
+                    if (response.editLink)
+                        $('.edit-link').attr('href', response.editLink);
+                    if (response.metaTitle)
+                        document.title = response.metaTitle;
+                    if (response.metaDescription)
+                        $('meta[name="description"]').attr("content", response.metaDescription);
+                    // if (response.childProductDetail) {
+                    //     if ($(response.childProductDetail).filter(".ajaxproductslider") != undefined)
+                    //         $('.ajaxproductslider').html($(response.childProductDetail).filter(".ajaxproductslider"))
+
+                    //     if ($(response.childProductDetail).filter(".check-out-button") != undefined)
+                    //         $(".button-wrapper").html($(response.childProductDetail).filter(".check-out-button"));
+
+                    //     if ($(response.childProductDetail).filter(".tr.quantity") != undefined)
+                    //         $(".productInfo .quantity").html($(response.childProductDetail).filter(".tr.quantity"));
+
+                    //     if ($(response.childProductDetail).filter(".tr.status") != undefined)
+                    //         $(".status-section").html($(response.childProductDetail).filter(".tr.status"));
+
+
+                    // }
+                 	if (response.selectedOptionIds) {
+                        var optionNames = '';
+                        var optionGroupCount = $(".product-info .product-options").length;
+                        $(".product-options").each(function (index) {
+                            $(this).find('.product-option-input').val('');
+                            $(this).find('.product-option').removeClass('active');
+                            $(this).find('.product-option').removeClass('disable');
+                            $(this).find('.product-option').each(function (index2) {
+                                var option = $(this); 
+                                var optionId = parseInt(option.val());
+                                if ($.inArray(optionId, response.selectedOptionIds) > -1) {
+                                    option.parent().parent().find('.product-option-input').val(optionId);
+                                    option.addClass('active');
+
+                                    if (option.parents('.product-intro').length)
+                                        optionNames += option.attr('data-name') + ', ';
+                                }
+                                if (optionGroupCount > 1 && $.inArray(optionId, response.optionIds) == -1) {
+                                    option.addClass('disable');
+                                }
+                            });
+
+                        });
+
+                        $('.product-selected-options .option-names').html(optionNames);
+                    }
+                    if (response.productUrl) {
+                        if (typeof(history.pushState) != "undefined") {
+                            var url = response.productUrl;
+                            var obj = {
+                                Title: '',
+                                Url: url
+                            };
+                            history.pushState(obj, obj.Title, obj.Url);
+                        }
+                    }
+                    $(button).addClass('active');
+                    //lazyloadAjax();
+                } else if (response.message) {
+                    alert(response.message);
+                }
+                // setTimeout(() => {
+                //     $('html,body').animate({
+                //         scrollTop: 400
+                //     }, 700);
+                // }, 300);
+            },
+            error: this.ajaxFailure
+        });
+    },
 	success_desktop: function (response) {
 		if (response.updatetopcartsectionhtml) {
 			$(AjaxCart.topcartselector).html(response.updatetopcartsectionhtml);
@@ -677,12 +832,13 @@ var AjaxCart = {
 			$(AjaxCart.topwishlistselector).html(response.updatetopwishlistsectionhtml);
 		}
 		if (response.updateflyoutcartsectionhtml) {
-			var checkoutUrl = $('.checkout-url').data('checkouturl');
+			var checkoutUrl = $('.checkout-url').data('checkouturl'); 
 			//$(AjaxCart.flyoutcartselector).replaceWith(response.updateflyoutcartsectionhtml);
 			$(AjaxCart.flyoutcartselector).replaceWith($(response.updateflyoutcartsectionhtml).filter(AjaxCart.flyoutcartselector));
 			
 			if (checkoutUrl != null)
 				$(AjaxCart.flyoutcartselector).find('.btn-checkout').attr('href', checkoutUrl);
+            $('.shopping-cart-ab').addClass('open'); 
 		}
 		if (response.message) {
 			//display notification
@@ -706,7 +862,8 @@ var AjaxCart = {
 			}
 			return false;
 		}
-		if (response.redirect) {
+		
+		if (response.redirect && !$( "body" ).hasClass( "cartpageshoping")) {
 			setLocation(response.redirect);
 			return true;
 		}
@@ -1449,6 +1606,33 @@ var AjaxCheckout = {
 		});
 	},
 
+	/*
+	getshippingtotal: function () {
+		var shippingMethodId=$("input[name=ShippingMethod]:checked").val();
+		var urladd = siteRoot + "/Product/Services/CheckoutService.aspx";
+
+		var data = {
+			'method': 'GetShippingTotal',
+			'shippingMethodId': shippingMethodId
+		};
+		$.ajax({
+			cache: false,
+			url: urladd,
+			data: data,
+			type: 'post',
+			success: function (response) {
+				if (response.success == true) {
+					if (AjaxCheckout.shippingtotalselector)
+						$(AjaxCheckout.shippingtotalselector).html(response.shippingtotalsectionhtml);
+					if (AjaxCheckout.totalselector)
+						$(AjaxCheckout.totalselector).html(response.totalsectionhtml);
+				}
+			}
+		});
+		
+	},
+	*/
+	
 	getshippingtotal: function (radio) {
 		if ($(radio).is(':checked')) {
 			var urladd = siteRoot + "/Product/Services/CheckoutService.aspx";
@@ -1472,6 +1656,7 @@ var AjaxCheckout = {
 			});
 		}
 	},
+	
 
 	saveorder: function (savetodb, redirect) {
 		if (this.loadWaiting != false) {
@@ -1514,7 +1699,19 @@ var AjaxCheckout = {
 				Invoice_CompanyTaxCode: "Vui lòng nhập Mã số thuế",
 				Invoice_CompanyName: "Vui lòng nhập Tên công ty",
 				Invoice_CompanyAddress: "Vui lòng nhập Địa chỉ công ty"
-			}
+			},
+
+		focusInvalid: false,
+    	invalidHandler: function(form, validator) {
+
+        if (!validator.numberOfInvalids())
+            return;
+
+        $('html, body').animate({
+            scrollTop: $(validator.errorList[0].element).offset().top - 100
+        }, 500);
+
+    	}
 		});
 
 		if (!$("#aspnetForm").valid()) {

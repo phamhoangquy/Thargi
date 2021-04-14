@@ -430,7 +430,25 @@
 									color: #58a53f
 									font-size: 16px
 									font-weight: 700
-
+				@media(max-width: 576px)
+					thead
+						display: none
+					tbody 
+						tr 
+							td 
+								position: relative
+								&:before 
+									content: attr(data-title-mobile)
+									font-size: 13px
+									font-weight: 700
+									color: #333
+									margin-bottom: 10px
+									display: block
+								&.amount
+									display: block
+									margin-top: 0
+									input 
+										border: none 
 .cart-step-1-bottom
 	@media screen and ( max-width: 576px)
 		padding-top: 30px
@@ -439,8 +457,7 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
-		@media screen and ( max-width: 576px)
-			display: block
+		
 		.btn-left
 			a
 				// padding-right: 0
@@ -517,7 +534,22 @@
 					top: 0
 					right: 0
 					padding-left: 5px
-
+		@media screen and ( max-width: 576px)
+			flex-direction: column-reverse
+			.btn-left
+				margin-top: 20px
+				width: 100%
+				a 
+					width: 100% 
+					text-align: center
+					justify-content: center
+			.btn-right
+				margin-top: 0
+				width: 100% 
+				a 
+					width: 100% 
+				.totalamount
+					text-align: right 
 // card - product last-view
 .product-lastview
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
