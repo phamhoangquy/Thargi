@@ -301,6 +301,6 @@
 		<value>Nhập số điện thoại của bạn</value>
 	</data>
 	<data name="AgreeingText" xml:space="preserve">
-		<value>Bằng cách đăng kí tài khoản, bạn đã đồng ý với điều khoản sử dụng của Thargi</value>
+		<value>Bằng cách đăng kí tài khoản, bạn đã đồng ý với &lt;a href="/dieu-khoan-su-dung"&gt;điều khoản sử dụng&lt;/a&lt; của Thargi</value>
 	</data>
 </root>

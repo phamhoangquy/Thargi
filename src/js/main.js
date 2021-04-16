@@ -23,6 +23,7 @@ $(document).ready(function () {
 	filterCate();
 	linkToPageAbout();
 	showBackToTop();
+	showMore();
 	if($('.cartpage .cart-login .select-group ul li:first-child span').hasClass('active')){
 		$('.cart-page-step-2 .cart-login .login-form .wrap').hide();
 	}else{
@@ -175,7 +176,7 @@ let header = {
 function linkAbout() {
 	$(".sub-menu li a").on("click", function (event) {
 		if (this.hash !== "") {
-			let offset = $("header").outerHeight() + 50;
+			let offset = $("header").outerHeight();
 			var hash = this.hash;
 			$(this).parent().addClass('active').siblings().removeClass("active")
 			$("html, body").animate({
@@ -722,3 +723,8 @@ $(window).scroll(function () {
 // 	$('.sub-menu-list .sub-menu ul li.active').scrollLeft(70)
 // }
 
+function showMore(){
+	let heightInfoDetail = $('.product-detail-2 .list-infor-wrapper').outerHeight();
+	console.log(heightInfoDetail);
+	heightInfoDetail > 900 ? $('.product-detail-2 .list-infor-wrapper .wrap-button').show() : $('.product-detail-2 .list-infor-wrapper .wrap-button').hide()
+}

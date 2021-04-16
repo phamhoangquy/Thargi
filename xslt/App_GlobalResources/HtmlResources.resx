@@ -301,6 +301,6 @@
 		<value>Enter your phone number</value>
 	</data>
 	<data name="AgreeingText" xml:space="preserve">
-		<value>By registering, you agreeded to the Thagri's</value>
+		<value>By registering, you &lt;a href="/en-US/policies"&gt;agreeded&lt;/a&lt; to the Thagri's</value>
 	</data>
 </root>

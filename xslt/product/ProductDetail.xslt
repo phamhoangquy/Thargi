@@ -56,9 +56,11 @@
 							</div>
 							<div class="desc-bottom">
 								<div class="content">
-									<div class="product-attributes">
-										<xsl:apply-templates select="/ProductDetail/ProductProperties[EnableShoppingCart='True']"/>
-									</div>
+									<xsl:if test="/ProductDetail/ProductProperties[EnableShoppingCart='True']">
+										<div class="product-attributes">
+											<xsl:apply-templates select="/ProductDetail/ProductProperties[EnableShoppingCart='True']"/>
+										</div>
+									</xsl:if>
 									<div class="price">
 										<p><xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of></p>
 									</div>
