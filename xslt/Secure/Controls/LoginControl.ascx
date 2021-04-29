@@ -10,7 +10,7 @@
             <div class="form-horizontal">
                 <div class="form-group">
                     <gb:SiteLabel ID="lblEmail" runat="server" CssClass="control-label" Visible="false" ForControl="UserName" ConfigKey="SignInEmailLabel" />
-                    <gb:SiteLabel ID="lblUserID" runat="server" CssClass="control-label" Visible="false" ForControl="UserName" ConfigKey="ManageUsersLoginNameLabel" />
+                    <!--<gb:SiteLabel ID="lblUserID" runat="server" CssClass="control-label" Visible="false" ForControl="UserName" ConfigKey="ManageUsersLoginNameLabel" />-->
                     <label>
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </label>
@@ -40,6 +40,18 @@
                         <asp:HyperLink ID="lnkRegisterExtraLink" runat="server" />
                 </div>
             </div>
+            <div class="flex justify-between mt-3"> 
+                <div class="cart-login" style="box-shadow:none;"> 
+                    <div class="social-login">
+                        <a class="btn facebook-login facebook" data-url="/Account/LoginFacebook.aspx" href="#"> 
+                            <em class="ri-facebook-fill"></em><span>Đăng nhập bằng Facebook</span>
+                        </a>
+                        <a class="btn google-login google" data-url="/Account/LoginGooglePlus.aspx" href="#">  
+                            <em class="ri-google-fill"></em><span>Đăng nhập bằng Google</span>
+                        </a>
+                    </div>  
+                </div>  
+            </div> 
             <portal:gbLabel ID="FailureText" runat="server" CssClass="alert alert-danger" EnableViewState="false" />
         </asp:Panel>
     </LayoutTemplate>

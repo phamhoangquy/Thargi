@@ -140,7 +140,7 @@
 				tbody
 					tr
 						th
-							width: 40%
+							width: 38%
 							font-size: 16px
 							color: #333333
 							font-weight: 700
@@ -176,18 +176,23 @@
 					justify-content: flex-start
 					.text
 						padding-right: 40px !important
-					.price
-						padding-left: 40px !important
+					.product-attributes
+						padding-right: 40px !important
+				@media screen and ( max-width: 576px)
+					.text
+						padding-right: 20px !important
+					.product-attributes
+						padding-right: 20px !important
 				@media screen and ( max-width: 360px)
 					.text
-						padding-right: 30px !important
-					.price
-						padding-left: 30px !important
+						padding-right: 17px !important
+					.product-attributes
+						padding-right: 17px !important
 				@media screen and ( max-width: 320px)
 					.text
 						padding-right: 15px !important
-					.price
-						padding-left: 15px !important
+					.product-attributes
+						padding-right: 15px !important
 				.product-attributes
 					.product-options
 						display: flex
@@ -206,8 +211,9 @@
 					padding: 10px 20px
 					font-size: 14px
 					color: #333333
+				.product-attributes
+					padding-right: 15px
 				.price
-					padding-left: 15px
 					p
 						color: #eb0000
 						font-size: 14px

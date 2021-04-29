@@ -12,21 +12,21 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<xsl:apply-templates select="News[1]"></xsl:apply-templates>
-
+						
 					</div>
 					<div class="col-lg-3">
 						<xsl:apply-templates select="News[position()&gt;1 and position()&lt;4]" mode="News2"></xsl:apply-templates>
-
+						
 					</div>
 					<div class="col-lg-3 pg">
 						<xsl:apply-templates select="News[position()&gt;3 and position()&lt;7]" mode="News3"></xsl:apply-templates>
-
+						
 					</div>
 				</div>
 				<div class="row">
 					<xsl:apply-templates select="News[position()&gt;6]" mode="News4"></xsl:apply-templates>
-
-
+					
+					
 				</div>
 			</div>
 		</section>
@@ -82,13 +82,7 @@
 	<xsl:template match="News" mode="News3">
 		<div class="content">
 			<div class="date">
-				<time>
-					<xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>
-					.
-					<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>
-					.
-					<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of>
-				</time>
+				<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
 			</div>
 			<div class="title-promotion">
 				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
@@ -115,6 +109,7 @@
 				<xsl:attribute name="target">
 					<xsl:value-of select="Target"></xsl:value-of>
 				</xsl:attribute>
+				
 				Xem chi tiết
 				<span class="ri-arrow-right-line"></span>
 			</a>

@@ -78,50 +78,29 @@ $(document).ready(function() {
             return false;
         });
     }
-
-    if ($('#ddlProvince').length) {
+    function LoadProvince(){
         $.ajax({
             type: "POST",
             contentType: "application/json; charset=utf-8",
-            url: "/DealerLocator/Services/GeoZoneService.asmx/LoadCountry",
-            data: "{'languageId': '" + $("#hdnDealerLocatorLanguageId").val() + "'}",
+            url: "/DealerLocator/Services/GeoZoneService.asmx/LoadProvince",
+            data: "{'languageId': '" + $("#hdnDealerLocatorLanguageId").val() + "', 'countryGuid': '" + $('#ddlCountry').val() + "'}",
             dataType: "json",
             success: function(result) {
-                var obj = $("#ddlCountry");
+                var obj = $("#ddlProvince");
                 $(obj).empty();
-                $(obj).append($("<option></option>").val("").html($("#hdfDealerLocatorSelectCountry").val()));
+                $(obj).append($("<option></option>").val("").html($("#hdfDealerLocatorSelectProvince").val()));
                 $.each(result.d, function(key, value) {
                     $(obj).append($("<option></option>").val(value.Key).html(value.Name));
                 });
-
-                if (obj.find('option').length == 2) {
-                    obj.addClass('hidden');
-                    obj.find('option').eq(1).prop('selected', true);
-                    $('#ddlCountry').trigger('change');
-                }
             },
-            error: function(result) {}
+            error: function(result) {
+
+            }
         });
-
-        $('#ddlCountry').change(function() {
-            $.ajax({
-                type: "POST",
-                contentType: "application/json; charset=utf-8",
-                url: "/DealerLocator/Services/GeoZoneService.asmx/LoadProvince",
-                data: "{'languageId': '" + $("#hdnDealerLocatorLanguageId").val() + "', 'countryGuid': '" + $('#ddlCountry').val() + "'}",
-                dataType: "json",
-                success: function(result) {
-                    var obj = $("#ddlProvince");
-                    $(obj).empty();
-                    $(obj).append($("<option></option>").val("").html($("#hdfDealerLocatorSelectProvince").val()));
-                    $.each(result.d, function(key, value) {
-                        $(obj).append($("<option></option>").val(value.Key).html(value.Name));
-                    });
-                },
-                error: function(result) {
-
-                }
-            });
+    }
+    if ($('#ddlProvince').length) {
+        $('body').on('change','#ddlCountry',function() { 
+            LoadProvince();
         });
 
         if ($('#ddlDistrict').length) {
@@ -146,6 +125,30 @@ $(document).ready(function() {
                 });
             });
         }
+        $.ajax({
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            url: "/DealerLocator/Services/GeoZoneService.asmx/LoadCountry",
+            data: "{'languageId': '" + $("#hdnDealerLocatorLanguageId").val() + "'}",
+            dataType: "json",
+            success: function(result) {
+                var obj = $("#ddlCountry");
+                $(obj).empty();
+                $(obj).append($("<option></option>").val("").html($("#hdfDealerLocatorSelectCountry").val()));
+                $.each(result.d, function(key, value) {
+                    $(obj).append($("<option></option>").val(value.Key).html(value.Name));
+                });
+
+                if (obj.find('option').length == 2) {
+                    obj.addClass('hidden');
+                    obj.find('option').eq(1).prop('selected', true);
+                    //$('#ddlCountry').trigger('change'); 
+                    LoadProvince();
+                }
+            }, 
+            error: function(result) {}
+        });
+
     }
 
     if ($('#add #map_canvas').length) {

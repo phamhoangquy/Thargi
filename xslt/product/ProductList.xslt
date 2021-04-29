@@ -38,10 +38,10 @@
 	<xsl:template match="Product">
 		<div class="col-6 col-md-6 col-lg-4">
 			<div class="product-wrapper">
-				<xsl:if test="Percent!=''">
+				<xsl:if test="DiscountPercentage !=''">
 					<div class="product-promotion sale">
 						<xsl:text>-</xsl:text>
-						<xsl:value-of select="Percent"></xsl:value-of>
+						<xsl:value-of select="DiscountPercentage"></xsl:value-of>
 						<xsl:text>%</xsl:text>
 					</div>
 				</xsl:if>

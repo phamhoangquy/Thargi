@@ -95,6 +95,14 @@
         </section>
         <section class="group">
           <div class="label">
+            <xsl:text>Thuế VAT</xsl:text>
+          </div>
+          <div class="value shipping-total">
+            <xsl:value-of select="/ShoppingCart/TaxTotal"></xsl:value-of>
+          </div>
+        </section>		
+        <section class="group">
+          <div class="label">
             <xsl:value-of select="/ShoppingCart/TotalText"></xsl:value-of>
           </div>
           <div class="value order-total">

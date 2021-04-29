@@ -7,9 +7,10 @@
 		display: none
 	.pages
 		.modulepager
-			padding-left: 25%
-			@media screen and ( max-width: 1023px)
-				padding-left: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top: 20px
 
 .product-detail-page,.product-lastview
 	.global-breadcrumb
@@ -379,28 +380,42 @@
 			display: flex
 			justify-content: center
 			align-items: center
-			.signup-panel
-				.signup-form
-					.form-horizontal
-						#ctl00_mainContent_RegisterUser_CreateUserStepContainer_pnlRequiredProfileProperties
-							.form-group
-								label
-									&.col-sm-3
-										margin-left: -15px
-								.col-sm-9
-									max-width: 100%
-									margin-left: -15px
-									input
-										width: 105.5%
-										@media screen and ( max-width: 1024px)
-											width: 105%
-										@media screen and ( max-width: 576px)
-											width: 109%
-								.settingcontrol
-									.frm-row
-										margin-bottom: 20px
-
-
+		.signup-panel
+			p 
+				font-size: 15px 
+				a 
+					color: #58a53f
+			.signup-form
+				.form-horizontal
+					margin-bottom: 20px
+					.settingrow 
+						// .frm-row
+						// 	margin-bottom: 10px
+						label
+							&.col-sm-3
+								margin: 0
+								padding: 0 
+						.col-sm-9
+							max-width: 100%
+							width: 100% 
+							margin: 0
+							padding: 0 
+						input
+							width: 100%
+				.settingcontrol
+					.frm-row
+						margin-bottom: 10px
+			.regerror
+				font-size: 14px 
+				color: red 
+				font-style: italic
+			td 
+				padding: 0 
+	.signup-form
+		.form-group 
+			input
+				&::placeholder 
+					font-style: italic
 // passwordrecovery
 .passwordrecovery
 	background: #f5f5f5
@@ -453,8 +468,11 @@
 								margin-top: 0
 								height: auto !important
 								flex-direction: row !important
-
-
+	.form-group .fa.fa-exclamation-triangle
+		right: auto 
+		left: 68%
+		transform: translateX(-50%)
+		top: 32px
 .fancybox-stage
 	.fancybox-content
 		button
